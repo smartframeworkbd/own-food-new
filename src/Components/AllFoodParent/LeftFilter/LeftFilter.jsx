@@ -2,74 +2,39 @@ import React from "react";
 import "./LeftFilter.css";
 import Range from "../../Common/Range/Range";
 
-
 const LeftFilter = () => {
   return (
-    <div className="filter-sidebar p-3 border rounded">
+    <div className="LeftFilter-sidebar p-3 border rounded">
       <div className="d-flex justify-content-between align-items-center mb-3">
         <h5 className="mb-0">Filter</h5>
-        <button className="btn btn-sm btn-custom-blue">Clear all</button>
+        <button className="btn btn-sm LeftFilter-btn-custom-blue">
+          Clear all
+        </button>
       </div>
 
       {/* Sort By */}
       <div className="mb-4">
         <h6>Sort by</h6>
-        <div className="form-check">
-          <input
-            className="form-check-input"
-            type="radio"
-            name="sort"
-            id="default"
-            defaultChecked
-          />
-          <label className="form-check-label" htmlFor="default">
-            Default
-          </label>
-        </div>
-        <div className="form-check">
-          <input
-            className="form-check-input"
-            type="radio"
-            name="sort"
-            id="ready"
-          />
-          <label className="form-check-label" htmlFor="ready">
-            Ready food
-          </label>
-        </div>
-        <div className="form-check">
-          <input
-            className="form-check-input"
-            type="radio"
-            name="sort"
-            id="instant"
-          />
-          <label className="form-check-label" htmlFor="instant">
-            Instant food
-          </label>
-        </div>
-        <div className="form-check">
-          <input
-            className="form-check-input"
-            type="radio"
-            name="sort"
-            id="catering"
-          />
-          <label className="form-check-label" htmlFor="catering">
-            Catering
-          </label>
-        </div>
-        <div className="form-check">
-          <input
-            className="form-check-input"
-            type="radio"
-            name="sort"
-            id="preorder"
-          />
-          <label className="form-check-label" htmlFor="preorder">
-            Pre Order
-          </label>
-        </div>
+        {[
+          { id: "default", label: "Default", checked: true },
+          { id: "ready", label: "Ready food" },
+          { id: "instant", label: "Instant food" },
+          { id: "catering", label: "Catering" },
+          { id: "preorder", label: "Pre Order" },
+        ].map(({ id, label, checked }) => (
+          <div className="form-check" key={id}>
+            <input
+              className="form-check-input"
+              type="radio"
+              name="sort"
+              id={id}
+              defaultChecked={checked}
+            />
+            <label className="form-check-label" htmlFor={id}>
+              {label}
+            </label>
+          </div>
+        ))}
       </div>
 
       {/* Meal Type */}

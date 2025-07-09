@@ -1,18 +1,18 @@
 /* Wrapper spacing */
-.custom-carousel-wrapper {
+.DailyDeals-custom-carousel-wrapper {
   margin-top: 30px;
   padding: 0 10px;
 }
 
 /* Title styling */
-.carousel-title {
+.DailyDeals-carousel-title {
   font-weight: bold;
   font-size: 20px;
   margin: 20px -10px;
 }
 
 /* Each slide/card wrapper */
-.carousel-slide {
+.DailyDeals-carousel-slide {
   padding: 0 7.5px;
   display: flex;
   justify-content: center;
@@ -20,7 +20,7 @@
 }
 
 /* Image styling */
-.carousel-image {
+.DailyDeals-carousel-image {
   width: 100%;
   max-width: 210px;
   height: 140px;
@@ -30,7 +30,7 @@
 }
 
 /* ======= Arrow Styling ======= */
-.custom-arrow {
+.DailyDeals-custom-arrow {
   background-color: white !important;
   color: white !important;
   border-radius: 50%;
@@ -46,15 +46,15 @@
   cursor: pointer;
 }
 
-.custom-arrow:hover {
+.DailyDeals-custom-arrow:hover {
   background-color: #0056b3 !important;
 }
 
-.left-arrow {
+.DailyDeals-left-arrow {
   left: -20px !important;
 }
 
-.right-arrow {
+.DailyDeals-right-arrow {
   right: -10px !important;
 }
 

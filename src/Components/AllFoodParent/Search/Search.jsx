@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Search.css";
 import LeftFilter from "../LeftFilter/LeftFilter";
 
-
 const Search = () => {
   const [showSidebar, setShowSidebar] = useState(false);
 
@@ -12,28 +11,29 @@ const Search = () => {
 
   return (
     <>
-      <div className="search-bar-container">
+      <div className="Search-bar-container">
         <input
           type="text"
-          className="search-input"
+          className="Search-input"
           placeholder="Search for food"
         />
-        <button className="filter-button" onClick={toggleSidebar}>
+        <button className="Search-filter-button" onClick={toggleSidebar}>
           ☰ Filter
         </button>
       </div>
 
       {/* Sidebar */}
-      <div className={`sidebar ${showSidebar ? "show" : ""}`}>
-        <button className="close-btn" onClick={toggleSidebar}>
+      <div className={`Search-sidebar ${showSidebar ? "Search-show" : ""}`}>
+        <button className="Search-close-btn" onClick={toggleSidebar}>
           ✖
         </button>
-        {/* FilterSidebar component call */}
         <LeftFilter />
       </div>
 
       {/* Overlay */}
-      {showSidebar && <div className="overlay" onClick={toggleSidebar}></div>}
+      {showSidebar && (
+        <div className="Search-overlay" onClick={toggleSidebar}></div>
+      )}
     </>
   );
 };

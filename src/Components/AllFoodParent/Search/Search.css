@@ -1,4 +1,4 @@
-.search-bar-container {
+.Search-bar-container {
   margin-top: 20px;
   margin-bottom: 10px;
   width: 100%;
@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-.search-input {
+.Search-input {
   width: 100%;
   padding: 10px 15px 10px 40px;
   border-radius: 8px;
@@ -18,7 +18,7 @@
   box-sizing: border-box;
 }
 
-.search-bar-container::before {
+.Search-bar-container::before {
   content: "🔍";
   position: absolute;
   left: 12px;
@@ -28,7 +28,7 @@
 }
 
 /* Filter button (visible only on mobile) */
-.filter-button {
+.Search-filter-button {
   display: none;
   margin-left: 10px;
   padding: 12px 12px;
@@ -40,13 +40,13 @@
 }
 
 @media (max-width: 768px) {
-  .filter-button {
+  .Search-filter-button {
     display: inline-block;
   }
 }
 
 /* Sidebar */
-.sidebar {
+.Search-sidebar {
   position: fixed;
   top: 0;
   left: -250px;
@@ -59,12 +59,12 @@
   z-index: 1001;
 }
 
-.sidebar.show {
+.Search-sidebar.Search-show {
   left: 0;
 }
 
 /* Close button inside sidebar */
-.close-btn {
+.Search-close-btn {
   background: none;
   border: none;
   font-size: 20px;
@@ -73,7 +73,7 @@
 }
 
 /* Overlay */
-.overlay {
+.Search-overlay {
   position: fixed;
   top: 0;
   left: 0;

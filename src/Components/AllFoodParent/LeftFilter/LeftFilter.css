@@ -1,21 +1,22 @@
-.filter-sidebar {
+.LeftFilter-sidebar {
   width: 100%;
   max-width: 280px;
   background-color: #ffffff;
 }
 
-.filter-sidebar h6 {
+.LeftFilter-sidebar h6 {
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.filter-sidebar .form-check {
+.LeftFilter-sidebar .form-check {
   margin-bottom: 8px;
 }
 
-.filter-sidebar input[type="range"] {
+.LeftFilter-sidebar input[type="range"] {
   accent-color: #0d6efd;
 }
-.btn-custom-blue {
+
+.LeftFilter-btn-custom-blue {
   color: #0d6efd;
 }

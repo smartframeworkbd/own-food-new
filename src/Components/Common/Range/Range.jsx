@@ -36,7 +36,7 @@ const Range = ({ min, max, label }) => {
           }}
           className="thumb thumb-right"
         />
-        <div className="slider-track" />
+
       </div>
     </div>
   );
