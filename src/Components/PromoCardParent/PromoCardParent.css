@@ -1,0 +1,52 @@
+.promo-card-parent {
+    background-color: #F3F7FC;
+    padding: 20px 0;
+}
+
+.promo-card-parent .slick-prev, 
+.promo-card-parent .slick-next {
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+}
+
+.promo-card-parent .slick-prev:before,
+.promo-card-parent .slick-next:before {
+    content: ''; /* Keep this to override Slick */
+    /* display: block;
+    width: 40px;
+    height: 40px;
+    color: wheat;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0; */
+}
+.promo-card-parent .custom-arrow {
+  width: 30px!important;
+  height: 30px!important;
+  background-color: #000!important;
+  color: #fff!important;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25)!important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.promo-card-parent .custom-arrow.slick-next {
+  right: 0px; 
+}
+.promo-card-parent .slick-slider {
+  padding: 0 15px;
+}
+.promo-card-parent .custom-arrow.slick-prev {
+  left: 0px; 
+}
+

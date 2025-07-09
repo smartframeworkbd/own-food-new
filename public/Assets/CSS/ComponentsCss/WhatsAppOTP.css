@@ -1,0 +1,644 @@
+
+/**************************************
+
+======================================
+        Table Of Contents
+======================================
+1. Typography
+2. Template Default Style
+3. Template Animation
+
+**************************************/
+/*=======================================================================
+1. Typography
+=========================================================================*/
+.OTP-W  .fxt-template-layout2 html {
+  height: 100%;
+}
+.OTP-W  .fxt-template-layout2 body {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  height: 100%;
+  line-height: 1.7;
+  vertical-align: baseline;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: #646464;
+  background-color: #fff;
+}
+.OTP-W .OTP-W .fxt-template-layout2  p {
+  margin: 0 0 20px 0;
+  color: #646464;
+}
+.OTP-W  .fxt-template-layout2 h1,
+.OTP-W  .fxt-template-layout2 h2,
+.OTP-W  .fxt-template-layout2 h3,
+.OTP-W .fxt-template-layout2 h4,
+.OTP-W .fxt-template-layout2 h5,
+.OTP-W .fxt-template-layout2 h6 {
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  margin: 0 0 20px 0;
+  color: #111;
+}
+.OTP-W  .fxt-template-layout2 h1,
+h2 {
+  line-height: 1.2;
+}
+.OTP-W h3,
+.OTP-W h4,
+.OTP-W h5,
+.OTP-W .h6 {
+  line-height: 1.4;
+}
+.OTP-W h1 {
+  font-size: 36px;
+}
+@media only screen and (max-width: 1199px) {
+  .OTP-W h1 {
+    font-size: 34px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .OTP-W h1 {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .OTP-W h1 {
+    font-size: 30px;
+  }
+}
+.OTP-W h2 {
+  font-size: 28px;
+}
+@media only screen and (max-width: 1199px) {
+  .OTP-W h2 {
+    font-size: 26px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .OTP-W h2 {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .OTP-W h2 {
+    font-size: 22px;
+  }
+}
+.OTP-W h3 {
+  font-size: 22px;
+  /* font-size: 30px; */
+  font-weight: 700;
+  color: #fff;
+  font-family: var(--pfamily);
+  font-family: var(--style-font);
+}
+@media only screen and (max-width: 991px) {
+  .OTP-W h3 {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .OTP-W h3 {
+    font-size: 18px;
+  }
+}
+.OTP-W h4 {
+  font-size: 20px;
+}
+@media only screen and (max-width: 991px) {
+  .OTP-W h4 {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .OTP-W h4 {
+    font-size: 16px;
+  }
+}
+.OTP-W h5 {
+  font-size: 18px;
+}
+@media only screen and (max-width: 991px) {
+  .OTP-W h5 {
+    font-size: 16px;
+  }
+}
+/*=======================================================================
+2. Template Default Style
+=========================================================================*/
+.OTP-W  .fxt-content-between  a {
+  text-decoration: none;
+}
+.OTP-W  .fxt-content-between  a:active,
+.OTP-W  .fxt-content-between  a:hover,
+.OTP-W  .fxt-content-between  a:focus {
+  text-decoration: none;
+}
+.OTP-W  .fxt-content-between  a:active,
+.OTP-W .fxt-content-between  a:hover,
+.OTP-W .fxt-content-between  a:focus {
+  outline: 0 none;
+}
+.OTP-W  .fxt-content-between img {
+  max-width: 100%;
+  height: auto;
+}
+.OTP-W  .fxt-content-between ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+}
+.OTP-W  .fxt-content-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 767px) {
+  .OTP-W  .fxt-none-767 {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .OTP-W  .fxt-none-991 {
+    display: none !important;
+  }
+}
+@-webkit-keyframes circle_rotate {
+  50%,
+  100% {
+    -webkit-transform: rotate(405deg);
+    transform: rotate(405deg);
+  }
+}
+@keyframes circle_rotate {
+  50%,
+  100% {
+    -webkit-transform: rotate(405deg);
+    transform: rotate(405deg);
+  }
+}
+
+ /*========================================================================
+  5. otp verification
+  =========================================================================*/
+  .fxt-template-layout2 {
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  @media only screen and (max-width: 991px) {
+    .fxt-template-layout2 {
+      padding: 15px;
+    }
+  }
+  .fxt-template-layout2 .fxt-checkbox-area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .fxt-template-layout2 .fxt-bg-color {
+    background-color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+  }
+  .fxt-template-layout2 .fxt-bg-img {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+  }
+  .fxt-template-layout2 .fxt-content {
+    padding: 100px 65px 70px 80px;
+    width: 100%;
+    -webkit-box-shadow: 3px 0 79px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 3px 0 79px 0 rgba(0, 0, 0, 0.08);
+  }
+  @media only screen and (max-width: 1199px) {
+    .fxt-template-layout2 .fxt-content {
+      padding: 100px 35px 70px 50px;
+    }
+  }
+  @media only screen and (max-width: 991px) {
+    .fxt-template-layout2 .fxt-content {
+      padding: 100px 70px 70px 70px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .fxt-template-layout2 .fxt-content {
+      padding: 80px 50px 50px 50px;
+    }
+  }
+  @media only screen and (max-width: 575px) {
+    .fxt-template-layout2 .fxt-content {
+      padding: 60px 30px 30px 30px;
+    }
+  }
+  @media only screen and (max-width: 479px) {
+    .fxt-template-layout2 .fxt-content {
+      padding: 50px 20px 20px 20px;
+    }
+  }
+  .fxt-template-layout2 .fxt-header {
+    text-align: center;
+  }
+  .fxt-template-layout2 .fxt-logo {
+    display: block;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 40vw;
+  }
+  .fxt-template-layout2 .fxt-form {
+    text-align: center;
+  }
+  .fxt-template-layout2 .fxt-form .fxt-otp-logo {
+    margin-bottom: 20px;
+    display: block;
+  }
+  .fxt-template-layout2 .fxt-form h2 {
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  .fxt-template-layout2 .fxt-form p {
+    margin-bottom: 30px;
+    font-size: 17px;
+  }
+  .fxt-template-layout2 .fxt-form p span {
+    display: block;
+  }
+  .fxt-template-layout2 .fxt-form label {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .fxt-template-layout2 .fxt-form .form-group {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 15px;
+  }
+  .fxt-template-layout2 .fxt-form .form-control {
+    min-height: 50px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid #e7e7e7;
+    padding: 10px 15px;
+    color: #111111;
+    background-color: #ffffff;
+  }
+  .fxt-template-layout2 .fxt-form input::-webkit-input-placeholder {
+    color: #a1a1a1;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .fxt-template-layout2 .fxt-form input::-moz-placeholder {
+    color: #a1a1a1;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .fxt-template-layout2 .fxt-form input:-moz-placeholder {
+    color: #a1a1a1;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .fxt-template-layout2 .fxt-form input:-ms-input-placeholder {
+    color: #a1a1a1;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .fxt-template-layout2 .fxt-form .fxt-form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+  }
+  .fxt-template-layout2 .fxt-form .fxt-form-row .fxt-form-col {
+    text-align: center;
+    margin-right: 10px;
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+  .fxt-template-layout2 .fxt-form .fxt-form-row .fxt-form-col:last-child {
+    margin-right: 0;
+  }
+  .fxt-template-layout2 .fxt-form .fxt-form-btn {
+    margin-bottom: 20px;
+  }
+  .fxt-template-layout2 .fxt-btn-fill {
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 500;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+    border: 0;
+    color: #fff;
+    border-radius: 3px;
+    background-color: #ff0000;
+    padding: 10px 36px;
+    margin-bottom: 10px;
+    width: 100%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .fxt-template-layout2 .fxt-btn-fill:hover {
+    background-color: #da0000;
+    border-color: #da0000;
+  }
+  .fxt-template-layout2 .fxt-btn-fill:focus {
+    outline: none;
+  }
+  .fxt-template-layout2 .switcher-text {
+    color: #63bbff;
+    font-size: 15px;
+    margin-bottom: 5px;
+    display: block;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .fxt-template-layout2 .switcher-text:hover {
+    color: #000000;
+  }
+  .fxt-template-layout2 .switcher-text2 {
+    color: #63bbff;
+    font-size: 15px;
+    display: inline-block;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .fxt-template-layout2 .switcher-text2.inline-text {
+    margin-left: 3px;
+  }
+  .fxt-template-layout2 .switcher-text2:hover {
+    color: #000000;
+  }
+  .fxt-template-layout2 .fxt-style-line {
+    overflow: hidden;
+    text-align: center;
+  }
+  .fxt-template-layout2 .fxt-style-line h2 {
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 30px;
+    font-size: 20px;
+    color: #a4a4a4;
+    display: inline-block;
+    position: relative;
+    padding: 0 25px;
+    z-index: 1;
+  }
+  .fxt-template-layout2 .fxt-style-line h2:before {
+    display: inline-block;
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: #ebebeb;
+    left: 100%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: 1;
+  }
+  .fxt-template-layout2 .fxt-style-line h2:after {
+    display: inline-block;
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: #ebebeb;
+    right: 100%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: 1;
+  }
+  .fxt-template-layout2 ul.fxt-socials {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-right: -5px;
+    margin-left: -5px;
+    margin-bottom: 20px;
+  }
+  .fxt-template-layout2 ul.fxt-socials li {
+    max-width: 100%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.33333%;
+    flex: 0 0 33.33333%;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 10px;
+  }
+  @media only screen and (max-width: 575px) {
+    .fxt-template-layout2 ul.fxt-socials li {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+    }
+  }
+  @media only screen and (max-width: 350px) {
+    .fxt-template-layout2 ul.fxt-socials li {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+    }
+  }
+  .fxt-template-layout2 ul.fxt-socials li a {
+    border-radius: 2px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    font-size: 14px;
+    height: 45px;
+    color: #ffffff;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .fxt-template-layout2 ul.fxt-socials li a i {
+    border-radius: 2px 0 0 2px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+  }
+  .fxt-template-layout2 ul.fxt-socials li a span {
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+  .fxt-template-layout2 ul.fxt-socials li.fxt-facebook a {
+    background-color: #3b5998;
+  }
+  .fxt-template-layout2 ul.fxt-socials li.fxt-facebook a i {
+    background-color: #4867aa;
+  }
+  .fxt-template-layout2 ul.fxt-socials li.fxt-facebook a:hover {
+    background-color: #5676bb;
+  }
+  .fxt-template-layout2 ul.fxt-socials li.fxt-twitter a {
+    background-color: #00acee;
+  }
+  .fxt-template-layout2 ul.fxt-socials li.fxt-twitter a i {
+    background-color: #33ccff;
+  }
+  .fxt-template-layout2 ul.fxt-socials li.fxt-twitter a:hover {
+    background-color: #3dc5f3;
+  }
+  .fxt-template-layout2 ul.fxt-socials li.fxt-google a {
+    background-color: #CC3333;
+  }
+  .fxt-template-layout2 ul.fxt-socials li.fxt-google a i {
+    background-color: #db4437;
+  }
+  .fxt-template-layout2 ul.fxt-socials li.fxt-google a:hover {
+    background-color: #e75042;
+  }
+  .fxt-template-layout2 .checkbox {
+    padding-left: 5px;
+    margin-right: 30px;
+    margin-bottom: 5px;
+  }
+  .fxt-template-layout2 .checkbox label {
+    padding-left: 20px;
+    color: #a4a4a4;
+    margin-bottom: 0;
+    font-size: 15px;
+    position: relative;
+  }
+  .fxt-template-layout2 .checkbox label:before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 4px;
+    left: 0;
+    margin-left: -5px;
+    border: 1px solid;
+    border-color: #dcdcdc;
+    border-radius: 3px;
+    background-color: #fff;
+    -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  }
+  .fxt-template-layout2 .checkbox label:after {
+    position: absolute;
+    margin-left: -20px;
+    padding-left: 3px;
+    font-size: 10px;
+    color: #555555;
+  }
+  .fxt-template-layout2 .checkbox input[type="checkbox"] {
+    display: none;
+  }
+  .fxt-template-layout2 .checkbox input[type="checkbox"]:checked + label::after {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f00c";
+    font-weight: 900;
+    color: #ffffff;
+    left: 15px;
+    top: 4px;
+  }
+  .fxt-template-layout2 .checkbox input[type="checkbox"]:checked + label::before {
+    background-color: #ff0000;
+    border-color: #ff0000;
+  }
+  .fxt-template-layout2 .fxt-footer {
+    text-align: center;
+  }
+  .fxt-template-layout2 .fxt-footer p {
+    color: #999898;
+    margin-bottom: 10px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .fxt-template-layout2 .fxt-footer .fxt-btn-resend {
+    margin-left: 3px;
+    box-shadow: none;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    color: #63bbff;
+    text-decoration: underline;
+    transition: all 0.3s ease-in-out;
+  }
+  .fxt-template-layout2 .fxt-footer .fxt-btn-resend:focus {
+    outline: none;
+  }
+  .fxt-template-layout2 .fxt-footer .fxt-btn-resend:hover {
+    color: #000000;
+  }
+  .fxt-template-layout2 .fxt-footer .text-or {
+    margin-left: 3px;
+    color: #000000;
+  }

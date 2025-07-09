@@ -1,0 +1,43 @@
+.party-cack-container {
+  margin-top: 20px;
+}
+.party-cack-container.container{max-width: 1280px!important;} 
+.category-nav {
+  border-bottom: 2px solid #e0e0e0;
+  flex-wrap: nowrap;
+  /* overflow-x: auto; */
+}
+
+.category-tab {
+  color: #000;
+  font-weight: 500;
+  padding: 10px 16px;
+  margin-right: 10px;
+  border: none !important;
+}
+
+.category-tab.active {
+  color: #007bff;
+  font-weight: 600;
+  border-bottom: 3px solid #007bff !important;
+  background-color: transparent !important;
+}
+
+.heading-title {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.wish-btn {
+  background-color: #e6f0ff;
+  color: #007bff;
+  font-weight: 600;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.wish-btn:hover {
+  background-color: #d0e7ff;
+  color: #0056b3;
+}

@@ -1,0 +1,77 @@
+/* Slider Wrapper */
+.offer-foods-wrapper {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+  margin: 20px;
+}
+
+/* Dropdown & Nav Buttons */
+.food-type-dropdown {
+  width: 150px;
+  font-size: 14px;
+  height: 35px;
+}
+
+.see-more-link {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.nav-btn {
+  background-color: #f1f3f5;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+/* Tabs */
+.tab-buttons {
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tab-btn {
+  background-color: transparent;
+  padding: 5px 15px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #000;
+  border: none;
+}
+
+.tab-btn.active {
+  color: #fff;
+  background-color: #0d6efd;
+  border-radius: 5px 5px 0 0;
+}
+
+/* Slider Item Fix */
+.slider-item {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Fix for overlap & stretching */
+.slick-slide {
+  display: flex !important;
+  justify-content: center;
+}
+
+.slick-track {
+  display: flex !important;
+  align-items: stretch;
+}
+
+/* Make sure FoodCard doesn't overflow */
+.slider-item > * {
+  width: 100%;
+  height: 100%;
+}
+.custom-slider {
+  min-height: 250px; /* Or whatever matches your card height */
+}

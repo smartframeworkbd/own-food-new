@@ -1,0 +1,66 @@
+.kitchen-card {
+  background-color: #f9fafb;
+  max-width: 290px!important;
+  min-width: 250px!important;
+  height: 275px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.kitchen-card:hover {
+cursor: pointer;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px); 
+}
+
+.kitchen-card .kitchen-image img {
+  width: 96px;
+  height:96px;
+  object-fit: cover;
+  border-radius:50%;
+}
+
+.kitchen-card .kitchen-details h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  text-align: center;
+}
+
+.kitchen-card .info-row {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.kitchen-card .vertical-divider {
+  width: 1px;
+  height: 20px;
+  background-color: #d1d5db;
+}
+
+
+.kitchen-card .kitchen-location{
+      color: #4b5563;
+      padding: 2px;
+
+}
+.kitchen-card .kitchen-button button {
+  font-weight: 600;
+  padding:5px 0;
+  color:  #2563eb;
+      border: 2px solid #2563eb!important ;
+background-color: #f9fafb!important;
+  transition: background-color 0.3s ease;
+}
+
+.kitchen-card .kitchen-button button:hover {
+    /* border: 2px solid #2563eb!important ; */
+  background-color: #2563eb !important;
+  color: white!important;
+}

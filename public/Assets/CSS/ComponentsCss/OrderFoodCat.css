@@ -1,0 +1,580 @@
+.OrderFoodCat {
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+.OrderFoodCat .shadow__inner {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+.OrderFoodCat a {
+  text-decoration: none;
+  display: inline-block;
+}
+.OrderFoodCat a:hover {
+  text-decoration: none;
+}
+.OrderFoodCat h3,
+h6,
+span,
+label {
+  margin-bottom: 0px;
+  text-transform: capitalize;
+}
+.OrderFoodCat h3,
+h6 {
+  font-weight: 500;
+  color: var(--heading);
+}
+.OrderFoodCat h3 {
+  font-size: var(--h3size);
+  line-height: var(--h3height);
+  font-family: var(--pfamily);
+  font-size: 26px;
+  font-weight: 600;
+  color: rgb(27, 109, 193);
+}
+.OrderFoodCat h6 {
+  font-size: var(--h6size);
+  line-height: var(--h6height);
+  font-family: var(--pfamily);
+}
+.OrderFoodCat input::-webkit-input-placeholder {
+  font-size: 14px;
+  color: var(--gray);
+  text-transform: capitalize;
+}
+.OrderFoodCat input:-ms-input-placeholder {
+  font-size: 14px;
+  color: var(--gray);
+  text-transform: capitalize;
+}
+.OrderFoodCat input::-ms-input-placeholder {
+  font-size: 14px;
+  color: var(--gray);
+  text-transform: capitalize;
+}
+.OrderFoodCat input::placeholder {
+  font-size: 14px;
+  color: var(--gray);
+  text-transform: capitalize;
+}
+.OrderFoodCat input,
+button {
+  border: none;
+  outline: none;
+  background: none;
+}
+.OrderFoodCat button:focus {
+  outline: none;
+}
+@media (max-width: 575px) {
+  /* .OrderFoodCat .col {
+    padding: 0px 4px;
+  } */
+}
+.OrderFoodCat .product-add {
+  width: 100%;
+  font-size: 15px;
+  padding: 6px 0px;
+  border-radius: 6px;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--heading);
+  background: var(--border);
+  text-shadow: var(-primary-tshadow);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+.OrderFoodCat .product-add i {
+  font-size: 14px;
+  margin-right: 5px;
+}
+.OrderFoodCat .product-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: none;
+}
+
+/* .OrderFoodCat .product-card-center {
+  margin-left: -6px;
+  margin-right: 5px;
+  padding: 4px;
+  border-radius: 2px;
+  text-align: center;
+} */
+.OrderFoodCat .product-action button i {
+  width: 35px;
+  height: 35px;
+  font-size: 14px;
+  line-height: 35px;
+  border-radius: 6px;
+  text-align: center;
+  display: inline-block;
+  color: var(--text);
+  background: var(--chalk);
+  text-shadow: var(--primary-tshadow);
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+.OrderFoodCat .product-action button i:hover {
+  color: var(--white);
+  background: var(--primary);
+}
+.OrderFoodCat .product-action input {
+  width: 100%;
+  font-size: 15px;
+  margin: 0px 5px;
+  padding: 6px 0px;
+  border-radius: 6px;
+  text-align: center;
+  color: var(--white);
+  background: var(--primary);
+  text-shadow: var(--primary-tshadow);
+}
+.OrderFoodCat .product-card {
+  width: 100%;
+  height: 374px;
+  overflow: hidden;
+  position: relative;
+  /* margin-bottom: 25px; */
+  padding: 8px 8px;
+  border-radius: 8px;
+  /* background: var(--white); */
+  border: 1px solid rgba(128, 128, 128, 0.541);
+  box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.562);
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+.OrderFoodCat .product-card:hover {
+  border-color: var(--primary);
+  -webkit-box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.1);
+}
+.OrderFoodCat .product-card:hover .product-widget {
+  opacity: 1;
+  bottom: 15px;
+}
+.OrderFoodCat .product-card:hover .product-add {
+  color: var(--white);
+  background: var(--primary);
+}
+.OrderFoodCat .product-media {
+  position: relative;
+  margin-bottom: 28px;
+}
+.OrderFoodCat .product-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.OrderFoodCat .label-text {
+  font-size: 14px;
+  padding: 5px 8px;
+  line-height: 13px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  color: var(--white);
+  text-align: center;
+  text-transform: capitalize;
+}
+.OrderFoodCat .label-text.rate {
+  background: var(--yellow);
+}
+.OrderFoodCat .product-wish {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 18px;
+  color: var(--gray-chalk);
+  z-index: 10;
+}
+
+.OrderFoodCat .product-image {
+  width: 100%;
+}
+.OrderFoodCat .product-widget {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  opacity: 0;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+.OrderFoodCat .product-widget span {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  font-size: 15px;
+  margin: 0px 6px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 8px;
+  color: var(--white);
+  background: var(--primary);
+  text-shadow: var(-primary-tshadow);
+  -webkit-box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.12);
+}
+.OrderFoodCat .product-content {
+  padding-top: 12px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+.OrderFoodCat .product-rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 3px;
+}
+.OrderFoodCat .product-rating svg {
+  color: #f6c90c;
+}
+.OrderFoodCat .product-rating i,
+.product-rating a {
+  font-size: 14px;
+  margin: 0px 2px;
+  color: var(--gray);
+}
+.OrderFoodCat .product-rating a {
+  white-space: nowrap;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+.OrderFoodCat .product-rating a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+.OrderFoodCat .product-rating .active {
+  color: var(--yellow);
+}
+.OrderFoodCat .product-name {
+  margin-bottom: 3px;
+  text-transform: capitalize;
+}
+.OrderFoodCat .product-name a {
+  color: var(--sub-heading);
+  font-size: 16px;
+  font-weight: bold;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+.OrderFoodCat .product-name a:hover {
+  color: var(--primary);
+}
+.OrderFoodCat .product-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  margin-bottom: 13px;
+}
+.OrderFoodCat .product-price del {
+  color: var(--red);
+  margin-right: 8px;
+}
+.OrderFoodCat .product-price span {
+  color: var(--primary);
+  white-space: nowrap;
+}
+.OrderFoodCat .product-price span small {
+  font-weight: 400;
+}
+@media (max-width: 575px) {
+  /* .OrderFoodCat .product-card {
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+  .OrderFoodCat .product-name {
+    font-size: 15px;
+    line-height: 22px;
+  } */
+}
+.OrderFoodCat .label-text {
+  font-size: 14px;
+  padding: 5px 8px;
+  line-height: 13px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  color: var(--white);
+  text-align: center;
+  text-transform: capitalize;
+}
+.OrderFoodCat .label-text.rate {
+  background: var(--yellow);
+}
+@media (max-width: 575px) {
+  /* .OrderFoodCat .product-add {
+    padding: 8px 0px;
+  }
+  .OrderFoodCat .product-add i {
+    display: none;
+  } */
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  /* .OrderFoodCat .product-add {
+    padding: 8px 0px;
+  }
+  .OrderFoodCat .product-add i {
+    display: none;
+  } */
+}
+.OrderFoodCat .sf_card_header {
+  background-color: rgb(27 109 193);
+}
+.OrderFoodCat .sf_card_header h3 {
+  color: white;
+}
+.OrderFoodCat .img_animation {
+  transition: all linear 0.3s;
+  height: 188px;
+  width: 100%;
+}
+.OrderFoodCat .img_animation img {
+  overflow: hidden;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.OrderFoodCat .img_animation:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+/*! CSS Used from: https://ownfood.hostdivine.com/static/css/main.5667a3ca.css */
+.OrderFoodCat .see_more_1 {
+  float: right;
+  font-family: --pfamily;
+  font-weight: 700;
+  margin-top: 0;
+  margin-right: 12px;
+}
+.OrderFoodCat .see_more_2 {
+  float: right;
+  font-family: --pfamily;
+  font-weight: 700;
+  margin-top: -11px;
+  margin-right: 30px;
+}
+
+.OrderFoodCat .sf_product_card_upper {
+  margin-left: -30px;
+}
+.OrderFoodCat .sf_product-card {
+  align-items: center;
+  background: var(--white);
+  /* border: 1px solid var(--white); */
+  border-radius: 8px;
+  /* padding: 5px; */
+  /* float: left; */
+  /* margin-bottom: 16px; */
+  /* margin-left: 40px; */
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  width: 100%;
+}
+.OrderFoodCat .sf_product-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.1);
+}
+.OrderFoodCat .sf_product-card:hover .sf_product-widget {
+  bottom: 15px;
+  opacity: 1;
+}
+.OrderFoodCat .sf_product-media {
+  position: relative;
+}
+.OrderFoodCat .sf_product-label {
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.OrderFoodCat .sf_product-wish {
+  color: var(--gray-chalk);
+  font-size: 18px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.OrderFoodCat .sf_product-image img {
+  width: 100%;
+}
+.OrderFoodCat .sf_product-widget {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  width: 100%;
+}
+.OrderFoodCat .sf_product-widget a {
+  background: var(--primary);
+  border-radius: 8px;
+  box-shadow: 0 7px 12px 0 rgba(0, 0, 0, 0.12);
+  color: var(--white);
+  font-size: 15px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 6px;
+  text-align: center;
+  text-shadow: var(-primary-tshadow);
+  width: 40px;
+}
+.OrderFoodCat .img_animation img {
+  overflow: hidden;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+dCat.OrderFoodCat .img_animation :hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.OrderFoodCat ul.card-action-buttons li {
+  background-color: #c1c1c1;
+  opacity: 0.8;
+  border-radius: 100%;
+  height: 36px;
+  width: 36px;
+  position: relative;
+  left: 0!important;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.OrderFoodCat ul.card-action-buttons li:hover{
+  background-color: #1b6dc1;
+  opacity: 1;
+}
+
+.OrderFoodCat .btn-floating i {
+  width: inherit;
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  font-size: 21px;
+  line-height: 17px;
+}
+.OrderFoodCat .top_header {
+  position: relative;
+  top: -23px;
+}
+.OrderFoodCat .bottom_footer {
+  display: flex;
+  gap: 3px;
+}
+
+.OrderFoodCat .bottom_footer li {
+  background-color: #fffefe00;
+  border-radius: 100%;
+  margin: 2px;
+  /* position: relative; */
+  left: -22px;
+  border: 2px solid #fff;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.OrderFoodCat .footer_img {
+  width: 35px;
+  height: 35px;
+}
+
+.OrderFoodCat .sf_init_title {
+  color: #333;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.OrderFoodCat .sf_text-theme {
+  font-family: var(--style-font);
+  color: #1b6dc1;
+  font-size: 28px;
+  font-weight: 700;
+}
+

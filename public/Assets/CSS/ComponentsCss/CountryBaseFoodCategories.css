@@ -1,0 +1,235 @@
+.CountryBaseFoodCategories {
+  padding: 20px 0;
+}
+.CountryBaseFoodCategories .headerText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.CountryBaseFoodCategories .sf_init_title {
+  font-weight: 700;
+  font-size: larger;
+}
+.CountryBaseFoodCategories .sf_text-theme {
+  font-family: var(--style-font);
+  color: #1b6dc1;
+  font-weight: 700;
+  font-size: larger;
+}
+
+.CountryBaseFoodCategories .slider-arrow:hover .right,
+.slider-arrow:hover .left {
+  visibility: visible;
+  opacity: 1;
+}
+.CountryBaseFoodCategories .right,
+.left {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 20px;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  color: navy;
+  background: white;
+  text-shadow: 5px 5px 5px gray;
+  -webkit-box-shadow: 5px 5 px 5px grey;
+  box-shadow: 5px 5 px 5px grey;
+  visibility: hidden;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+.CountryBaseFoodCategories .right:hover,
+.left:hover {
+  color: white;
+  background: navy;
+}
+.CountryBaseFoodCategories .sf_section {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.custCountryslider{
+  margin-top: 10px;
+}
+
+.CountryBaseFoodCategories .slider-arrow:hover .dandik,
+.slider-arrow:hover .bamdik {
+  visibility: visible;
+  opacity: 1;
+}
+.CountryBaseFoodCategories .slick-list {
+  margin: 0 -9px;
+}
+.CountryBaseFoodCategories .sf_brand-wrap {
+  text-align: center;
+  padding-top: 15px;
+}
+.CountryBaseFoodCategories .sf_brand-wrap:hover .sf_brand-media::before {
+  border-color: rgb(19, 32, 176);
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+@-webkit-keyframes rotate360 {
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes rotate360 {
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.CountryBaseFoodCategories .sf_brand-wrap:hover .sf_brand-overlay {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+/* @media (max-width: 575px) {
+  .sf_brand-wrap {
+    width: 200px;
+  }
+} */
+
+.CountryBaseFoodCategories .sf_brand-media img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.CountryBaseFoodCategories .sf_brand-media {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 15px;
+  z-index: 1;
+}
+.CountryBaseFoodCategories .sf_brand-media::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: white;
+  border: 2px dashed rgba(87, 86, 86, 0.364);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  -webkit-animation: rotate360 1.2s linear infinite;
+  animation: rotate360 1.2s linear infinite;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+.CountryBaseFoodCategories .sf_brand-media img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.CountryBaseFoodCategories .sf_brand-media {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 15px;
+  z-index: 1;
+}
+.CountryBaseFoodCategories .brand-meta h4 {
+  font-size: 20px;
+}
+
+.CountryBaseFoodCategories .sf_brand-overlay {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+.CountryBaseFoodCategories .sf_brand-overlay a i {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  background: navy;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+.CountryBaseFoodCategories .sf_brand-overlay a i:hover {
+  color: navy;
+  background: white;
+}
+
+.CountryBaseFoodCategories .slick-prev,
+.CountryBaseFoodCategories .slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 45%;
+  display: block;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 9px;
+  z-index: 1;
+  border-radius: 50%;
+  font-size: 80px;
+  transition: all 0.2s linear;
+}
+.CountryBaseFoodCategories:hover .slick-prev,
+.CountryBaseFoodCategories:hover .slick-next {
+  background-color: white;
+  color: var(--primary);
+  box-shadow: var(--primary-bshadow);
+}
+.CountryBaseFoodCategories:hover .slick-prev:hover,
+.CountryBaseFoodCategories:hover .slick-next:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.CountryBaseFoodCategories .slick-prev {
+  left: 0;
+}
+.CountryBaseFoodCategories .slick-next {
+  right: 0;
+}

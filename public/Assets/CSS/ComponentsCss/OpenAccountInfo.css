@@ -1,0 +1,148 @@
+.OpenAccountInfo {
+  padding-top: 0;
+  padding-bottom: 30px;
+}
+.OpenAccountInfo .headerText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.OpenAccountInfo .sf_init_title {
+  font-weight: 700;
+  font-size: larger;
+  color: #333;
+}
+.OpenAccountInfo .sf_text-theme {
+  font-family: var(--style-font);
+  color: #1b6dc1;
+  font-weight: 700;
+  font-size: larger;
+}
+.OpenAccountInfo .upSection {
+  margin-top: 30px;
+}
+.OpenAccountInfo .upSection h3 {
+  font-size: 32px;
+  font-weight: 700;
+}
+.OpenAccountInfo .upSection p {
+  font-size: 14px;
+}
+.OpenAccountInfo .downSection .leftSide {
+  margin-top: 15px;
+  padding: 25px 25px;
+  background: #475569;
+  border-radius: 10px;
+}
+.OpenAccountInfo .downSection .leftSide .headingText h3 {
+  font-size: 27px;
+  font-weight: 700;
+  color: #fff;
+}
+.OpenAccountInfo .downSection .leftSide .headingText p {
+  font-size: 14px;
+  color: #fff;
+}
+.OpenAccountInfo .downSection .leftSide .offerBtn {
+  background: #ea580c;
+  font-size: 11px;
+  padding: 1px 10px;
+  color: #fff;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.OpenAccountInfo .downSection .leftSide .seasonLife {
+  position: relative;
+}
+.OpenAccountInfo .downSection .leftSide .seasonLife span {
+  display: inline-block;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 700;
+  margin-left: 60px;
+}
+.OpenAccountInfo .downSection .leftSide .seasonLife span::after {
+  position: absolute;
+  content: "";
+  top: 10px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: #ea580c;
+}
+.OpenAccountInfo .downSection .leftSide .seasonLife h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+.OpenAccountInfo .downSection .leftSide .infoBtn {
+  margin-top: 5px;
+  display: inline-block;
+  font-size: 16px;
+  background: #fff;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 10px;
+  color: #333;
+  cursor: pointer;
+}
+.OpenAccountInfo .downSection .rightSide {
+  margin-top: 15px;
+}
+.OpenAccountInfo .downSection .rightSide .innerCard {
+  padding: 10px 10px;
+  border-radius: 10px;
+  width: 175px;
+  height: 144px;
+}
+.OpenAccountInfo .downSection .rightSide .innerCard.Purple {
+  background: #9333ea;
+}
+.OpenAccountInfo .downSection .rightSide .innerCard.Pink {
+  background: #db2777;
+}
+.OpenAccountInfo .downSection .rightSide .innerCard.Green {
+  background: #16a34a;
+}
+.OpenAccountInfo .downSection .rightSide .innerCard.Orange {
+  background: #ea580c;
+}
+.OpenAccountInfo .downSection .rightSide .innerCard.Cyan {
+  background: #0891b2;
+}
+.OpenAccountInfo .downSection .rightSide .innerCard.Violet {
+  background: #7c3aed;
+}
+.OpenAccountInfo .downSection .rightSide .innerCard h2 {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+.OpenAccountInfo .downSection .rightSide .innerCard span {
+  color: #fff;
+
+  font-size: 50px;
+}
+.OpenAccountInfo .downSection .rightSide .arrow {
+  padding: 0 10px;
+}
+.OpenAccountInfo .downSection .rightSide .arrow svg {
+  font-size: 30px;
+  color: #333;
+}
+
+.OpenAccountInfo .sf_sub-title {
+  font-family: var(--pfamily);
+  color: var(--title-color);
+  text-transform: none;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0 0 15px 0;
+}
+
+.OpenAccountInfo .sf_text-theme {
+  font-family: var(--style-font);
+  color: #1b6dc1;
+}

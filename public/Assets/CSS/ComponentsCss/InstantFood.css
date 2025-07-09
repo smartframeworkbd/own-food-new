@@ -1,0 +1,591 @@
+.InstantFood {
+  /* padding: 20px 0px; */
+}
+
+.InstantFood .headerText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.InstantFood .sf_init_title {
+  font-weight: 700;
+  font-size: larger;
+  color: #333;
+}
+.InstantFood .sf_text-theme {
+  font-family: var(--style-font);
+  color: #1b6dc1;
+  font-weight: 700;
+  font-size: larger;
+}
+.InstantFood h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.InstantFood h6 {
+  font-size: 1rem;
+}
+
+.InstantFood small {
+  font-size: 0.875em;
+}
+
+.InstantFood a {
+  color: #0d6efd;
+  text-decoration: underline;
+}
+
+.InstantFood a:hover {
+  color: #0a58ca;
+}
+
+.InstantFood img {
+  vertical-align: middle;
+}
+
+.InstantFood label {
+  display: inline-block;
+}
+
+.InstantFood button {
+  border-radius: 0;
+}
+
+.InstantFood button:focus:not(:focus-visible) {
+  outline: 0;
+}
+
+.InstantFood button {
+  text-transform: none;
+}
+
+.InstantFood button {
+  -webkit-appearance: button;
+}
+
+.InstantFood .icofont-star:before {
+  content: "\f000";
+}
+
+.icofont-plus:before {
+  content: "\efc2";
+}
+
+.icofont-minus:before {
+  content: "\ef9a";
+}
+
+/*! CSS Used from: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css */
+.InstantFood .fas {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: var(--fa-display, inline-block);
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+}
+
+.InstantFood .fas {
+  font-family: "Font Awesome 6 Free";
+}
+
+.InstantFood .fa-heart:before {
+  content: "\f004";
+}
+
+.InstantFood .fa-shopping-basket:before {
+  content: "\f291";
+}
+
+.InstantFood .fa-eye:before {
+  content: "\f06e";
+}
+
+.InstantFood .fas {
+  font-weight: 900;
+}
+
+/*! CSS Used from: https://ownfood.hostdivine.com/vendor/slickslider/slick.min.css */
+.InstantFood .slick-slide img {
+  display: block;
+}
+.InstantFood .sf_slick {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 4px;
+  text-align: center;
+}
+
+/*! CSS Used from: https://ownfood.hostdivine.com/css/main.css */
+.InstantFood a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.InstantFood a:hover {
+  text-decoration: none;
+}
+
+.InstantFood h6,
+span,
+label {
+  margin-bottom: 0px;
+  text-transform: capitalize;
+}
+
+.InstantFood h6 {
+  font-weight: 500;
+  color: var(--heading);
+}
+
+/* .InstantFood button {
+  border: none;
+  outline: none;
+  background: none;
+} */
+
+.InstantFood button:focus {
+  outline: none;
+}
+
+.InstantFood .product-add {
+  width: 100%;
+  font-size: 15px;
+  padding: 6px 0px;
+  border-radius: 6px;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--heading);
+  background: rgb(192, 189, 189);
+  text-shadow: var(-primary-tshadow);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+
+.InstantFood .product-add i {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.InstantFood .product-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: none;
+}
+
+.InstantFood .product-action button i {
+  width: 35px;
+  height: 35px;
+  font-size: 14px;
+  line-height: 35px;
+  border-radius: 6px;
+  text-align: center;
+  display: inline-block;
+  color: var(--text);
+  background: var(--chalk);
+  text-shadow: var(--primary-tshadow);
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+
+/*  */
+
+.InstantFood .wrapper {
+  padding: 0 10px;
+}
+.InstantFood .product-card {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 25px;
+  padding: 15px 18px;
+  border-radius: 8px;
+  background: white;
+  border: 1px solid rgb(131, 129, 129);
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+
+.InstantFood .product-card:hover {
+  border-color: rgb(27, 109, 193);
+  -webkit-box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 8px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+.InstantFood .product-card:hover .product-widget {
+  opacity: 1;
+  bottom: 15px;
+}
+
+.InstantFood .product-card:hover .product-add {
+  color: white;
+  background: rgb(27, 109, 193);
+}
+
+.InstantFood .product-media {
+  position: relative;
+}
+
+.InstantFood .product-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.InstantFood .label-text {
+  font-size: 14px;
+  padding: 5px 8px;
+  line-height: 13px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  color: white;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.InstantFood .label-text.new {
+  background: green;
+}
+
+.InstantFood .product-wish {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 18px;
+  color: gray;
+}
+
+.product-image img {
+  width: 100%;
+}
+
+.InstantFood .product-widget {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  opacity: 0;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+
+.InstantFood .product-widget a {
+  width: 40px;
+  height: 40px;
+  font-size: 15px;
+  margin: 0px 6px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 8px;
+  color: white;
+  background: rgb(27, 109, 193);
+  text-shadow: 2px 2px 2px gray;
+  -webkit-box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.12);
+}
+
+.InstantFood .product-content {
+  padding-top: 12px;
+  text-align: center;
+  border-top: 1px solid gray;
+}
+
+.InstantFood .product-rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 3px;
+}
+.InstantFood .product-rating svg {
+  color: #f6c800;
+}
+
+.InstantFood .product-rating i,
+.InstantFood .product-rating a {
+  font-size: 14px;
+  margin: 0px 2px;
+  color: gray;
+}
+
+.InstantFood .product-rating a {
+  white-space: nowrap;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+
+.InstantFood .product-rating a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.InstantFood .product-rating .active {
+  color: yellow;
+}
+
+.InstantFood .product-name {
+  margin-bottom: 3px;
+  text-transform: capitalize;
+}
+
+.InstantFood .product-name a {
+  color: var(--sub-heading);
+  font-size: 16px;
+  font-weight: bold;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+
+.InstantFood .product-name a:hover {
+  color: rgb(27, 109, 193);
+}
+
+.InstantFood .product-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  margin-bottom: 13px;
+}
+
+.InstantFood .product-price del {
+  color: red;
+  margin-right: 8px;
+}
+
+.InstantFood .product-price span {
+  color: rgb(27, 109, 193);
+  white-space: nowrap;
+}
+
+.InstantFood .product-price span small {
+  font-weight: 400;
+}
+
+@media (max-width: 575px) {
+  /* .product-card {
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+
+  .product-name {
+    font-size: 15px;
+    line-height: 22px;
+  } */
+}
+
+.label-text {
+  font-size: 14px;
+  padding: 5px 8px;
+  line-height: 13px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  color: white;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+@media (max-width: 575px) {
+  /* .product-add {
+    padding: 8px 0px;
+  }
+
+  .product-add i {
+    display: none;
+  } */
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  /* .product-add {
+    padding: 8px 0px;
+  }
+
+  .product-add i {
+    display: none;
+  } */
+}
+
+/*! CSS Used from: https://ownfood.hostdivine.com/static/css/main.5667a3ca.css */
+.slick-slide img {
+  display: block;
+}
+
+.InstantFood .slick-prev,
+.InstantFood .slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 9px;
+  z-index: 1;
+  border-radius: 50%;
+  font-size: 80px;
+  transition: all 0.2s linear;
+}
+.InstantFood:hover .slick-prev,
+.InstantFood:hover .slick-next {
+  background-color: white;
+  color: var(--primary);
+  box-shadow: var(--primary-bshadow);
+}
+.InstantFood:hover .slick-prev:hover,
+.InstantFood:hover .slick-next:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.InstantFood .slick-prev {
+  left: 0;
+}
+.InstantFood .slick-next {
+  right: 0;
+}
+
+.InstantFood .sf_sub-title {
+  font-family: var(--pfamily);
+  color: var(--title-color);
+  text-transform: none;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0 0 15px 0;
+}
+
+.InstantFood .sf_text-theme {
+  font-family: var(--style-font);
+  color: #1b6dc1;
+}
+/* .InstantFood .custom__btn {
+  display: flex;
+  justify-content: center;
+} */
+
+.InstantFood .custom__btn button {
+  padding: 15px 48px;
+  border: 2px solid #1b6dc1;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: 0.3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #1b6dc1;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.InstantFood .custom__btn button::before {
+  content: "";
+  width: 0;
+  height: 400%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #1b6dc1;
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.InstantFood .custom__btn button:hover::before {
+  width: 105%;
+}
+
+.InstantFood .custom__btn button:hover {
+  color: #fff;
+}
+
+.InstantFood .img_animation img {
+    overflow: hidden;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.InstantFood .img_animation :hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}

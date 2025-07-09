@@ -1,0 +1,325 @@
+.CustomerLogin {
+  position: relative;
+  z-index: 0;
+  padding: 40px 0;
+}
+.CustomerLogin .form-control:focus {
+  box-shadow: none;
+}
+.CustomerLogin h3 {
+  font-family: "Rubik", sans-serif;
+  color: #040404;
+}
+.CustomerLogin .btn-theme:focus {
+  box-shadow: none;
+}
+.CustomerLogin .btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.CustomerLogin .login-inner-form {
+  width: 100%;
+}
+.CustomerLogin .bg-color-23 {
+  background: url("/Assets/Img//login__bg_-1.jpeg") top left repeat;
+  background-size: cover;
+  top: 0;
+  bottom: 0;
+  min-height: 100vh;
+  z-index: 999;
+  opacity: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px;
+}
+.CustomerLogin h3 {
+  font-family: "Rubik", sans-serif;
+}
+.CustomerLogin .form-section {
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+  background: #fff;
+  padding: 50px;
+  border-radius: 30px;
+}
+.CustomerLogin .form-box {
+  width: 100%;
+}
+.CustomerLogin .login-inner-form .form-group {
+  margin-bottom: 25px;
+}
+.CustomerLogin .login-inner-form .form-box {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+.CustomerLogin .login-inner-form .form-control {
+  font-size: 15px;
+  outline: none;
+  color: #535353;
+  border-radius: 3px;
+  border: 1px solid #dbdbdb;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06);
+}
+.CustomerLogin .login-inner-form .form-box .form-control {
+  float: left;
+  width: 100%;
+  padding: 13px 15px 13px 65px;
+}
+.CustomerLogin .login-inner-form .form-box i {
+  position: absolute;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #1b6dc1;
+  border-radius: 3px 0 0 3px;
+  font-size: 20px;
+  color: #fff;
+}
+.CustomerLogin .info {
+  color: #fff;
+
+  text-align: right;
+  max-width: 700px;
+}
+.CustomerLogin .bg-img {
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  min-height: 100vh;
+  position: relative;
+  text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.CustomerLogin .waviy {
+  position: relative;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.CustomerLogin .waviy span {
+  position: relative;
+  display: inline-block;
+  color: #040404;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(0.1s * var(--i));
+  font-family: "Rubik", sans-serif;
+}
+.CustomerLogin .waviy span.color-yellow {
+  color: #fab55d;
+}
+.CustomerLogin .login-inner-form .form-label {
+  margin-bottom: 5px;
+  color: #535353;
+  float: left !important;
+}
+.CustomerLogin .info P {
+  color: #535353;
+  font-size: 17px;
+  line-height: 30px;
+  margin-bottom: 0;
+}
+.CustomerLogin .btn-theme {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  border: none;
+  outline: none !important;
+  color: #ffffff;
+  text-transform: capitalize;
+  transition: all 0.3s linear;
+  z-index: 1;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 400;
+  width: 100%;
+  font-family: "Rubik", sans-serif;
+  border-radius: 3px;
+}
+.CustomerLogin .btn-theme:focus {
+  box-shadow: none;
+}
+.CustomerLogin .logo {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.CustomerLogin .logo img {
+  height: 25px;
+}
+.CustomerLogin h3 {
+  text-align: center;
+  margin: 0 0 24px;
+  font-size: xx-large;
+  color: #1b6dc1;
+  font-weight: 700;
+}
+.CustomerLogin .form-check-input:checked {
+  background-color: #fab55d !important;
+  border-color: #fab55d !important;
+}
+.CustomerLogin .login-inner-form .social-list {
+  padding: 0;
+  text-align: center;
+}
+.CustomerLogin .login-inner-form .social-list li {
+  display: inline-block;
+}
+.CustomerLogin .login-inner-form .social-list li a {
+  margin: 1px;
+  font-size: 15px;
+  font-weight: 400;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 3px;
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+}
+.CustomerLogin .login-inner-form .social-list li a:hover {
+  text-decoration: none;
+}
+.CustomerLogin .login-inner-form .extra-login {
+  float: left;
+  width: 100%;
+  margin: 25px 0;
+  text-align: center;
+  position: relative;
+}
+.CustomerLogin .login-inner-form .extra-login::before {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 100%;
+  height: 1px;
+  background: #23396726;
+  content: "";
+}
+.CustomerLogin .login-inner-form .extra-login > span {
+  width: auto;
+  float: none;
+  display: inline-block;
+  background: #fff;
+  padding: 1px 20px;
+  z-index: 1;
+  position: relative;
+  font-size: 15px;
+  color: #535353;
+  text-transform: capitalize;
+}
+.CustomerLogin .login-inner-form .checkbox {
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+.CustomerLogin .login-inner-form .form-check {
+  float: left;
+  margin-bottom: 0;
+}
+.CustomerLogin .login-inner-form .form-check-label {
+  padding-left: 5px;
+  margin-bottom: 0;
+  font-size: 16px;
+  color: #535353;
+}
+.CustomerLogin .btn {
+  box-shadow: none !important;
+}
+.CustomerLogin .btn-lg {
+  padding: 0 50px;
+  line-height: 50px;
+}
+.CustomerLogin .btn-primary {
+  background: #1b6dc1;
+}
+.CustomerLogin .btn-primary:hover {
+  background: #eba750;
+}
+.CustomerLogin .form-section a {
+  text-decoration: none;
+}
+.CustomerLogin .form-section .form-check-input {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  position: absolute;
+  border: 1px solid #dbdbdb;
+  border-radius: 0;
+  background-color: #fff;
+  margin-left: -22px;
+}
+.CustomerLogin .login-inner-form .checkbox a {
+  font-size: 16px;
+  font-weight: 400;
+  /* color: #535353 !important; */
+}
+.CustomerLogin .form-section p {
+  margin: 28px 0 0;
+  font-size: 16px;
+  color: #535353;
+  text-transform: none !important;
+}
+.CustomerLogin .form-section p a {
+  margin-left: 5px;
+  color: #535353;
+}
+
+@media (max-width: 1200px) {
+  /* .CustomerLogin .info {
+    margin: 0;
+  }
+  .CustomerLogin .waviy {
+    font-size: 33px;
+  } */
+}
+@media (max-width: 992px) {
+  /* .CustomerLogin .bg-img {
+    display: none;
+  }
+  .CustomerLogin .login-inner-form .social-list li a {
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+  }
+  .CustomerLogin .bg-color-23 {
+    padding: 30px 15px;
+  }
+  .CustomerLogin .form-section {
+    padding: 50px 30px;
+  } */
+}
+
+.CustomerLogin .btn-theme:focus {
+  box-shadow: none;
+}
+
+.CustomerLogin .btn-theme:focus {
+  box-shadow: none;
+}
+
+.CustomerLogin .btn-theme:focus {
+  box-shadow: none;
+}
+.CustomerLogin .login-inner-form .form-box .eye-container{
+  position: absolute;
+  right: 10px;
+  display: flex;
+ height: 100%;
+  align-items: center;
+
+}

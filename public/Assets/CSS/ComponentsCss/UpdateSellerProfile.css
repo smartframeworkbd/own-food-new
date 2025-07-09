@@ -1,0 +1,521 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&amp;display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:wght@300;400;500;600;700;800;900&amp;display=swap");
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(../fonts/Audiowide.ttf);
+}
+
+.UpdateSellerProfile h1,
+.UpdateSellerProfile h2,
+.UpdateSellerProfile h3,
+.UpdateSellerProfile h4,
+.UpdateSellerProfile h5,
+.UpdateSellerProfile h6,
+.UpdateSellerProfile span,
+.UpdateSellerProfile a {
+  font-family: myFirstFont;
+}
+
+.UpdateSellerProfile {
+  position: relative;
+  margin-top: 200px;
+  margin-left: 10px;
+  margin-right: 10px;
+  /* width: 100%; */
+}
+.UpdateSellerProfile  .fb_iframe_widget_fluid_desktop iframe {
+ 
+  max-height: 500px!important;
+  height: 100% !important;;
+}
+.UpdateSellerProfile .profile-section .inner-section .SellerName {
+  font-size: 28px;
+  color: #1b6dc1;
+  font-family: myFirstFont;
+}
+
+.UpdateSellerProfile .profile-section .inner-section .sellerId {
+  color: #1b6dc1;
+  font-size: 20px;
+}
+.UpdateSellerProfile .slick-slide {
+  padding: 0 10px; /* Gap between slides */
+}
+
+.UpdateSellerProfile .slick-list {
+  margin: 0 -10px; /* Ensure slides fit within the container */
+}
+
+.UpdateSellerProfile .profile-section .inner-section .msr {
+  background-color: #1b6dc1;
+  /* padding: 1px 3px;
+  margin-bottom: 15px;
+  color: white;
+  display: flex;
+  border-radius: 5px;
+  align-items: center; */
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  /* padding: 1; */
+}
+
+.UpdateSellerProfile .profile-section .inner-section {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 30px;
+}
+
+.UpdateSellerProfile .profile-picture {
+  border: #a21caf;
+}
+
+.UpdateSellerProfile .profile-picture img {
+  object-fit: cover;
+  width: 460px !important;
+  height: 450px;
+  border: 5px solid #1b6dc1;
+}
+
+.UpdateSellerProfile .wrapper {
+  /* margin-top: 15px;
+  padding-left: 0px; */
+}
+
+/* .UpdateSellerProfile  .video {
+  height: 400px;
+  border: 2px solid gray;
+  margin-top: 15px;
+  padding-left: 0px;
+} */
+
+
+.UpdateSellerProfile .video {
+  max-height: 520px;
+  overflow: hidden;
+  /* border: 10px solid #db2e2e; */
+  border-radius: 5px;
+}
+
+.UpdateSellerProfile .video video {
+  /* width: 100%;
+  height: 100%; */
+}
+
+.UpdateSellerProfile .small-video {
+  padding: 0 5px;
+  height: 56 !important;
+}
+
+.UpdateSellerProfile .video-player {
+  /* border: 1px solid #e11d48; */
+}
+
+.UpdateSellerProfile .video-list .video-item {
+  /* background-color: white; */
+}
+
+.UpdateSellerProfile .second-section {
+  /* height: 447px; */
+  overflow: hidden;
+}
+
+.UpdateSellerProfile .second-section .center-slider {
+  border-radius: 5px;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  /* text-align: center; */
+  /* margin-bottom: 15px; */
+}
+
+.UpdateSellerProfile .second-section .centerslider-list {
+  /* border-radius: 5px; */
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+.UpdateSellerProfile .second-section .video-player .video-player-item {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  /* background-color:#1b6dc1; */
+}
+
+.UpdateSellerProfile .second-section .video-player .video-player-item .video {
+  /* height: 540px!important; */
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.UpdateSellerProfile .second-section .video-player .video-player-item .video .react-player {
+  /* height: 540!important; */
+  width: 911px !important;
+  height: 504px !important;
+  padding-top: 0px;
+  padding-bottom: 5px;
+  /* border: 1px solid grey; */
+}
+
+.UpdateSellerProfile .video-list {
+  height: 508px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-left: 5px;
+  /* background-color: #1650cc; */
+}
+
+.UpdateSellerProfile .video-list .video-list-item {
+  margin: 2px;
+  height: 100%;
+  width: 100%;
+  /* background-color: #a21caf; */
+}
+
+.UpdateSellerProfile .fourth-section div>div {
+  /* background-color: rgb(210, 60, 60); */
+}
+
+.UpdateSellerProfile .fourth-section {
+  margin-top: 10px;
+}
+
+.UpdateSellerProfile .cart-item .cart {
+  color: #1b6dc1;
+}
+
+.UpdateSellerProfile .cart-item:hover {
+  color: white;
+  transition: all 0.5s linear;
+
+
+  background-color: #1b6dc1;
+}
+
+.UpdateSellerProfile .cart-item {
+
+  background-color: #c4d7f3;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.UpdateSellerProfile .profile-section>div {
+  margin-left: 5px;
+  padding: 10px;
+  border-radius: 4px;
+  background: #ffffff;
+  box-shadow: 5px 5px 9px #b1b1b1, -5px -5px 9px #ffffff;
+}
+
+.UpdateSellerProfile .othersinfo {
+  margin-top: 20px;
+
+
+}
+
+.UpdateSellerProfile .othersinfo .s-content {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgba(172, 171, 171, 0.476);
+  color: rgb(0, 0, 0);
+  padding: 10px 5px;
+
+  font-size: small;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.UpdateSellerProfile .othersinfo .s-content:hover {
+  background-color: rgb(96, 142, 243);
+  transition: all linear 1s;
+}
+
+/* .UpdateSellerProfile .player-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.UpdateSellerProfile .react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+/* menu bar css start */
+.UpdateSellerProfile .MenuBar .menu-bar {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: rgb(27, 109, 193);
+  padding: 10px;
+}
+
+.UpdateSellerProfile .MenuBar .menu-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.UpdateSellerProfile .MenuBar .menu-bar ul li {
+  display: inline-block;
+  position: relative;
+}
+
+.UpdateSellerProfile .MenuBar .menu-bar ul li a {
+  display: block;
+  padding: 10px 20px;
+  /* color: #333; */
+  color: #f5f5f5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.UpdateSellerProfile .MenuBar .menu-bar ul li:hover>a {
+  /* background-color: #ddd; */
+  background-color: rgba(164, 204, 244, 0.493);
+}
+
+.UpdateSellerProfile .MenuBar .menu-bar ul li:hover .submenu {
+  /* background-color:rgba(164, 204, 244, 0.493) ; */
+  display: block;
+}
+
+.UpdateSellerProfile .MenuBar .menu-bar .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1c2acb;
+  padding: 10px;
+  z-index: 1;
+}
+
+.UpdateSellerProfile .MenuBar .menu-bar .submenu li {
+  display: block;
+  width: 200px;
+}
+
+.UpdateSellerProfile .MenuBar .menu-bar .submenu li a {
+  padding: 5px 10px;
+}
+
+.UpdateSellerProfile .MenuBar .menu-bar .submenu li:hover a {
+  background-color: rgba(164, 204, 244, 0.493);
+}
+
+.sticky-item {
+  position: relative;
+
+}
+
+.UpdateSellerProfile .sticky {
+  position: fixed;
+  margin-left: -10px;
+  width: 100%;
+  top: 96px;
+  z-index: 99;
+}
+
+
+/* comment section  */
+.UpdateSellerProfile .comments-section .comment {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.UpdateSellerProfile .comments-section .comment-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.UpdateSellerProfile .comments-section .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.UpdateSellerProfile .comments-section .comment-meta {
+  flex-grow: 1;
+}
+
+.UpdateSellerProfile .comments-section .timestamp {
+  color: #999;
+  font-size: 12px;
+}
+
+.UpdateSellerProfile .comments-section .comment-content p {
+  margin: 0;
+}
+
+.UpdateSellerProfile .comments-section .comment-actions {
+  margin-top: 10px;
+}
+
+.UpdateSellerProfile .comments-section .like-button,
+.reply-button {
+  background-color: #f2f3f5;
+  border: none;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.UpdateSellerProfile .comments-section .like-button:hover,
+.reply-button:hover {
+  background-color: #e5e7eb;
+}
+
+.UpdateSellerProfile .food-container .day-container-children {
+  box-shadow: 0 1px 6px 1px rgba(69, 65, 78, 0.1);
+}
+
+.UpdateSellerProfile .food-container .day-container-children .sd-bold {
+  /* font-size: large; */
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.UpdateSellerProfile .food-container .day-container-children .day {
+  transition: all 0.5s;
+  background: white;
+  /* background: linear-gradient(to right, #1b6dc1 0%, #1b6dc1 0%); */
+}
+
+.UpdateSellerProfile .food-container .day-container-children .day:hover {
+  background: linear-gradient(to right, #1b6dc1 0%, #1b6dc1 100%);
+  /* transform: ba ; */
+  /* transform: background; */
+  color: white;
+
+}
+
+.UpdateSellerProfile .day-container .day-container-children .ration-other-section {
+  padding: 10px 10px 10px 10px;
+}
+
+.UpdateSellerProfile .food-container {
+  margin-top: 20px;
+}
+
+.UpdateSellerProfile .asidebar {
+  border: 1px solid rgb(230, 218, 218);
+}
+
+.UpdateSellerProfile .asidebar a {
+  padding: 10px 10px 10px 20px;
+  text-decoration: none;
+  font-size: 15px;
+  /* color: #3838389c; */
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  display: block;
+
+  border-bottom: 1px solid gainsboro;
+}
+
+.UpdateSellerProfile .asidebar a:hover {
+  color: #ffffff;
+
+  border-left: 6px solid #1650cc;
+  background-color: rgb(218, 215, 215);
+  color: #000000;
+}
+
+.UpdateSellerProfile .asidebar a:focus {
+  background-color: #1650cc;
+  color: white;
+}
+
+.another-details {
+
+  font-family: myFirstFont;
+
+  white-space: nowrap;
+
+  padding: 2px;
+
+  /* text-align: center; */
+
+  height: 60px;
+
+  color: #ffffff;
+
+  background-color: #1B6DC1;
+}
+
+.another-details .wish,
+.catering {
+  background-color: #ffffff;
+  color: #1B6DC1;
+  padding: 5px 8px;
+  margin: 10px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 3px #c3c3c3,
+    -2px -2px 3px #bdbdbd;
+
+}
+
+.UpdateSellerProfile .another-details-inner {
+  /* background-color: green; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.UpdateSellerProfile .thumbContainer {
+  /* background-color: pink; */
+  /* margin: 2px; */
+  padding: 5px;
+  /* border: 1px solid #1B6DC1; */
+  font-size: 15px;
+}
+
+.UpdateSellerProfile .video-section {
+  border: 5px solid #1B6DC1;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.UpdateSellerProfile .Diary-card {
+  /* background-color: red; */
+
+}
+
+.UpdateSellerProfile .Diary-card .blog-slider {
+  /* height: 200px; */
+
+}
+
+.UpdateSellerProfile .Diary-card .blog-slider .blog-card {
+
+  /* height: 200px; */
+  height: 380px;
+}
+
+.UpdateSellerProfile .slick-prev::before {
+
+  color: rgb(233, 183, 6);
+}
+
+.UpdateSellerProfile .slick-next::before {
+
+  color: rgb(233, 183, 6);
+
+}
+
+.UpdateSellerProfile .slick-dots {
+  background-color: white;
+  visibility: hidden;
+}

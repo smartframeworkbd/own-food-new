@@ -1,0 +1,36 @@
+.partner-img-float {
+  width: 210px;
+  height: auto;
+  margin-top: -40px;
+  object-fit: contain;
+  transition: width 0.3s ease;
+}
+
+.promo-partner-inner-box {
+  min-height: 200px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.promo-partner-inner-box:hover {
+  box-shadow: 5px 5px 10px #cacaca, -5px -5px 10px #f6f6f6;
+  cursor: pointer;
+}
+
+/* 🟢 Mobile responsiveness */
+@media (max-width: 576px) {
+  .partner-img-float {
+    max-width: 120px!important;
+    width: 120px!important; 
+    margin-top: 0;
+  }
+
+  /* .promo-partner-inner-box {
+    flex-direction: column;
+    text-align: center;
+  } */
+
+  .promo-partner-inner-box .ms-3 {
+    margin-left: 0 !important;
+    margin-top: 1rem;
+  }
+}

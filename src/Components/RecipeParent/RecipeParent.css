@@ -1,0 +1,99 @@
+/* Slider Wrapper */
+.recipe-slider-wrapper {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+  margin: 20px;
+  position: relative;
+}
+
+/* Dropdown & Nav Buttons */
+.recipe-slider-wrapper .food-type-dropdown {
+  width: 150px;
+  font-size: 14px;
+  height: 35px;
+}
+
+.recipe-slider-wrapper .see-more-link {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.recipe-slider-wrapper .nav-btn {
+  background-color: #f1f3f5;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tabs */
+.recipe-slider-wrapper .tab-buttons {
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.recipe-slider-wrapper .tab-btn {
+  background-color: transparent;
+  padding: 5px 15px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #000;
+  border: none;
+}
+
+.recipe-slider-wrapper .tab-btn.active {
+  color: #fff;
+  background-color: #0d6efd;
+  border-radius: 5px 5px 0 0;
+}
+
+/* Slider Item */
+.recipe-slider-wrapper .slider-item {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Slick Fixes */
+.recipe-slider-wrapper .slick-slide {
+  display: flex !important;
+  justify-content: center;
+}
+
+.recipe-slider-wrapper .slick-track {
+  display: flex !important;
+  align-items: stretch;
+}
+
+/* Force RecipeCard sizing */
+.recipe-slider-wrapper .slider-item > * {
+  width: 100%;
+  height: 100%;
+}
+
+/* Custom Slider */
+.recipe-slider-wrapper .custom-slider {
+  min-height: 250px;
+  padding-right: 20px; /* space to show half card */
+  position: relative;
+}
+
+/* Optional: Fade effect for last half card */
+.recipe-slider-wrapper .custom-slider::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  /* background-color: black; */
+  height: 100%;
+  width: 40px;
+  background: linear-gradient(to right, transparent, white);
+  z-index: 1;
+  pointer-events: none;
+}

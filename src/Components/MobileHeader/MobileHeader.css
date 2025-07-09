@@ -1,0 +1,49 @@
+.mobile-header-container {
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+    z-index: 1030; /* higher than default elements */
+    background-color: white;
+  }
+  
+   .mobile-header-container .mobile-header {
+    padding: 0.5rem 1rem;
+    /* border-bottom: 1px solid #e1e1e1; */
+  }
+  
+  .mobile-header-container .logo-text {
+    font-size: 1rem;
+    letter-spacing: -0.2px;
+  }
+  
+  .mobile-header-container .login-text {
+    font-size: 0.95rem;
+    color: #4c4c4c;
+  }
+    
+  .mobile-header-container .cart-icon-wrapper {
+    position: relative;
+  }
+  
+  .mobile-header-container .cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    font-size: 0.6rem;
+    padding: 3px 5px;
+    border-radius: 50%;
+  }
+  
+  .mobile-header-container .join-btn {
+    font-size: 0.85rem;
+    padding: 4px 12px;
+    border-radius: 6px;
+  }
+.horizontal-logo{
+    width: 91px;
+}  
+.mobile-header-container .search-bar {
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    border: 1px solid #0d6efd; /* Bootstrap primary color */
+  }

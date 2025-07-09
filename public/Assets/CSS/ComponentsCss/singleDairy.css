@@ -1,0 +1,81 @@
+.singleDairy {
+}
+.singleDairy .leftWrapper {
+  margin: 50px 0;
+}
+.singleDairy .leftWrapper .imgFile {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+.singleDairy .leftWrapper .imgFile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.singleDairy .leftWrapper .admin {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.singleDairy .leftWrapper .admin .inner {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.singleDairy .rightWrapper {
+  margin: 50px 0;
+}
+.singleDairy .rightWrapper .searchBar input {
+  border: 1px solid #ddd;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  color: #333;
+  padding: 5px 10px;
+}
+.singleDairy .rightWrapper .searchBar button {
+  background: #1b6dc1;
+  padding: 8px 30px;
+  border-radius: 8px;
+  margin-top: 10px;
+  color: #fff;
+}
+.singleDairy .rightWrapper .recent-post {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.singleDairy .rightWrapper .recent-post .items {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 10px;
+}
+.singleDairy .rightWrapper .recent-post .items .img-file {
+  width: 100px;
+  height: 80px;
+  overflow: hidden;
+}
+.singleDairy .rightWrapper .recent-post .items .img-file img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.singleDairy .rightWrapper .recent-post .items .text-file {
+  width: 100%;
+}
+.singleDairy .rightWrapper .recent-post .items .text-file h2 {
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+}
+.singleDairy .rightWrapper .recent-post .items .text-file .date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.singleDairy .rightWrapper .recent-post .items .text-file .date {
+  font-size: 14px;
+}

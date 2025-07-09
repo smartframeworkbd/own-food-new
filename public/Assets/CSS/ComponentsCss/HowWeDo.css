@@ -1,0 +1,101 @@
+.HowWeDo {
+  padding: 20px 0;
+}
+.HowWeDo .card-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.HowWeDo .Card {
+  display: flex;
+  gap: 5px;
+}
+.HowWeDo .card_details {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 0 8px 8px 8px;
+}
+.HowWeDo .card_details .Card .before_class img,
+.HowWeDo .card_details .Card .after_class img{
+  transition: all 0.5s;
+
+}
+.HowWeDo .card_details .Card:hover img{
+
+}
+.HowWeDo .card_details .Card .before_class:hover img,
+.HowWeDo .card_details .Card .after_class:hover img{
+  transform: scale(1.5);
+
+}
+
+.HowWeDo .sf_text-theme {
+  font-family: var(--style-font);
+  font-weight: 700;
+  font-size: 36px;
+  color: #1b6dc1;
+}
+.HowWeDo .sf_init_title {
+  font-weight: 700;
+  font-size: 36px;
+  color: rgb(7, 7, 7);
+}
+.HowWeDo .Card .before {
+  font-weight: 700;
+  font-size: larger;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+
+  background: #007ae48a;
+
+  width: 100%;
+}
+
+.HowWeDo .Card .before p,
+.HowWeDo .Card .after p {
+  /* align-items: center;
+  justify-content: center;
+  display: flex; */
+  color: white;
+}
+
+/* .HowWeDo .Card .after p {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+} */
+.HowWeDo .Card .after,
+.HowWeDo .Card .before {
+  font-weight: 700;
+  font-size: larger;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  color: white;
+  background: #007ae48a;
+display: flex;
+justify-content: center;
+align-items: center;
+  width: 100%;
+}
+
+.HowWeDo .Card .after_class {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.HowWeDo .Card .before_class {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.HowWeDo .card_title {
+  font-family: var(--pfamily);
+  font-weight: 800;
+  font-size: large;
+}

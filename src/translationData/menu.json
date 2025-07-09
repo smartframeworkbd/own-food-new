@@ -1,0 +1,173 @@
+{
+  "earnMoney": {
+    "en": "EARN MONEY",
+    "bn": "আয় করুন"
+  },
+  "openAccount": {
+    "en": "OPEN YOUR ACCOUNT",
+    "bn": "একাউন্ট  খুলুন"
+  },
+  "about-us": {
+    "en": "About Us",
+    "bn": "আমাদের সম্পর্কে"
+  },
+  "Categry": {
+    "en": "Category",
+    "bn": "ক্যাটাগরি"
+  },
+  "contact-us": {
+    "en": "Contact Us",
+    "bn": "যোগাযোগ করুন"
+  },
+  "termsCondition": {
+    "en": "Terms & Condition",
+    "bn": "আমাদের নীতিমালা"
+  },
+  "signIN": {
+    "en": "SIGN IN",
+    "bn": "লগ-ইন"
+  },
+  "watchVide": {
+    "en": "Watch Video",
+    "bn": "ভিডিও দেখুন"
+  },
+  "tagss": {
+    "en": "Tags",
+    "bn": "ট্যাগ"
+  },
+  "descrption": {
+    "en": "Description",
+    "bn": "বর্ণনা"
+  },
+  "addtoCart": {
+    "en": "Add To Cart",
+    "bn": "কার্টে যোগ করুন"
+  },
+  "moreFilters": {
+    "en": "More Filters",
+    "bn": "আরও ফিল্টার"
+  },
+  "nearMee": {
+    "en": "Near Me",
+    "bn": "আমার কাছাকাছি"
+  },
+  "allCategory": {
+    "en": "All Category",
+    "bn": "সব ক্যাটাগরি"
+  },
+  "allSubCategory": {
+    "en": "All Sub-Category",
+    "bn": "সমস্ত সাব-ক্যাটাগরি"
+  },
+  "subCategory": {
+    "en": "Sub-Category",
+    "bn": "সাব-ক্যাটাগরি"
+  },
+  "filererbyprice": {
+    "en": "Filter By Price",
+    "bn": "মূল্য দ্বারা ফিল্টার"
+  },
+  "filererbyReview": {
+    "en": "Filter By Review",
+    "bn": "পর্যালোচনা দ্বারা ফিল্টার"
+  },
+  "filererbyFoodType": {
+    "en": "Filter By Food-Type",
+    "bn": "খাদ্য-প্রকার দ্বারা ফিল্টার"
+  },
+  "prepTime": {
+    "en": "Preparation time",
+    "bn": "প্রস্তুতির সময়"
+  },
+  "cookTime": {
+    "en": "Cooking time",
+    "bn": "রান্নার সময়"
+  },
+  "servess": {
+    "en": "Serves",
+    "bn": "পরিবেশন"
+  },
+  "ProtienDetails": {
+    "en": "Protein Details",
+    "bn": "প্রোটিন বিবরণ"
+  },
+  "inngredients": {
+    "en": "Ingredients ",
+    "bn": "উপকরণ"
+  },
+  "shoppingLisst": {
+    "en": "Shopping List",
+    "bn": "কেনাকাটার তালিকা"
+  },
+  "methodes": {
+    "en": "Method",
+    "bn": "পদ্ধতি"
+  },
+  "quuantity": {
+    "en": "Stock",
+    "bn": "স্টক"
+  },
+  "recipeeTips": {
+    "en": "Recipe Tips",
+    "bn": "রেসিপি টিপস"
+  },
+  "fetauredRecipes": {
+    "en": "Featured Recipes",
+    "bn": "বৈশিষ্ট্যযুক্ত রেসিপি"
+  },
+  "allRecipe": {
+    "en": "All Recipe Collection",
+    "bn": "সমস্ত রেসিপি সংগ্রহ"
+  },
+  "allFood": {
+    "en": "ALL FOOD",
+    "bn": "অল ফুড"
+  },
+  "locateMe": {
+    "en": "Locate Me",
+    "bn": "সনাক্ত করুন"
+  },
+  "catering": {
+    "en": "CATERING",
+    "bn": "ক্যাটেরিং"
+  },
+  "recipe": {
+    "en": "RECIPES",
+    "bn": "রেসিপি"
+  },
+  "diary": {
+    "en": "DIARY",
+    "bn": "ডায়েরি"
+  },
+  "category": { "en": "CATEGORY", "bn": "ক্যাটাগরি" },
+  "profile": {
+    "dashboard": {
+      "en": "Dashboard",
+      "bn": "ড্যাশবোর্ড"
+    },
+    "notification": {
+      "en": "Notification",
+      "bn": "নোটিফিকেশন"
+    },
+    "logout": {
+      "en": "Logout",
+      "bn": "লগ আউট"
+    }
+  },
+  "cartBTN": {
+    "en": "Proceed to Checkout",
+    "bn": "চেক আউট করুন"
+  },
+  "searchurfood": {
+    "en": "Search your desired foods ...",
+    "bn": "পছন্দের খাবার অনুসন্ধান করুন..."
+  },
+  "couponTitle": {
+    "en": "Do you have coupon code?",
+    "bn": "আপনার কি কুপন কোড আছে?",
+    "btn": {
+      "en": "Apply",
+      "bn": "এপ্লাই"
+    }
+  }
+}

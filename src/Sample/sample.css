@@ -1,0 +1,55 @@
+.fat-IMG{
+    width: 423px;
+}
+.fat-IMG2 {
+    width: 100%;
+    height: 186px;
+    overflow: hidden;
+}
+
+.rightIMGC1 {
+    width: 309px;
+    height: 449px;
+    overflow: hidden;
+}
+.rightBottomIMGC50 {
+    width: 203px;
+    height: 134px;
+    overflow: hidden;
+}
+.rightBottomIMGC50 img{
+  
+    margin-top: 9px;
+}
+
+@media only screen and (max-width:480px) {
+    .fat-IMG {
+        width: 100%;
+    }
+
+    .fat-IMG2 {
+        width: 100%;
+        height: auto;
+    }
+
+    .fat-IMG2 img{
+        width: 100%;
+    }
+
+    .rightIMGC1 {
+       width: 100%;
+       margin-top: 11px;
+    }
+
+    .rightBottomIMGC50 {
+        width: 100%;
+        height: 100%;
+    }
+
+ 
+
+    .rightBottomIMGC50 img {
+        width: 100%;
+        height: auto;
+    }
+}

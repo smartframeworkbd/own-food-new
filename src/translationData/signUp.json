@@ -1,0 +1,42 @@
+{
+    "formTitle":{
+        "en":"Create An Account",
+        "bn":"নতুন একাউন্ট"
+    },
+    "fullName":{
+        "en":"Full Name",
+        "bn":"পুরো নাম (ইংরেজিতে)"
+    },
+    "email":{
+        "en":"Email Address",
+        "bn":"ই-মেইল"
+    },
+    "mobile":{
+        "en":"Mobile Number",
+        "bn":"মোবাইল (ইংরেজিতে)"
+    },
+    "password":{
+        "en":"Password",
+        "bn":"পাসওয়ার্ড"
+    },
+    "confirmPassword":{
+        "en":"Confirm Password",
+        "bn":"কনফার্ম পাসওয়ার্ড"
+    },
+    "reference":{
+        "en":"Reference",
+        "bn":"অ্যাকাউন্ট দাতার  রেফার নাম্বার (ইংরেজিতে)"
+    },
+    "terms":{
+        "en":"All the above information is correct.",
+        "bn":"উপরের সকল তথ্য সঠিক"
+    },
+    "formFooterTitle":{
+        "en":"have an account?",
+        "bn":"অ্যাকাউন্ট আছে?",
+        "loginHere":{
+            "en":"Login here",
+            "bn":"লগ-ইন"
+        }
+    }
+}

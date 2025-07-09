@@ -1,0 +1,2090 @@
+/*------------break point---------------------
+|  X-Small	None	<576px                   |
+|  Small	sm	≥576px                       |
+|  Medium	md	≥768px                       |
+|  Large	lg	≥992px                       |
+|  Extra large	xl	≥1200px                |
+|  Extra extra large	xxl	≥1400px          |
+--------------------------------------------*/
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .Category {
+    margin-top: -40px;
+  }
+
+  .ProfileFoodGallery .inner__body .text__file .overlay__img {
+    position: absolute;
+    /* right: 150px; */
+    right: 34%;
+    top: -54px;
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+  }
+
+
+
+
+
+  .UpdateSellerProfile .second-section .video-player .video-player-item .video .react-player {
+    /* height: 540!important; */
+    width: 320px !important;
+    height: 400px !important;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    /* border: 1px solid grey; */
+  }
+
+  .createFood {
+    margin-top: 140px;
+    width: 100%;
+  }
+
+  .card-carrier {
+    background: transparent !important;
+    border: 5px solid #1b6dc1;
+    padding: 2px 15px;
+    /* margin: 0px; */
+    margin-bottom: 10px;
+  }
+
+  .UpdateSellerProfile .video-section {
+    position: relative;
+    left: 1px;
+    box-sizing: border-box;
+    margin: 10px;
+    width: 94%;
+  }
+
+  .ytp-cued-thumbnail-overlay-image {
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 48%;
+    height: 101%;
+    position: absolute;
+  }
+
+  .UpdateSellerProfile .second-section .center-slider {
+    border-radius: 5px;
+    /* background-color: red; */
+    width: 420px;
+    /* height: 2px; */
+  }
+
+  .another-details {
+    font-family: myFirstFont;
+    white-space: nowrap;
+    padding: 2px;
+    /* text-align: center; */
+    height: 120px;
+    color: #ffffff;
+    background-color: #1B6DC1;
+  }
+
+  .UpdateSellerProfile .another-details-inner {
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .UpdateSellerProfile .all-items-container {
+    /* background-color: red; */
+    /* width: 328px; */
+    /* padding-left: 35px; */
+    /* margin-left: 34px; */
+  }
+  .UpdateSellerProfile .food-presentation-card{
+    width: 100%!important;
+    max-width: 100%;
+
+  }
+  /* .UpdateSellerProfile  .sellerCard {
+    height: 100px;
+    width: 100;
+  } */
+  .UpdateSellerProfile .video-list {
+    max-height: 575px;
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-left: 5px;
+    /* background-color: #1650cc; */
+  }
+
+  .zip-form label {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+  .RecipeCollection .allRecipeCatItem .single-recipe-cat-items {
+    margin-bottom: 25px;
+    width: 100%;
+    height: 380px;
+  }
+
+  .RecipeFeature {
+    padding-top: 50px;
+    /* width: 1009px; */
+    margin: 0px 0px;
+    /* position: relative; */
+    /* left: -17px; */
+  }
+
+  .RecipeFeature .leftSide .wrapper .img-file {
+    margin-top: 16px;
+    width: 100%;
+    height: 375px;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .RecipeFeature .allRecipeCatItem .single-recipe-cat-items {
+    margin-bottom: 32px;
+    width: 100%;
+    height: 369px;
+  }
+
+  .BrowseByKitchen .slick-initialized .slick-slide a {
+    width: 100%;
+    display: flex !important;
+    justify-content: center !important;
+    margin-bottom: 60px;
+  }
+
+  .FoodCatGallery .sf_top_name {
+    color: rgb(27, 109, 193);
+    /* padding-bottom: 5px; */
+    font-family: var(--style-font);
+    color: #1b6dc1;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .AllFoodLayoutDesign .sf_text-theme {
+    color: rgb(27, 109, 193);
+    /* padding-bottom: 5px; */
+    font-family: var(--style-font);
+    color: #1b6dc1;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .Footer .footer-title {
+    color: white;
+    /* text-align: center; */
+  }
+
+  #footer-info {
+
+    border-bottom: 1px #59a3ef solid;
+  }
+
+  .Footer p {
+    color: white;
+    font-size: 13px;
+    padding-left: 8px;
+    padding-top: 10px;
+  }
+
+  #location-text {
+    /* padding-left: 41px; */
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  #location {
+    text-align: center;
+    position: relative;
+    /* left: -29px; */
+  }
+
+  .Footer .appBTN {
+    /* background-color: green; */
+    /* text-align: center; */
+    justify-content: center;
+  }
+
+  .Recipe_Gallery .bottom__gallery .leftSide .leftBar {
+    /* height: 150px; */
+    width: 100%;
+  }
+
+  .Recipe_Gallery .bottom__gallery .rightSide .topBar {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .Recipe_Gallery .bottom__gallery .leftSide .leftBar img {
+    height: 185px;
+    background-color: #1b6dc1;
+    /* height: 150px !important; */
+    width: 100%;
+  }
+
+  .Recipe_Gallery .bottom__gallery .leftSide .rightBar {
+    /* display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr); */
+    grid-column-gap: 0px;
+    grid-row-gap: 8px;
+  }
+
+  .Recipe_Gallery .bottom__gallery .leftSide .rightBar img {
+    /* height: 100px!important; */
+    width: 100%;
+  }
+
+  .Recipe_Gallery .bottom__gallery .leftSide .leftSide__inner {
+    background: #fff;
+    padding: 7px 7px;
+    border-radius: 0;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .Recipe_Gallery .top__gallery .leftSide .topBar .overlay__text {
+    translate: all linear 0.5s;
+    visibility: visible;
+    opacity: 1;
+    height: 185px!important;
+  }
+
+  .Recipe_Gallery .bottom__gallery .leftSide .leftBar .overlay__text .inner__body h3 .Recipe_Gallery .top__gallery .leftSide .buttonBar .fastImg .overlay__text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .Recipe_Gallery .top__gallery .leftSide .buttonBar .fastImg .overlay__text_more {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .Recipe_Gallery .top__gallery .leftSide .buttonBar .secondImg .overlay__text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .Recipe_Gallery .top__gallery .leftSide .buttonBar .thirdImg .overlay__text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .Recipe_Gallery .bottom__gallery .leftSide .leftBar .firstImg .overlay__text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .Recipe_Gallery .bottom__gallery .leftSide .leftBar .secondImg .overlay__text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .Recipe_Gallery .top__gallery .rightSide .leftBar .overlay__text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .Recipe_Gallery .top__gallery .rightSide .rightBar .firstImg .overlay__text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .Recipe_Gallery .top__gallery .rightSide .rightBar .firstImg .overlay__text_more {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .Recipe_Gallery .top__gallery .rightSide .rightBar .secondImg .overlay__text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .Recipe_Gallery .top__gallery .rightSide .rightBar .thirdImg .overlay__text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .Recipe_Gallery .bottom__gallery .leftSide .leftBar .firstImg .overlay__text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .Recipe_Gallery .bottom__gallery .leftSide .leftBar .secondImg .overlay__text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .Recipe_Gallery .bottom__gallery .leftSide .rightBar .firstImg .overlay__text {
+    visibility: visible;
+    opacity: 1;
+    /* transform: scale(1.5); */
+
+  }
+
+  .Recipe_Gallery .bottom__gallery .leftSide .rightBar .firstImg .overlay__text_more {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .Recipe_Gallery .bottom__gallery
+
+  /* .leftSide */
+  .rightBar .secondImg .overlay__text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .Recipe_Gallery .bottom__gallery .leftSide .rightBar .thirdImg .overlay__text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .Recipe_Gallery .bottom__gallery .rightSide .topBar .firstImg .overlay__text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .Recipe_Gallery .bottom__gallery .rightSide .topBar .secondImg .overlay__text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .Recipe_Gallery .bottom__gallery .rightSide .topBar .thirdImg .overlay__text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .Recipe_Gallery .bottom__gallery .rightSide .bottomBar .firstImg .overlay__text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .Recipe_Gallery .bottom__gallery .rightSide .bottomBar .thirdImg .overlay__text_more {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .Recipe_Gallery .bottom__gallery .rightSide .bottomBar .secondImg .overlay__text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .Recipe_Gallery .bottom__gallery .rightSide .bottomBar .thirdImg .overlay__text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+
+
+  .Recipe_Gallery .bottom__gallery .rightSide .topBar a {
+    height: 100% !important;
+    width: 100%;
+  }
+
+  .Recipe_Gallery .bottom__gallery .rightSide .rightSide__inner .topBar .firstImg {
+    height: 185px;
+    /* width: 357px; */
+  }
+
+  .Recipe_Gallery .bottom__gallery .rightSide .rightSide__inner .topBar .firstImg div img {
+    height: 222px;
+    /* width: 358px; */
+  }
+
+  .Recipe_Gallery .bottom__gallery .rightSide .rightSide__inner .imgFile img {
+    height: 100%;
+    width: 100%;
+    transition: all linear 0.5s;
+  }
+
+  .Recipe_Gallery .bottom__gallery .rightSide .bottomBar {
+    margin-top: 8px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .Recipe_Gallery .bottom__gallery .rightSide .rightSide__inner .bottomBar .imgFile img {
+    height: 185px;
+  }
+
+  .Recipe_Gallery .bottom__gallery .rightSide .rightSide__inner {
+    background: #fff;
+    padding: 7px 7px;
+    border-radius: 0;
+    overflow: hidden;
+    height: 100%!important;
+  }
+
+  .Recipe_Gallery .bottom__gallery .leftSide .rightBar img {
+    /* height: 100px !important; */
+    width: 100%;
+  }
+  .Recipe_Gallery .buttonBar a{
+    width: 100%;
+  }
+
+  .Recipe_Gallery .bottom__gallery .leftSide .leftBar {
+    height: 100%;
+  }
+
+  .Recipe_Gallery .bottom__gallery .leftSide .rightBar img {
+    height: 185px;
+    /* mobile device size */
+    /* width: 100%; */
+  }
+
+  .header_text {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .footer-logo-section {
+    text-align: center;
+    margin-bottom: 15px;
+    padding-bottom: 28px;
+    border-bottom: 1px #59a3ef solid;
+  }
+
+  .footer-text-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    position: relative;
+    /* left: 133px; */
+    padding-bottom: 20px;
+    border-bottom: 0px white solid;
+    text-align: center;
+  }
+
+  .footer-address-section {
+    /* background-color: red; */
+    /* display: flex; */
+    margin-top: 20px;
+  }
+
+  .tabcontents {
+    width: 353px;
+    position: relative;
+    left: -111px;
+  }
+
+  .FoodCatGallery .img_animation {
+    width: 100%;
+    height: 222px;
+    overflow: hidden;
+    transition: all linear 0.3s;
+  }
+
+  .FoodCatGallery .img_animation img {
+    overflow: hidden;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .mobile-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .Header .logo {
+    height: 43px;
+  }
+
+  .Footer .footer-logo img {
+    width: 40%;
+    position: relative;
+    left: 0px;
+  }
+
+  .Header .header-widget {
+    display: block;
+    /* margin-left: -27px; */
+  }
+
+  .mobile-header-left-items {
+    display: flex !important;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    /* padding-right: 18px; */
+    width: 100%;
+  }
+
+
+  .mobile-header-right-items {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    /* width: 60%; */
+  }
+
+  .nav-search-box {
+    width: 100%;
+    margin-top: 2%;
+    margin-right: 2px;
+  }
+
+  .dropdown .navbar-link img {
+
+    margin-left: 22%;
+
+  }
+
+
+
+  .dlg {
+    display: none;
+  }
+
+  .Header .navbar-link {
+    padding: 10px 5px;
+  }
+
+  .Header .location-container {
+    width: 90%;
+  }
+
+
+  .Header .zipCode .zipCodeBtn {
+    /* width: 135px; */
+    width: 90%;
+    text-overflow: ellipsis;
+    height: 43px;
+    overflow: hidden;
+  }
+
+  .Header .btnSign {
+    /* border: none;
+  font-family: var(--pfamily); */
+    font-size: 11px;
+    /* font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 6px;
+  background: var(--primary);
+  color: #fff;
+  border: none; */
+    padding: 4px 8px;
+
+  }
+
+
+  .search-icon {
+    margin-left: 288%;
+  }
+
+
+
+  .Header .zipCode .zipCodePopup .zipCode_input h2 {
+    margin-top: 28px;
+    font-size: 23px;
+
+  }
+
+
+  .Header .zipCode .zipCodePopup {
+    padding: 31px 25px;
+
+  }
+
+  .smc {
+    margin-top: 25px;
+  }
+
+  .locationSaveBtn {
+    width: 100%;
+  }
+
+  .ClientTop .brand-meta h4 {
+    font-size: 14px;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .ClientTop {
+    margin-top: 70px;
+    margin-bottom: -10px;
+  }
+
+  .cart-sidebar {
+    padding: 5px 30px 5px 30px;
+  }
+
+  .CardSlider {
+    margin-top: 0px;
+  }
+
+  .ProductsDetails {
+    margin-top: 45px;
+  }
+
+  .sf_search-form {
+
+    margin-left: 10%;
+  }
+
+  .cart-action-group h6 {
+
+    margin-right: 14%;
+
+  }
+
+  .InstantFood h6,
+  span,
+  label {
+    margin-bottom: 0px;
+    text-transform: capitalize;
+    font-size: 10px;
+  }
+  .AllFoodLayoutDesign .food-presentation-card{
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%
+    
+  }
+  .Receipebook_layoutTwo .leftBar .imgFile .titleOverFlow, .Receipebook_layoutTwo .leftBar .big_imgFileTwo .titleOverFlow {
+    text-align: 
+    center;
+  }
+  /* .centered-slider .food-presentation-card{
+    width: 100%;
+    max-width: 100%;
+    min-width: 260px;
+  } */
+/* .InstantFood  .centered-slider {
+  padding: 0 10px;
+} */
+/* .InstantFood .slick-slide {
+  margin: 0 10px; 
+}
+
+.InstantFood .slick-list {
+  margin: 0 -10px; 
+} */
+  /* .filterBtn-group .filterBtn .myFilterBtn {
+
+  padding: 0px 8px;
+  border-radius: 5px;
+  transition: all 0.2s linear;
+  font-size: 12px;
+  height: 47px;
+
+  } */
+
+  .Recipe_Gallery .top__gallery .leftSide .topBar .imgFile {
+    /* border-radius: 8px; */
+    overflow: hidden;
+    /* transition: all linear 0.5s; */
+    /* position: relative; */
+    height: 185px;
+    width: 680px;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .Recipe_Gallery .top__gallery .leftSide .topBar .imgFile img {
+    transition: transform 0.2s;
+    width: 55%;
+  }
+
+  .Recipe_Gallery .top__gallery .leftSide .buttonBar .imgFile img {
+    /* border-radius: 8px; */
+    overflow: hidden;
+    transition: all linear 0.3s;
+    padding-left: 0px;
+    height: 185px;
+    width: 100%;
+    object-fit: cover;
+    /* max-width: 110px; */
+  }
+  .ProductsDetails .image-gallery-content .image-gallery-slide .image-gallery-image{
+    height: 250px;
+  }
+
+  .Recipe_Gallery .top__gallery .rightSide .rightSide_inner .leftBar img {
+    max-height: 564px;
+    height: 185px;
+    width: 450px;
+    object-fit: cover;
+    transition: all 0.5s;
+  }
+
+  .adIMG {
+    height: 185px;
+    width: 371px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+
+  .createFood .bannerImg {
+    width: 107%;
+    height: 210px;
+    border-radius: 5px;
+    margin: -2px -10px -10px;
+  }
+
+  .EarnMoney .sf-container {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .sf_earn_wrapper {
+    background-color: rgba(80, 80, 80, 0.567);
+    height: 100%;
+  }
+
+  /* .CardSlider .cardSlider_body {
+    margin-top: 50px;
+  } */
+
+  .CardSlider .cardSlider_body .cardSlider_body_inner .imgFile img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  /*-----------------------------
+  |
+  |
+  | updated at 18/1/25 by bijon  
+  ---------------------------------*/
+
+
+
+  .BannerCardImages {
+    margin-left: 40px;
+    padding: 10px;
+  }
+
+  .banner-card-designs img {
+    height: 250px;
+    /* Further adjustment for very small devices */
+  }
+
+  .banner-card-designs {
+    border-radius: 6px;
+  }
+
+  .BrowseByKitchen .brand-wrap {
+    width: 200px;
+  }
+
+  .banner-containercst {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .banner-lefty {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .banner-lefty h1 {
+    font-size: 28px;
+  }
+
+  .banner-lefty h3 {
+    font-size: 20px;
+  }
+
+  .banner-lefty h4 {
+    font-size: 18px;
+  }
+
+  .banner-lefty p {
+    font-size: 14px;
+  }
+
+  .banner-lefty a {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .banner-righty {
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    width: 130px;
+  }
+
+  .banner-righty img {
+    width: 100px;
+    height: 100px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .card-card {
+    transition: all 300ms ease;
+    cursor: pointer;
+    margin-left: 20%;
+    width: 60%;
+    border-radius: 3px;
+    border: #08516b 2px solid;
+    height: 40vh;
+
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2), 0 0 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .card .testimonial-left-button {
+    position: absolute;
+
+    top: 45%;
+    left: 0%;
+
+    background-color: #3cbeec;
+    z-index: 4;
+  }
+
+  .card .testimonial-right-button {
+    position: absolute;
+
+    top: 45%;
+    left: 90%;
+    box-shadow: none;
+
+    background-color: #3cbeec;
+    z-index: 4;
+  }
+
+  .sf_brand-wrap {
+    width: 200px;
+  }
+
+  .blog-meta li {
+    margin-right: 25px;
+  }
+
+  .blog-content {
+    padding: 15px 8px 0px;
+  }
+
+  .offer-card {
+    width: 320px;
+    margin: 0px auto 30px;
+  }
+
+  .account-card {
+    padding: 0px 15px 15px;
+  }
+
+  .payment-card p span {
+    margin-right: 8px;
+  }
+
+  .team-card {
+    width: 290px;
+    margin: 0px auto 50px;
+  }
+
+  .filterBtn {
+    flex: 0 0 calc(33.33% - 10px);
+    margin-bottom: 10px;
+  }
+
+  .filterBtn .myFilterBtn {
+    font-size: 12px;
+    padding: 0px 8px;
+    height: 47px;
+    width: 100%;
+  }
+
+  .cart-sidebar {
+    right: 0px;
+    width: 100%;
+    height: 100vh;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    margin: 80px 0px 0px;
+    border-radius: 15px 15px 0px 0px;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+  }
+
+  .cart-sidebar.active {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+  }
+
+  .cart-close {
+    left: 50%;
+    top: -45px;
+    bottom: inherit;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    border-radius: 50px 50px 0px 0px;
+    -webkit-box-shadow: 0px -8px 10px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px -8px 10px 0px rgba(0, 0, 0, 0.15);
+  }
+
+  .cart-list {
+    max-height: calc(100vh - 290px);
+  }
+
+  .cart-media a img {
+    width: 80px;
+  }
+
+  .product-card {
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+
+  .product-name {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .product-add {
+    padding: 8px 0px;
+  }
+
+  .product-add i {
+    display: none;
+  }
+
+  .OrderFoodCat .col {
+    padding: 0px 4px;
+  }
+
+  .OrderFoodCat .product-card {
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+
+  .OrderFoodCat .product-name {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .OrderFoodCat .product-add {
+    padding: 8px 0px;
+  }
+
+  .OrderFoodCat .product-add i {
+    display: none;
+  }
+
+  .modal-dialog .product-add {
+    padding: 8px 0px;
+  }
+
+  .modal-dialog .product-add i {
+    display: none;
+  }
+
+  .modal-dialog .view-gallery,
+  .view-details {
+    margin: 25px;
+  }
+
+  .modal-dialog .view-list-group {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .modal-dialog .view-list-title {
+    margin: 0px 0px 10px;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (min-width: 576px) and (max-width: 767px) {
+
+  /* body{
+        background-color: green;
+    } */
+  .AllFoodLayoutDesign .sf_text-theme {
+    text-align: center;
+  }
+
+  .header_text {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .mobile-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .Header .logo {
+    height: 43px;
+  }
+
+
+
+  .Header .header-widget {
+    display: block;
+  }
+
+  .mobile-header-left-items {
+    display: flex !important;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+
+
+  .mobile-header-right-items {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    width: 60%;
+  }
+
+  .createFood {
+    margin-top: 140px;
+    width: 100%;
+  }
+
+  .createFood .bannerImg {
+    width: 107%;
+    height: 210px;
+    border-radius: 5px;
+    margin: -2px -10px -10px;
+  }
+
+  .nav-search-box {
+    width: 100%;
+    margin-top: 2%;
+  }
+
+  .dropdown .navbar-link img {
+
+    margin-left: 64%;
+  }
+
+
+
+  .dlg {
+    display: none;
+  }
+
+  .Header .navbar-link {
+    padding: 10px 5px;
+  }
+
+
+  .Header .zipCode .zipCodeBtn {
+    width: 104px;
+    text-overflow: ellipsis;
+    height: 34px;
+    overflow: hidden;
+  }
+
+
+  .search-icon {
+    margin-left: 288%;
+  }
+
+
+
+  .Header .zipCode .zipCodePopup .zipCode_input h2 {
+    margin-top: 28px;
+    font-size: 23px;
+
+  }
+
+
+  .Header .zipCode .zipCodePopup {
+    padding: 31px 25px;
+
+  }
+
+  .smc {
+    margin-top: 25px;
+  }
+
+  .locationSaveBtn {
+    width: 100%;
+  }
+
+
+
+  .sf_search-form {
+
+    margin-left: 10%;
+  }
+
+  .cart-action-group h6 {
+
+    margin-right: 14%;
+
+  }
+
+  /*-----------------------------
+  |
+  |
+  | updated at 18/1/25 by bijon  
+  ---------------------------------*/
+  .BannerCardImages {
+    margin-left: 40px;
+    padding: 10px;
+  }
+/* .centered-slider .food-presentation-card{
+    width: 100%;
+    max-width: 100%;
+  } */
+  /* .InstantFood  .centered-slider {
+    padding: 0 10px;
+  } */
+  /* .InstantFood .slick-slide {
+    margin: 0 10px; 
+  }
+  
+  .InstantFood .slick-list {
+    margin: 0 -10px; 
+  } */
+  .banner-card-designs img {
+    height: 300px;
+    /* Adjust for smaller devices */
+  }
+
+  .banner-card-designs {
+    border-radius: 8px;
+  }
+
+  .BrowseByKitchen .section {
+    margin-bottom: 55px;
+  }
+
+  .BrowseByKitchen .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .BrowseByKitchen .section-heading h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .Category .single-banner {
+    /* padding: 60px 0px; */
+  }
+
+  .Category .single-banner h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .header-top-welcome,
+  .header-top-list {
+    display: none;
+  }
+
+  .header-top-select {
+    width: 270px;
+    margin: 0px auto;
+  }
+
+  .FoodCatGallery .section {
+    margin-bottom: 55px;
+  }
+
+  .product-add {
+    padding: 8px 0px;
+  }
+
+  .product-add i {
+    display: none;
+  }
+
+  .OrderFoodCat .product-add {
+    padding: 8px 0px;
+  }
+
+  .OrderFoodCat .product-add i {
+    display: none;
+  }
+
+  .display-4 {
+    font-size: 2rem;
+  }
+
+  .pagination-expanded .page-item-expanded {
+    display: none;
+  }
+
+  .ms-wizard-vertical.ms-form-wizard ul[role="tablist"] {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+  }
+
+  .ms-wizard-vertical.ms-form-wizard .content,
+  .ms-wizard-vertical.ms-form-wizard .actions,
+  .ms-wizard-vertical.ms-form-wizard ul[role="tablist"] li:not(:first-child) a {
+    margin-left: 0;
+  }
+
+  .ms-wizard-vertical.ms-form-wizard ul[role="tablist"] li:last-child {
+    margin-bottom: 0;
+  }
+
+  .section-title {
+    margin: 1.5rem 0;
+  }
+
+  .ms-todo-options,
+  .ms-todo-options.ms-todo-nav {
+    align-items: center;
+  }
+
+  .ms-email-panel .ms-panel-body {
+    flex-direction: column;
+  }
+
+  .ms-email-config {
+    margin-top: 1.5rem;
+  }
+
+  .ms-email-panel .ms-email-main {
+    width: 100%;
+  }
+
+  .ms-email .ms-email-time {
+    float: none;
+  }
+
+  .ms-email-details {
+    overflow: visible;
+  }
+
+  .ms-email-controls,
+  .ms-email-header,
+  .ms-email .ms-email-details p,
+  .ms-email-pagination li:first-child {
+    display: none;
+  }
+
+  .ms-auth-form {
+    display: block;
+  }
+
+  .ms-auth-form form {
+    padding: 3rem 1rem;
+  }
+
+  .ms-auth-form form {
+    width: 100%;
+  }
+
+  .ms-email .ms-hoverable-dropdown {
+    bottom: 100%;
+  }
+
+  .ms-profile-overview {
+    height: auto;
+  }
+
+  .ms-profile-cover {
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: auto;
+    padding-bottom: 1.5rem;
+    flex-direction: column;
+  }
+
+  .ms-profile-user-buttons {
+    flex: 0 0 auto;
+    text-align: left;
+  }
+
+  .ms-profile-cover img {
+    margin-bottom: 1rem;
+  }
+
+  .ms-profile-user-info,
+  .ms-profile-user-buttons {
+    padding: 0;
+  }
+
+  .ms-profile-navigation {
+    position: relative;
+    left: auto;
+    bottom: auto;
+  }
+
+  .ms-lock-screen-weather,
+  .ms-lock-screen-time,
+  .ms-lock-screen-nav {
+    display: none;
+  }
+
+  .ms-graph-meta ul {
+    display: none;
+  }
+
+  .ms-selected-website select,
+  .ms-selected-website h2 {
+    margin-bottom: 1rem;
+  }
+
+  .ms-selected-website button {
+    width: 100%;
+  }
+
+  .ms-portfolio-minimal .ms-portfolio-item::before {
+    height: 100%;
+  }
+
+  .ms-portfolio-minimal .ms-portfolio-item .ms-portfolio-item-content {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .ms-graph-labels.column-direction {
+    display: none;
+  }
+
+  .ms-panel-footer .ms-device {
+    margin-bottom: 1.5rem;
+  }
+
+  div.dataTables_wrapper div.dataTables_length,
+  div.dataTables_wrapper div.dataTables_filter,
+  div.dataTables_wrapper div.dataTables_info,
+  div.dataTables_wrapper div.dataTables_paginate {
+    text-align: left;
+  }
+
+  div.table-responsive>div.dataTables_wrapper>div.row>div[class^="col-"] {
+    padding: 0;
+  }
+
+  div.dataTables_wrapper div.dataTables_filter input {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    justify-content: flex-start;
+    margin: 20px 0 0;
+  }
+
+  .modal-dialog .product-add {
+    padding: 8px 0px;
+  }
+
+  .modal-dialog .product-add i {
+    display: none;
+  }
+
+  .modal-dialog .product-view {
+    max-width: 480px;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* body{
+        background-color: yellow;
+    } */
+
+  .RecipeFeature .allRecipeCatItem .single-recipe-cat-items {
+    margin-bottom: 25px;
+    width: 718px;
+    /* height: 600px; */
+  }
+
+  .RecipeFeature .allRecipeCatItem .single-recipe-cat-items .imgFile {
+    width: 100%;
+    height: 485px;
+    overflow: hidden;
+    border-radius: 6px 6px 0px 0px;
+    transition: all 0.2s linear;
+  }
+
+  .RecipeFeature .inner-bg {
+    background: #1b6dc1;
+    padding: 15px;
+    margin-left: 22px;
+    border-radius: 10px;
+  }
+
+  .createFood {
+    margin-top: 140px;
+    width: 100%;
+  }
+
+  .RecipeFeature {
+    padding-top: 50px;
+    width: 100%;
+    margin: 0px 0px;
+    /* margin-left: 62px; */
+    /* position: relative; */
+    /* left: -17px; */
+  }
+
+  .RecipeCollection .allRecipeCatItem .single-recipe-cat-items .imgFile {
+    width: 100%;
+    height: 485px;
+    overflow: hidden;
+    border-radius: 6px 6px 0px 0px;
+    transition: all 0.2s linear;
+  }
+
+  .RecipeCollection .allRecipeCatItem .single-recipe-cat-items {
+    margin-bottom: 25px;
+    width: 717px;
+    height: 615px;
+  }
+
+  .footer-logo-section {
+    text-align: center;
+    margin-bottom: 15px;
+    scale: 1.5;
+    padding-top: 20px;
+  }
+
+  .footer-text-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 25px;
+  }
+
+  .Footer .footer-logo img {
+    width: 40%;
+    position: relative;
+    left: 0px;
+  }
+
+  .footer-address-section {
+    /* background-color: red; */
+    /* display: flex; */
+    margin-top: 20px;
+  }
+
+  .InstantFood .custom__btn button {
+    padding: 15px 48px;
+    border: 2px solid #1b6dc1;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: 0.3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #1b6dc1;
+    border-radius: 5px;
+    font-weight: 600;
+    top: 60px;
+  }
+
+  .Header .zip-form {
+    width: 100%;
+    /* position: relative; */
+    /* left: -28px; */
+    height: 40px;
+    border-radius: 8px;
+    background: var(--chalk);
+    border: 2px solid var(--chalk);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+    cursor: pointer;
+  }
+
+  .InstantFood {
+    padding: 20px 0px;
+    position: relative;
+    /* top: -99px; */
+  }
+
+  .header_text {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .mobile-header {
+    width: 75%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    left: -44px;
+  }
+
+  .Header .logo {
+    height: 43px;
+  }
+
+  .ProfileFoodGallery .inner__body {
+    padding: 8px;
+    border-radius: 5px;
+    height: 580px !important;
+  }
+
+  .ProfileFoodGallery .inner__body .img__file {
+    position: relative;
+    border-radius: 7px;
+    width: 100%;
+    height: 446px;
+    overflow: hidden;
+  }
+
+  .Header .header-widget {
+    display: block;
+  }
+
+  .mobile-header-left-items {
+    display: flex !important;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    left: -13px;
+  }
+
+
+  .mobile-header-right-items {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    width: 60%;
+  }
+
+  .nav-search-box {
+    width: 975px;
+    margin-top: 2%;
+    /* position: relative; */
+    /* left: 524px; */
+  }
+
+  .dropdown .navbar-link img {
+
+    margin-left: 64%;
+  }
+
+
+
+  .dlg {
+    display: none;
+  }
+
+  .Header .navbar-link {
+    padding: 10px 5px;
+  }
+
+
+  .Header .zipCode .zipCodeBtn {
+    width: 439px;
+    text-overflow: ellipsis;
+    height: 46px;
+    overflow: hidden;
+  }
+
+
+  .search-icon {
+    margin-left: 288%;
+  }
+
+
+
+  .Header .zipCode .zipCodePopup .zipCode_input h2 {
+    margin-top: 28px;
+    font-size: 23px;
+
+  }
+
+
+  .Header .zipCode .zipCodePopup {
+    padding: 31px 25px;
+
+  }
+
+  .smc {
+    margin-top: 25px;
+  }
+
+  .locationSaveBtn {
+    width: 100%;
+  }
+
+
+
+  .sf_search-form {
+
+    margin-left: 10%;
+  }
+
+  .cart-action-group h6 {
+
+    margin-right: 14%;
+
+  }
+
+  .Recipe_Gallery .top__gallery .leftSide .topBar .imgFile {
+    /* border-radius: 8px; */
+    overflow: hidden;
+    /* transition: all linear 0.5s; */
+    /* position: relative; */
+    height: 347px;
+    width: 682px;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .Recipe_Gallery .top__gallery .leftSide .topBar .imgFile img {
+    transition: transform 0.2s;
+    width: 687px;
+    height: 343px;
+  }
+
+  .Recipe_Gallery .top__gallery .leftSide .buttonBar .imgFile img {
+    /* border-radius: 8px; */
+    overflow: hidden;
+    transition: all linear 0.3s;
+    padding-left: 0px;
+    height: 116px;
+    width: 210px;
+  }
+
+  .Recipe_Gallery .top__gallery .rightSide .rightSide_inner .leftBar img {
+    max-height: 564px;
+    height: 425px;
+    width: 685px;
+    object-fit: cover;
+    transition: all 0.5s;
+  }
+
+  .adIMG {
+    height: 457px;
+    width: 689px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+
+  .EarnMoney .sf-container {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .sf_earn_wrapper {
+    background-color: rgba(80, 80, 80, 0.567);
+    height: 100%;
+  }
+
+  .CardSlider {
+    padding: 20px 118px;
+  }
+
+
+  /*-----------------------------
+  |
+  |
+  | updated at 18/1/25 by bijon  
+  ---------------------------------*/
+
+
+  .BrowseByKitchen .section {
+    margin-bottom: 75px;
+  }
+
+  .card .testimonial-left-button {
+    /* position: fixed; */
+    top: 46%;
+    left: 3%;
+    /* background-color: red; */
+    z-index: 4;
+  }
+
+  .card .testimonial-right-button {
+    /* position: fixed; */
+    top: 45%;
+    left: 93%;
+    box-shadow: none;
+    background-color: #3cbeec;
+    z-index: 4;
+  }
+
+  .CustomerLogin .bg-img {
+    display: none;
+  }
+
+  .CustomerLogin .login-inner-form .social-list li a {
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+  }
+
+  .CustomerLogin .bg-color-23 {
+    padding: 30px 15px;
+  }
+
+  .CustomerLogin .form-section {
+    padding: 50px 30px;
+  }
+
+  .CustomerRegistration .bg-img {
+    display: none;
+  }
+
+  .CustomerRegistration .login-inner-form .social-list li a {
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+  }
+
+  .CustomerRegistration .bg-color-23 {
+    padding: 30px 15px;
+  }
+
+  .CustomerRegistration .form-section {
+    padding: 50px 30px;
+  }
+
+  .header-top-welcome {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .FoodCatGallery .section {
+    margin-bottom: 75px;
+  }
+
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* body{
+        background-color: blue;
+    } */
+
+  /* .header_text {
+    margin-bottom: 10px;
+    text-align: center;
+    } */
+  .Header .logo {
+    height: 60px;
+  }
+
+  .Header .zipCode .zipCodeBtn {
+    background: #ffffff;
+    color: black;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    font-weight: normal;
+    cursor: pointer;
+    margin: 0 3px;
+    transition: all 0.1s linear;
+    font-size: 12px;
+    border: 1px solid #ddd;
+  }
+
+  .Header .navbar-list li {
+    margin-right: 10px;
+  }
+
+  .Header .navbar-link {
+    font-size: 12px;
+  }
+
+  .Header .zip-form {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    background: var(--chalk);
+    border: 2px solid var(--chalk);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+    cursor: pointer;
+  }
+
+  .Header .btnopen {
+    margin: 5px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 6px;
+    font-family: var(--pfamily);
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 5px 14px;
+    font-weight: 500;
+  }
+
+  .Header .btnSign {
+    border: none;
+    font-family: var(--pfamily);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 6px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 5px 14px;
+    font-weight: 500;
+  }
+
+  .createFood {
+    margin-top: 140px;
+    width: 100%;
+  }
+
+  .Header .header-content {
+    padding: 18px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: space-between;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+  }
+
+  .InstantFood h6,
+  span,
+  label {
+    margin-bottom: 0px;
+    text-transform: capitalize;
+    font-size: 12px;
+  }
+
+  .Recipe_Gallery .top__gallery .rightSide .rightSide_inner .leftBar img {
+    max-height: 564px;
+    height: 491px;
+    width: 400px;
+    object-fit: cover;
+    transition: all 0.5s;
+  }
+
+  .CardSlider {
+    padding: 20px 37px;
+  }
+
+
+
+  .adIMG {
+    height: 156px;
+    width: 162px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+
+  .Recipe_Gallery .top__gallery .leftSide .topBar .imgFile img {
+    transition: transform 0.2s;
+    height: 338px;
+    width: 442px;
+  }
+
+  .Recipe_Gallery .top__gallery .leftSide .buttonBar .imgFile img {
+    /* border-radius: 8px; */
+    overflow: hidden;
+    transition: all linear 0.3s;
+    padding-left: 0px;
+    height: 146px;
+    width: 132px;
+  }
+
+  .sf_earn_wrapper {
+    background-color: rgba(80, 80, 80, 0.567);
+    height: 465px;
+  }
+
+  .CardSlider .cardSlider_body .cardSlider_body_inner .textFile h4 {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+
+
+  .ProfileFoodGallery .inner__body {
+    padding: 8px;
+    border-radius: 5px;
+    height: 580px !important;
+    width: 693px;
+    position: relative;
+    left: 113px;
+  }
+
+  .ProfileFoodGallery .inner__body .img__file {
+    position: relative;
+    border-radius: 7px;
+    width: 100%;
+    height: 446px;
+    overflow: hidden;
+  }
+
+  .footer-logo-section {
+    text-align: center;
+    scale: 1.5;
+    margin-bottom: 15px;
+    padding-top: 20px;
+  }
+
+  .footer-text-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 25px;
+  }
+
+  .footer-address-section {
+    /* background-color: red; */
+    /* display: flex; */
+    margin-top: 20px;
+  }
+
+  .Footer .footer-logo img {
+    width: 40%;
+    position: relative;
+    left: 0px;
+  }
+
+  .RecipeFeature .allRecipeCatItem .single-recipe-cat-items {
+    margin-bottom: 25px;
+    width: 278px;
+    height: 367px;
+  }
+
+  .RecipeCollection .allRecipeCatItem .single-recipe-cat-items {
+    margin-bottom: 25px;
+    width: 280px;
+    height: 380px;
+  }
+
+  .UpdateSellerProfile .second-section .video-player .video-player-item .video .react-player {
+    /* height: 540!important; */
+    width: 937px !important;
+    height: 527px !important;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    /* border: 1px solid grey; */
+  }
+
+  .UpdateSellerProfile .second-section .center-slider {
+    border-radius: 5px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
+    /* margin-bottom: 15px; */
+  }
+
+  .CustomerLogin .info {
+    margin: 0;
+  }
+
+  .CustomerLogin .waviy {
+    font-size: 33px;
+  }
+
+  .CustomerRegistration .info {
+    margin: 0;
+  }
+
+  .CustomerRegistration .waviy {
+    font-size: 33px;
+  }
+
+  .blog-content {
+    padding: 15px 12px 0px;
+  }
+
+  .FoodCatGallery .section {
+    margin-bottom: 75px;
+  }
+
+  .ProfileFoodGallery .inner__body .text__file .overlay__img {
+    position: absolute;
+    right: 90px;
+    top: -54px;
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+  }
+
+  .Header .navbar-list li {
+    margin-right: 10px;
+  }
+
+  .Header .navbar-link {
+    font-size: 15px;
+  }
+
+}
+
+/* X-Large devices (large desktops, less than 1400px) */
+@media (min-width: 1200px) and (max-width: 1550px) {}

@@ -1,0 +1,66 @@
+.wishOrder {
+    margin-top: 140px;
+  }
+  
+  .wishOrder .card-header{
+    background: #1B6DC1;
+    color: white;
+  }
+  .wishOrder h6, span, label {
+    margin-bottom: 0px;
+    text-transform: capitalize;
+    font-family: myFirstFont;
+    font-weight: bold;
+    padding-bottom: 10px;
+    font-size: 20px;
+  }
+  .wishOrder .wish-submit{
+    width: 50%;
+    /* color: #1B6DC1; */
+    background: #1B6DC1;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+    margin-left: 24%;
+  }
+   #form-file-upload {
+    height: 16rem;
+    width: 28rem;
+    max-width: 100%;
+    text-align: center;
+    position: relative;
+    
+  }
+  
+   #input-file-upload {
+    display: none;
+  }
+  
+   #label-file-upload {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 2px;
+    border-radius: 1rem;
+    border-style: dashed;
+    border-color: #cbd5e1;
+    background-color: #f8fafc;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 2%;
+  }
+  
+   .upload-button {
+    cursor: pointer;
+    padding: 0.25rem;
+    font-size: 1rem;
+    border: none;
+    font-family: "Oswald", sans-serif;
+    background-color: transparent;
+  }
+  
+   .upload-button:hover {
+    text-decoration-line: underline;
+  }
+  

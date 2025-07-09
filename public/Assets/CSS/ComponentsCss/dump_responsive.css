@@ -1,0 +1,548 @@
+
+/*------------break point---------------------
+|  X-Small	None	<576px                   |
+|  Small	sm	≥576px                       |
+|  Medium	md	≥768px                       |
+|  Large	lg	≥992px                       |
+|  Extra large	xl	≥1200px                  |
+|  Extra extra large	xxl	≥1400px          |
+--------------------------------------------*/
+
+ /* X-Small devices (portrait phones, less than 576px) */
+ @media  (max-width: 575.98px) {
+
+    body{
+        background-color: red;
+    }
+    .mobile-header {
+        width: 96%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .Header .logo {
+        height: 43px;
+    }
+
+
+
+    .Header .header-widget {
+        display: block;
+    }
+
+    .mobile-header-left-items {
+        display: flex !important;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+    }
+
+
+    .mobile-header-right-items {
+        display: flex !important;
+        flex-direction: row;
+        align-items: center;
+        width: 60%;
+    }
+
+    .nav-search-box {
+        width: 100%;
+        margin-top: 2%;
+    }
+
+    .dropdown .navbar-link img {
+
+        margin-left: 64%;
+    }
+
+
+
+    .dlg {
+        display: none;
+    }
+
+    .Header .navbar-link {
+        padding: 10px 5px;
+    }
+
+
+    .Header .zipCode .zipCodeBtn {
+        width: 104px;
+        text-overflow: ellipsis;
+        height: 43px;
+        overflow: hidden;
+    }
+
+
+    .search-icon {
+        margin-left: 288%;
+    }
+
+
+
+    .Header .zipCode .zipCodePopup .zipCode_input h2 {
+        margin-top: 28px;
+        font-size: 23px;
+
+    }
+
+
+    .Header .zipCode .zipCodePopup {
+        padding: 31px 25px;
+
+    }
+
+    .smc {
+        margin-top: 25px;
+    }
+
+    .locationSaveBtn {
+        width: 100%;
+    }
+
+    .ClientTop .brand-meta h4 {
+        font-size: 14px;
+        color: #000;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .sf_search-form {
+
+        margin-left: 10%;
+    }
+
+    .cart-action-group h6 {
+
+        margin-right: 14%;
+
+    }
+
+    .InstantFood h6,
+span,
+label {
+  margin-bottom: 0px;
+  text-transform: capitalize;
+  font-size: 13px;
+}
+     .filterBtn-group .filterBtn .myFilterBtn {
+  background: #ebebec;
+  padding: 5px 3px;
+  border-radius: 5px;
+  transition: all 0.2s linear;
+  font-size: 12px;
+  height: 47px;
+  /* width: 65px; */
+}
+
+.Recipe_Gallery .top__gallery .leftSide .topBar .imgFile {
+    /* border-radius: 8px; */
+    overflow: hidden;
+  }
+  
+  .RecipeFeature .leftSide .wrapper .img-file img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .RecipeFeature .rightSide {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .RecipeFeature .rightSide .wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    margin-top: 6px;
+  }
+  
+  .RecipeFeature .rightSide .wrapper .preparation {
+    padding-bottom: 5px;
+  }
+  
+  .RecipeFeature .rightSide .wrapper .preparation:last-child {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .RecipeFeature .rightSide .wrapper .preparation p {
+    font-size: 16px;
+    color: var(--gray);
+  }
+  
+  .RecipeFeature .rightSide .profile-info {
+    margin-top: 30px;
+  }
+  
+  .RecipeFeature .rightSide .wrapper .img-file {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  
+  
+  .RecipeFeature .rightSide .wrapper .inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: flex-end;
+  }
+  
+  .RecipeFeature .rightSide .wrapper .img-file img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s;
+}
+     .adIMG {
+  height: 230px;
+  width: 371px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.Recipe_Gallery .top__gallery .leftSide .topBar .imgFile {
+  /* border-radius: 8px; */
+  overflow: hidden;
+  /* transition: all linear 0.5s; */
+  /* position: relative; */
+  height: 240px;
+  width: 680px;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.Recipe_Gallery .top__gallery .leftSide .buttonBar .imgFile img {
+  /* border-radius: 8px; */
+  overflow: hidden;
+  transition: all linear 0.3s;
+  padding-left: 0px;
+  height: 106px;
+  width: 102px;
+}
+
+.Recipe_Gallery .top__gallery .leftSide .topBar .imgFile img {
+  transition: transform 0.2s;
+  width: 355px;
+  height: 50%;
+}
+  }
+
+/* Small devices (landscape phones, less than 768px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    body{
+        background-color: green;
+    }
+
+    .mobile-header {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .Header .logo {
+        height: 43px;
+    }
+
+
+
+    .Header .header-widget {
+        display: block;
+    }
+
+    .mobile-header-left-items {
+        display: flex !important;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+    }
+
+
+    .mobile-header-right-items {
+        display: flex !important;
+        flex-direction: row;
+        align-items: center;
+        width: 60%;
+    }
+
+    .nav-search-box {
+        width: 100%;
+        margin-top: 2%;
+    }
+
+    .dropdown .navbar-link img {
+
+        margin-left: 64%;
+    }
+
+
+
+    .dlg {
+        display: none;
+    }
+
+    .Header .navbar-link {
+        padding: 10px 5px;
+    }
+
+
+    .Header .zipCode .zipCodeBtn {
+        width: 104px;
+        text-overflow: ellipsis;
+        height: 34px;
+        overflow: hidden;
+    }
+
+
+    .search-icon {
+        margin-left: 288%;
+    }
+
+
+
+    .Header .zipCode .zipCodePopup .zipCode_input h2 {
+        margin-top: 28px;
+        font-size: 23px;
+
+    }
+
+
+    .Header .zipCode .zipCodePopup {
+        padding: 31px 25px;
+
+    }
+
+    .smc {
+        margin-top: 25px;
+    }
+
+    .locationSaveBtn {
+        width: 100%;
+    }
+
+
+
+    .sf_search-form {
+
+        margin-left: 10%;
+    }
+
+    .cart-action-group h6 {
+
+        margin-right: 14%;
+
+    }
+
+    
+ }
+
+ /* Medium devices (tablets, less than 992px) */
+@media (min-width: 768px) and  (max-width: 991.98px) {
+    body{
+        background-color: yellow;
+    }
+    .mobile-header {
+        width: 95%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .Header .logo {
+        height: 43px;
+    }
+
+
+
+    .Header .header-widget {
+        display: block;
+    }
+
+    .mobile-header-left-items {
+        display: flex !important;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+    }
+
+
+    .mobile-header-right-items {
+        display: flex !important;
+        flex-direction: row;
+        align-items: center;
+        width: 60%;
+    }
+
+    .nav-search-box {
+        width: 50%;
+        margin-top: 2%;
+    }
+
+    .dropdown .navbar-link img {
+
+        margin-left: 64%;
+    }
+
+
+
+    .dlg {
+        display: none;
+    }
+
+    .Header .navbar-link {
+        padding: 10px 5px;
+    }
+
+
+    .Header .zipCode .zipCodeBtn {
+        width: 138px;
+        text-overflow: ellipsis;
+        height: 46px;
+        overflow: hidden;
+    }
+
+
+    .search-icon {
+        margin-left: 288%;
+    }
+
+
+
+    .Header .zipCode .zipCodePopup .zipCode_input h2 {
+        margin-top: 28px;
+        font-size: 23px;
+
+    }
+
+
+    .Header .zipCode .zipCodePopup {
+        padding: 31px 25px;
+
+    }
+
+    .smc {
+        margin-top: 25px;
+    }
+
+    .locationSaveBtn {
+        width: 100%;
+    }
+
+
+
+    .sf_search-form {
+
+        margin-left: 10%;
+    }
+
+    .cart-action-group h6 {
+
+        margin-right: 14%;
+
+    }
+ }
+
+ /* Large devices (desktops, less than 1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    body{
+        background-color: blue;
+    }
+    .Header .logo {
+        height: 60px;
+    }
+    
+    .Header .zipCode .zipCodeBtn {
+        background: #ffffff;
+        color: black;
+        padding: 10px 10px 10px 10px;
+        border-radius: 5px;
+        font-weight: normal;
+        cursor: pointer;
+        margin: 0 3px;
+        transition: all 0.1s linear;
+        font-size: 12px;
+        border: 1px solid #ddd;
+      }
+      .Header .navbar-list li {
+        margin-right: 10px;
+      }
+    
+      .Header .navbar-link {
+        font-size: 12px;
+      }
+
+      .Header .btnopen {
+        margin: 5px;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        border-radius: 6px;
+        font-family: var(--pfamily);
+        background: var(--primary);
+        color: #fff;
+        border: none;
+        padding: 5px 14px;
+        font-weight: 500;
+      }
+      .Header .btnSign {
+        border: none;
+        font-family: var(--pfamily);
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        border-radius: 6px;
+        background: var(--primary);
+        color: #fff;
+        border: none;
+        padding: 5px 14px;
+        font-weight: 500;
+    }
+
+    .Header .header-content {
+  padding: 18px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: space-between;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+
+    .InstantFood h6, span, label {
+        margin-bottom: 0px;
+        text-transform: capitalize;
+        font-size: 12px;
+    }
+}
+
+ /* X-Large devices (large desktops, less than 1400px) */
+@media  (min-width: 1200px) and (max-width: 1550px) {
+    body{
+        background-color: gray;
+    }
+
+    
+ }
+
+
+ 

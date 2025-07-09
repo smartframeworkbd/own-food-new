@@ -1,0 +1,40 @@
+.otp {
+  height: 100vh;
+}
+.otp .card {
+  width: 350px;
+  padding: 10px;
+  border-radius: 20px;
+  background: #fff;
+  border: none;
+  height: 350px;
+  position: relative;
+}
+
+.otp .container {
+  height: 100vh;
+}
+
+.otp body {
+  background: #eee;
+}
+
+.otp .mobile-text {
+  font-size: 15px;
+}
+
+.otp .form-control {
+  margin-right: 12px;
+}
+
+.otp .form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #ff8880;
+  outline: 0;
+  box-shadow: none;
+}
+
+.otp .cursor {
+  cursor: pointer;
+}

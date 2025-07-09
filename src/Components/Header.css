@@ -1,0 +1,224 @@
+
+.Header.navbar {
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 12px 0;
+}
+
+.Header .navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.Header .navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.Header .menu-button {
+  padding: 4px;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.Header .menu-button:hover {
+  background-color: #f3f4f6;
+}
+
+.Header .logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.Header .logo-icon img {
+  width: 93px;
+  height: 69px;
+  border-radius: 4px;
+}
+
+.Header .logo-text {
+  color: #2563eb;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.Header .navbar-center {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 8px 0;
+}
+
+.Header .search-icon-box{
+  width: 42px;
+  height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #000; /* Replace #000 with your desired border color */
+  padding: 8px 12px;
+  display: flex;          /* Required to apply "gap" */
+  gap: 10px;              /* Space between child elements */
+  box-sizing: border-box; /* Ensures padding doesn’t exceed set width/height */
+}
+
+.Header .action-button {
+  background-color: #fbbf24;
+  color: #1B6DC1;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Roboto, sans-serif;
+  transition: background-color 0.2s;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.Header .action-button:hover {
+  background-color: #f59e0b;
+}
+
+.Header .navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.Header .text-link {
+  color: #6b7280;
+  text-decoration: none;
+
+  cursor: pointer;
+  transition: color 0.2s;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: center;         
+  display: flex;
+  justify-content: center;   
+  align-items: center;     
+}
+
+.Header .text-link:hover {
+  color: #374151;
+}
+
+.Header .cart-button {
+  position: relative;
+  padding: 8px;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.Header .cart-button:hover {
+  background-color: #f3f4f6;
+}
+
+.Header .cart-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 12px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.Header .login-button {
+  border: 1px solid #d1d5db;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+  font-size: 14px;
+}
+
+.Header .login-button:hover {
+  background-color: #f9fafb;
+}
+
+.Header .login-text {
+  size: 16px;
+  color: #374151;
+}
+
+.Header .language-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  transition: color 0.2s;
+  font-size: 14px;
+}
+
+.Header .language-button:hover {
+  color: #374151;
+}
+
+.Header .language-icon {
+  width: 24px;
+  height: 16px;
+  background-color: #d1d5db;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.Header .language-text {
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+ .Header .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+ .Header .navbar-center {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+.Header  .navbar-right {
+    justify-content: flex-start;
+    width: 100%;
+  }
+}

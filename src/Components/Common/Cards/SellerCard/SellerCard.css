@@ -1,0 +1,389 @@
+.sellerCard {
+    /* background-image: url("/Assets/Img/Slider/footer_bg_1.jpg"); */
+    background-position: 50%;
+    background-size: cover;
+    z-index: 0;
+    position: relative;
+    margin: 20px 0;
+    padding: 20px 0;
+  }
+  .sellerCard::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: rgba(255, 255, 255, 0.6);
+    z-index: -1;
+  }
+  
+  .sellerCard ul {
+    padding: 0px;
+    list-style: none;
+  }
+  .sellerCard h2,
+  .sellerCard h4,
+  .sellerCard p,
+  .sellerCard ul,
+  .sellerCard  li,
+  .sellerCard span {
+    margin-bottom: 0px;
+    text-transform: capitalize;
+  }
+  .sellerCard p {
+    font-family: var(--pfamily);
+  }
+  .sellerCard h2,
+  .sellerCard  h4 {
+    font-weight: 500;
+    /* color: var(--heading); */
+  }
+  .sellerCard h2 {
+    font-family: var(--pfamily);
+    font-size: var(--h2size);
+    letter-spacing: -0.3px;
+    text-transform: capitalize;
+    font-weight: 700;
+  }
+  .sellerCard h4 {
+    font-size: var(--h4size);
+    line-height: var(--h4height);
+    font-family: var(--pfamily);
+  }
+  .sellerCard button {
+    border: none;
+    outline: none;
+    background: none;
+  }
+  .sellerCard button:focus {
+    outline: none;
+  }
+  .sellerCard .section {
+    margin-bottom: 60px;
+  }
+  .sellerCard .section-heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 767px) {
+    .sellerCard .section {
+      margin-bottom: 55px;
+    }
+    .sellerCard .section-heading {
+      margin-bottom: 30px;
+    }
+    .sellerCard .section-heading h2 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .sellerCard .section {
+      margin-bottom: 75px;
+    }
+  }
+  .sellerCard .slider-arrow:hover .dandik,
+  .slider-arrow:hover .bamdik {
+    visibility: visible;
+    opacity: 1;
+  }
+  .sellerCard .dandik,
+  .bamdik {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 20px;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    color: var(--primary);
+    background: var(--white);
+    text-shadow: var(--primary-tshadow);
+    -webkit-box-shadow: var(--primary-bshadow);
+    box-shadow: var(--primary-bshadow);
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+  }
+  .sellerCard .dandik:hover,
+  .bamdik:hover {
+    color: var(--white);
+    background: var(--primary);
+  }
+  .sellerCard .dandik {
+    right: -10px;
+  }
+  .sellerCard .bamdik {
+    left: -10px;
+  }
+  .sellerCard .brand-wrap {
+    text-align: center;
+    padding-top: 15px;
+    width: 224px;
+  }
+  .sellerCard .brand-wrap:hover .brand-media::before {
+    border-color: var(--primary);
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+  }
+  .sellerCard .brand-wrap:hover .brand-overlay {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  .sellerCard .brand-media {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 15px;
+    z-index: 1;
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+    padding: 10px;
+  }
+  .sellerCard .brand-media::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+  
+    width: 125px;
+    height: 125px;
+  
+    border-radius: 50%;
+    background: var(--white);
+    border: 2px dashed var(--border);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-animation: rotate360 1.2s linear infinite;
+    animation: rotate360 1.2s linear infinite;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+  .sellerCard .brand-media img {
+    /* width: 150px;
+    height: 150px; */
+    border-radius: 50%;
+  }
+  @media (max-width: 575px) {
+    .sellerCard .brand-wrap {
+      width: 200px;
+    }
+  }
+  .sellerCard .slick-list {
+    margin: 0 -9px;
+  }
+  .sellerCard .sf_text-theme {
+    font-family: var(--style-font);
+    color: #1b6dc1;
+    font-size: 36px;
+  }
+  .sellerCard .sf_init_title {
+    color: rgb(0, 0, 0);
+    font-size: 36px;
+  }
+  
+  .sellerCard .slick-slider {
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+    touch-action: pan-y;
+    -webkit-user-select: none;
+    user-select: none;
+    -khtml-user-select: none;
+  }
+  .sellerCard .slick-list,
+  .slick-slider {
+    display: block;
+    position: relative;
+  }
+  .sellerCard .slick-list {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+  .sellerCard .slick-list:focus {
+    outline: none;
+  }
+  .sellerCard .slick-slider .slick-list,
+  .slick-slider .slick-track {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  .sellerCard .slick-track {
+    display: block;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 0;
+  }
+  .sellerCard .slick-track:after,
+  .slick-track:before {
+    content: "";
+    display: table;
+  }
+  .sellerCard .slick-track:after {
+    clear: both;
+  }
+  .sellerCard .slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+  }
+  .sellerCard .slick-slide img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+  .sellerCard .slick-initialized .slick-slide {
+    display: block;
+  }
+  .sellerCard .slick-dots {
+    bottom: -25px;
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+  .sellerCard .slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 0;
+    position: relative;
+  }
+  .sellerCard .slick-dots li,
+  .slick-dots li button {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+  }
+  .sellerCard .slick-dots li button {
+    background: transparent;
+    border: 0;
+    color: transparent;
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    outline: none;
+    padding: 5px;
+  }
+  .sellerCard .slick-dots li button:focus,
+  .slick-dots li button:hover {
+    outline: none;
+  }
+  .sellerCard .slick-dots li button:focus:before,
+  .slick-dots li button:hover:before {
+    opacity: 1;
+  }
+  .sellerCard .slick-dots li button:before {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #000;
+    content: "•";
+    font-family: slick;
+    font-size: 6px;
+    height: 20px;
+    left: 0;
+    line-height: 20px;
+    opacity: 0.25;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 20px;
+  }
+  .sellerCard .slick-dots li.slick-active button:before {
+    color: #000;
+    opacity: 0.75;
+  }
+  
+  .sellerCard .sf_title_color_brand {
+    color: #333 !important;
+    /* padding-top: 20px; */
+  }
+  
+  .sellerCard .brand-meta p {
+    color: white;
+  }
+  /*! CSS Used keyframes */
+  @-webkit-keyframes rotate360 {
+    to {
+      -webkit-transform: translate(-50%, -50%) rotate(360deg);
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  @keyframes rotate360 {
+    to {
+      -webkit-transform: translate(-50%, -50%) rotate(360deg);
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  @-webkit-keyframes rotate360 {
+    to {
+      -webkit-transform: translate(-50%, -50%) rotate(360deg);
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  @keyframes rotate360 {
+    to {
+      -webkit-transform: translate(-50%, -50%) rotate(360deg);
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  
+  .sellerCard .slick-prev,
+  .sellerCard .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 45%;
+    display: block;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 9px;
+    z-index: 1;
+    border-radius: 50%;
+    font-size: 80px;
+    transition: all 0.2s linear;
+  }
+  .sellerCard:hover .slick-prev,
+  .sellerCard:hover .slick-next {
+    background-color: white;
+    color: var(--primary);
+    box-shadow: var(--primary-bshadow);
+  }
+  .sellerCard:hover .slick-prev:hover,
+  .sellerCard:hover .slick-next:hover {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  .sellerCard .slick-prev {
+    left: 0;
+  }
+  .sellerCard .slick-next {
+    right: 0;
+  }
+  

@@ -1,0 +1,19 @@
+.FAQ {
+  padding: 20px 0;
+}
+.FAQ .accordion-header,
+.accordion-body {
+  border-left: 5px solid blue;
+  border-right: 5px solid blue;
+}
+.FAQ .accordion-item {
+  margin-top: 10px;
+  border-radius: 9px;
+  background: #ffffff;
+  box-shadow: 5px 5px 7px #949494, -5px -5px 7px #ffffff;
+}
+.FAQ .accordion-button:focus {
+  border-bottom: 2px solid rgba(128, 128, 128, 0.363);
+  background-color: white;
+  box-shadow: none;
+}

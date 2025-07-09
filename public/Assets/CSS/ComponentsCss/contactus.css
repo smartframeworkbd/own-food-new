@@ -1,0 +1,16 @@
+.contactUsSection .icon-wrapper {
+    width: 70px;
+    height: 70px;
+    margin-top: 100px;
+  }
+  
+  .contactUsSection h5 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .contactUsSection p {
+    margin: 0;
+    font-size: 14px;
+  }
+  

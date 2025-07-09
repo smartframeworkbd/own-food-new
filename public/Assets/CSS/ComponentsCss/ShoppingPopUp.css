@@ -1,0 +1,468 @@
+.modal-dialog {
+  background: #fff;
+  padding: 20px;
+}
+.modal-dialog a {
+  text-decoration: none;
+  display: inline-block;
+}
+.modal-dialog a:hover {
+  text-decoration: none;
+}
+.modal-dialog ul {
+  padding: 0px;
+  list-style: none;
+}
+.modal-dialog h3,
+p,
+ul,
+li,
+span,
+label {
+  margin-bottom: 0px;
+  text-transform: capitalize;
+}
+.modal-dialog p {
+  font-family: var(--pfamily);
+}
+.modal-dialog h3 {
+  font-weight: 500;
+  color: var(--heading);
+}
+.modal-dialog h3 {
+  font-size: var(--h3size);
+  line-height: var(--h3height);
+  font-family: var(--pfamily);
+}
+.modal-dialog input::-webkit-input-placeholder {
+  font-size: 14px;
+  color: var(--gray);
+  text-transform: capitalize;
+}
+.modal-dialog input:-ms-input-placeholder {
+  font-size: 14px;
+  color: var(--gray);
+  text-transform: capitalize;
+}
+.modal-dialog input::-ms-input-placeholder {
+  font-size: 14px;
+  color: var(--gray);
+  text-transform: capitalize;
+}
+.modal-dialog input::placeholder {
+  font-size: 14px;
+  color: var(--gray);
+  text-transform: capitalize;
+}
+.modal-dialog input,
+button {
+  border: none;
+  outline: none;
+  background: none;
+}
+.modal-dialog button:focus {
+  outline: none;
+}
+.modal-dialog .product-add {
+  width: 100%;
+  font-size: 15px;
+  padding: 6px 0px;
+  border-radius: 6px;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--heading);
+  background: var(--border);
+  text-shadow: var(-primary-tshadow);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+.modal-dialog .product-add i {
+  font-size: 14px;
+  margin-right: 5px;
+}
+.modal-dialog .product-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: none;
+}
+.modal-dialog .product-action button i {
+  width: 35px;
+  height: 35px;
+  font-size: 14px;
+  line-height: 35px;
+  border-radius: 6px;
+  text-align: center;
+  display: inline-block;
+  color: var(--text);
+  background: var(--chalk);
+  text-shadow: var(--primary-tshadow);
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+.modal-dialog .product-action button i:hover {
+  color: var(--white);
+  background: var(--primary);
+}
+.modal-dialog .product-action input {
+  width: 100%;
+  font-size: 15px;
+  margin: 0px 5px;
+  padding: 6px 0px;
+  border-radius: 6px;
+  text-align: center;
+  color: var(--white);
+  background: var(--primary);
+  text-shadow: var(--primary-tshadow);
+}
+.modal-dialog .modal-content {
+  border: none;
+  background: none;
+  border-radius: 0px;
+}
+@media (max-width: 575px) {
+  /* .modal-dialog .product-add {
+    padding: 8px 0px;
+  }
+  .modal-dialog .product-add i {
+    display: none;
+  } */
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  /* .modal-dialog .product-add {
+    padding: 8px 0px;
+  }
+  .modal-dialog .product-add i {
+    display: none;
+  } */
+}
+.modal-dialog .product-view {
+  max-width: 1000px;
+  border-radius: 8px;
+  background: var(--white);
+}
+.modal-dialog .view-gallery {
+  margin: 30px;
+  position: relative;
+}
+.modal-dialog .view-label-group {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.modal-dialog .view-label {
+  font-size: 15px;
+  padding: 6px 10px;
+  margin-bottom: 6px;
+  line-height: 13px;
+  border-radius: 3px;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--white);
+}
+.modal-dialog .view-label:last-child {
+  margin-bottom: 0px;
+}
+.modal-dialog .view-label.off {
+  background: var(--red);
+}
+.modal-dialog .view-label.new {
+  background: var(--green);
+}
+.modal-dialog .view-details {
+  margin: 30px;
+}
+.modal-dialog .view-name {
+  font-size: 26px;
+  line-height: 34px;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+.modal-dialog .view-name a {
+  color: var(--heading);
+}
+.modal-dialog .view-name a:hover {
+  color: var(--primary);
+}
+.modal-dialog .view-meta {
+  margin-bottom: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+.modal-dialog .view-meta p {
+  font-size: 13px;
+  margin-right: 20px;
+  text-transform: uppercase;
+  color: var(--placeholder);
+}
+.modal-dialog .view-meta span,
+.view-meta a {
+  margin-left: 5px;
+  color: var(--placeholder);
+}
+.modal-dialog .view-meta a:hover {
+  text-decoration: underline;
+  color: var(--primary);
+}
+.modal-dialog .view-rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+.modal-dialog .view-rating svg {
+  color: #f6c800;
+}
+.modal-dialog .view-rating i,
+.view-rating a {
+  font-size: 15px;
+  margin-right: 3px;
+  color: var(--gray);
+}
+.modal-dialog .view-rating a {
+  margin-left: 8px;
+  white-space: nowrap;
+  text-transform: capitalize;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+.modal-dialog .view-rating a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+.modal-dialog .view-rating .active {
+  color: var(--yellow);
+}
+.modal-dialog .view-price {
+  margin-bottom: 20px;
+}
+.modal-dialog .view-price del {
+  color: var(--red);
+  margin-right: 25px;
+}
+.modal-dialog .view-price span {
+  color: var(--primary);
+}
+.modal-dialog .view-price span small {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.modal-dialog .view-desc {
+  margin-bottom: 25px;
+}
+.modal-dialog .view-list-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-bottom: 25px;
+}
+.modal-dialog .view-list-title {
+  font-weight: 500;
+  margin-right: 15px;
+  color: var(--heading);
+  text-transform: capitalize;
+}
+.modal-dialog .view-tag-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.modal-dialog .view-tag-list li {
+  margin-right: 8px;
+}
+.modal-dialog .view-tag-list li a {
+  font-size: 14px;
+  line-height: 12px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  letter-spacing: 0.3px;
+  text-transform: capitalize;
+  color: var(--text);
+  background: var(--chalk);
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+.modal-dialog .view-tag-list li a:hover {
+  color: var(--white);
+  background: var(--primary);
+}
+.modal-dialog .view-share-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.modal-dialog .view-share-list li {
+  margin-right: 8px;
+}
+.modal-dialog .view-share-list li a {
+  width: 35px;
+  height: 35px;
+  font-size: 16px;
+  line-height: 35px;
+  border-radius: 50%;
+  text-align: center;
+  color: var(--text);
+  background: var(--chalk);
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-dialog .view-share-list li a:hover {
+  color: var(--white);
+  background: var(--primary);
+}
+.modal-dialog .view-add-group {
+  margin: 45px 0px 15px;
+}
+.modal-dialog .view-add-group .product-add,
+.view-add-group .action-input {
+  height: 46px;
+  line-height: 46px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--primary);
+}
+.modal-dialog .view-action-group {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 15px;
+  -ms-grid-columns: (minmax(200px, 1fr)) [auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  position: relative;
+}
+.modal-dialog .view-action-group a {
+  padding: 10px 0px;
+  border-radius: 8px;
+  color: var(--text);
+  background: var(--border);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+.modal-dialog .view-action-group a i {
+  font-size: 16px;
+  margin-right: 8px;
+}
+.modal-dialog .view-action-group a span {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.modal-dialog .preview-slider {
+  margin-bottom: 20px;
+}
+.modal-dialog .preview-slider li img {
+  width: 100%;
+  border-radius: 8px;
+}
+@media (max-width: 500px) {
+  /* .modal-dialog .view-gallery,
+  .view-details {
+    margin: 25px;
+  }
+  .modal-dialog .view-list-group {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .modal-dialog .view-list-title {
+    margin: 0px 0px 10px;
+  } */
+}
+@media (max-width: 767px) {
+  /* .modal-dialog .product-view {
+    max-width: 480px;
+  } */
+}

@@ -1,0 +1,74 @@
+{
+  "deliverDetails": {
+    "en": "Delivery Details",
+    "bn": " ডেলিভারি বিবরণ"
+  },
+  "address": {
+    "en": "Delivery Address",
+    "bn": "ডেলিভারি ঠিকানা"
+  },
+  "Addaddress": {
+    "en": "Add New Delivery Address",
+    "bn": "নতুন ডেলিভারি ঠিকানা যোগ করুন"
+  },
+  "orderSummary": {
+    "en": "Order Summary",
+    "bn": "অর্ডার"
+  },
+  "totalItems": {
+    "en": "Total Items",
+    "bn": "সর্বমোট আইটেম"
+  },
+  "addmores": {
+    "en": "Add More Food",
+    "bn": "আরো খাবার  যোগ করুন"
+  },
+  "NoOrderFound": {
+    "en": "No Order Found",
+    "bn": "কোন অর্ডার পাওয়া যায়নি"
+  },
+  "orderTotal": {
+    "en": "Order Total",
+    "bn": "অর্ডার টোটাল"
+  },
+  "subTotal": {
+    "en": "Sub Total",
+    "bn": "সাব টোটাল"
+  },
+  "deliveryFee": {
+    "en": "Delivery Fee",
+    "bn": "ডেলিভারি ফি"
+  },
+  "smallOrderFee": {
+    "en": "Small Order Fee",
+    "bn": "অর্ডার ফি"
+  },
+  "taxes": {
+    "en": "Taxes",
+    "bn": "ট্যাক্স"
+  },
+  "total": {
+    "en": "Total",
+    "bn": "টোটাল"
+  },
+  "serviceFee": {
+    "en": "Service Fee",
+    "bn": "সার্ভিস ফ্রি"
+  },
+  "couponBTN": {
+    "en": "Apply",
+    "bn": "এপ্লাই"
+  },
+  "PaymentBTN": {
+    "en": "Continue To Payment",
+    "bn": "পেমেন্ট চালিয়ে যান"
+  },
+  "PaymentCODBTN": {
+    "en": "Complete Order",
+    "bn": "অর্ডার করুন"
+  },
+  "paymentMethod": {
+    "en": "Choose Payment Method",
+    "bn": "পেমেন্ট পদ্ধতি নির্বাচন করুন"
+  }
+}

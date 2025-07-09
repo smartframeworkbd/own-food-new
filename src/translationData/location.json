@@ -1,0 +1,14 @@
+{
+    "title":{
+        "en":"Location Details",
+        "bn":"বিস্তারিত লোকেশন"
+    },
+    "changeLocation":{
+        "en":"Change Location",
+        "bn":"লোকেশন পরিবর্তন"
+    },
+    "button":{
+        "en":"Save",
+        "bn":"সেভ করুন "
+    }
+}

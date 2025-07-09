@@ -1,0 +1,36 @@
+.Map {
+  padding-top: 20px;
+  z-index: 0;
+  position: relative;
+}
+.Map .headerText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+}
+.Map .sf_init_title {
+  font-weight: 700;
+  font-size: larger;
+  color: #333;
+}
+.Map .sf_text-theme {
+  font-family: var(--style-font);
+  color: #1b6dc1;
+  font-weight: 700;
+  font-size: larger;
+}
+.Map .mural-bg {
+  position: relative;
+  background-image: url("../../assets/img/map.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Map .bg-main {
+  background-color: #ebe8e8;
+  /* opacity: 10%; */
+}
+.Map .sf_main_container {
+  z-index: 1;
+}

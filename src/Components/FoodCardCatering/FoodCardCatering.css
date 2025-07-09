@@ -1,0 +1,181 @@
+.food-card-catering {
+  /* width: 278px; */
+  /* height: 341px; */
+  font-family: 'Arial', sans-serif;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.food-card-catering .kitchen-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  background-color: rgba(47, 47, 47, 0.6);
+  color: white;
+  padding: 8px 4px;
+  font-weight: bold;
+  font-size: 14px;
+  z-index: 2;
+  border-radius: 4px 0 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.food-card-catering .food-img {
+  width: 100%;
+  height: 225px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Discount badge */
+.food-card-catering .starburst {
+  position: absolute;
+  top: 25px;
+  left: 50px;
+  width: 46px;
+  height: 46px;
+  background: #d21b1b;
+  color: #f2f217;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-45deg);
+  z-index: 2;
+}
+.food-card-catering .starburst span {
+  transform: rotate(45deg);
+  font-size: 12px;
+  font-weight: bold;
+}
+.food-card-catering .starburst:before,
+.food-card-catering .starburst:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  z-index: -1;
+}
+.food-card-catering .starburst:before { transform: rotate(30deg); }
+.food-card-catering .starburst:after { transform: rotate(-30deg); }
+
+/* Icon container */
+.food-card-catering .icon-container {
+  position: absolute;
+  top: 10px;
+  right: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  z-index: 3;
+}
+.food-card-catering .icon-item {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.food-card-catering .icon-item:hover {
+  background-color: rgba(210, 27, 27, 0.8);
+  transform: scale(1.1);
+}
+.food-card-catering .icon-item svg {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+}
+.food-card-catering .icon-item span {
+  position: absolute;
+  bottom: -16px;
+  font-size: 9px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.food-card-catering .icon-item:last-child {
+  background-color: rgba(210, 27, 27, 0.8);
+}
+.food-card-catering .icon-item:last-child:hover {
+  background-color: rgba(180, 20, 20, 1);
+}
+
+/* Overlay Text */
+.food-card-catering .overlay-text {
+  position: absolute;
+  bottom: 36px;
+  left: 29px;
+  background-color:#d21b1bb5;
+  color: #f2f217;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+/* Bottom info bar */
+.food-card-catering .bottom-info-bar {
+  position: absolute;
+  bottom: 0;
+  left: 29px;
+  right: 0;
+  background-color: rgba(48, 48, 48, 0.6);
+  color: white;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 2;
+}
+.food-card-catering .bottom-info-bar > div {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Footer Info */
+.food-card-catering .footer-info {
+  background-color: #fff;
+  padding: 8px;
+}
+
+@media (max-width: 576px) {
+  .food-card-catering {
+    width: 100%;
+    max-width: 278px;
+  }
+}
+.food-items-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.food-item-pill {
+  background-color: #f8f9fa;
+  border: 1px solid #d1d5db;
+  border-radius: 9999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #1f2937;
+  white-space: nowrap;
+}

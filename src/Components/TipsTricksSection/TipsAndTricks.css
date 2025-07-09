@@ -1,0 +1,169 @@
+.tips-tricks-container {
+  background: linear-gradient(135deg, #e8f4f8 0%, #f0f8ff 100%);
+  padding: 24px;
+  border-radius: 16px;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.see-more-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.see-more-text {
+  color: #3498db;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-button.prev {
+  background-color: #34495e;
+  color: white;
+}
+
+.nav-button.next {
+  background-color: #2c3e50;
+  color: white;
+}
+
+.nav-button:hover {
+  transform: scale(1.1);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.food-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 200px;
+  transition: transform 0.3s ease;
+}
+
+.food-card:hover {
+  transform: scale(1.03);
+}
+
+.food-card.double-row {
+  grid-row: span 2;
+  height: 420px;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  padding: 10px;
+}
+
+.play-button-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.play-icon {
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-left: 12px solid white;
+  border-bottom: 7px solid transparent;
+  margin-left: 2px;
+}
+
+.card-bottom {
+  margin-top: auto;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.card-icon {
+  font-size: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .food-card.double-row {
+    grid-column: span 2;
+    height: 220px;
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .food-card.double-row {
+    grid-column: span 1;
+    height: 220px;
+  }
+}

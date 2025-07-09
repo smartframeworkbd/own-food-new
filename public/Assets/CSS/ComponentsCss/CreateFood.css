@@ -1,0 +1,123 @@
+.createFood {
+  margin-top: 140px;
+  width: 70%;
+}
+
+.createFood .title{
+  color: black;
+  /* color: #333; */
+  font-weight: 700;
+  font-size: 33px;
+  /* margin-bottom: -40px; */
+  /* position: relative; */
+  /* top: -42px; */
+  /* z-index: 1; */
+  /* padding-bottom: 25px; */
+  margin-bottom: 50px;
+}
+.createFood .card-header{
+  /* background: #1B6DC1; */
+  color: white;
+  background-color: white;
+}
+.createFood h6, label {
+  margin-bottom: 0px;
+  text-transform: none;
+  font-family: myFirstFont;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.createFood .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) {
+  border-color: var(--ck-color-base-border);
+  height: 120px;
+}
+.createFood .ck.ck-editor__main>.ck-editor__editable {
+  border-color: var(--ck-color-base-border);
+  height: 120px;
+}
+
+.createFood .restriction{
+  width: 100%;
+  /* color: #1B6DC1; */
+  background: #1B6DC1;
+  font-weight: bold;
+  text-align: center;
+  font-size: 22px;
+  /* margin-left: 24%; */
+}
+
+.createFood .restrictionList{
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgba(172, 171, 171, 0.476);
+  color: rgb(0, 0, 0);
+  padding: 10px 5px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 5px;
+  
+}
+
+.createFood .bannerImg{
+  width: 102%;
+  height: 300px;
+  border-radius: 5px;
+  margin: -2px -10px -10px;
+}
+.createFood .wish-submit{
+  width: 50%;
+  /* color: #1B6DC1; */
+  background: #1B6DC1;
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+  margin-left: 24%;
+}
+
+.createFood .wish-submit:hover{
+  width: 50%;
+  /* color: #1B6DC1; */
+  background: #333;
+ 
+}
+#form-file-upload {
+  height: 16rem;
+  width: 28rem;
+  max-width: 100%;
+  text-align: center;
+  position: relative;
+  
+}
+
+#input-file-upload {
+  display: none;
+}
+
+#label-file-upload {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 2px;
+  border-radius: 1rem;
+  border-style: dashed;
+  border-color: #cbd5e1;
+  background-color: #f8fafc;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding: 2%;
+}
+
+.upload-button {
+  cursor: pointer;
+  padding: 0.25rem;
+  font-size: 1rem;
+  border: none;
+  font-family: "Oswald", sans-serif;
+  background-color: transparent;
+}
+
+.upload-button:hover {
+  text-decoration-line: underline;
+}
+

@@ -1,0 +1,29 @@
+.RecipeBook {
+  padding: 20px 0;
+}
+.RecipeBook .bottom__gallery .leftSide .leftBar {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 20px;
+}
+.RecipeBook .bottom__gallery .leftSide .leftBar .imgFile {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all linear 0.3s;
+}
+
+.RecipeBook .bottom__gallery .leftSide .leftBar .imgFile :hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.RecipeBook .rightSide .rightBar.imgFile {
+  margin-top: 10px;
+}
+.RecipeBook .big_imgFile {
+  height: 569px;
+
+  overflow: hidden;
+}

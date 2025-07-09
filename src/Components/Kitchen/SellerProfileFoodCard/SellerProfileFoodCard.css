@@ -1,0 +1,154 @@
+.kitchen-profile-food-card {
+  border-radius: 10px;
+  border: 1px solid #e1e1e1;
+  max-width: 410px;
+ /* height: 190px; */
+}
+
+.kitchen-profile-food-card h5 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.kitchen-profile-food-card {
+  border-radius: 10px;
+  border: 1px solid #e1e1e1;
+  max-width: 414px;
+  max-height: 190px;
+}
+
+.kitchen-profile-food-card h5 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.kitchen-profile-food-card .offer-text {
+  font-size: 14px;
+}
+
+.kitchen-profile-food-card .food-image {
+  width: 100%;
+  height: 112px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.kitchen-profile-food-card .info-icon {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  border: 1px solid #cfcfcf;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #4c4c4c;
+}
+
+.kitchen-profile-food-card .plus-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #edf5ff;
+  color: #007bff;
+  width: 24px;
+  height: 24px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kitchen-profile-food-card .feedback-footer {
+  /* position: absolute;
+  bottom: 0;
+  left: 0; */
+  width: 100%;
+}
+.kitchen-profile-food-card .food-title
+{
+    font-weight: 600;
+    font-size: 16px!important;
+    letter-spacing: -0.3%;
+}
+.kitchen-profile-food-card .offer-text {
+  font-size: 14px;
+}
+.kitchen-profile-food-card .food-details-text{
+    font-size: 14px;
+    font-weight: 400;
+}
+.kitchen-profile-food-card .food-image{
+    height: 112px;
+    width: 100%;
+    /* width: 168px; */
+}
+.kitchen-profile-food-card .info-icon {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  border: 1px solid #cfcfcf;
+  border-radius: 50%;
+  text-align: center;
+  /* line-height: 20px; */
+  font-size: 12px;
+  color: #4c4c4c;
+}
+
+.kitchen-profile-food-card .plus-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #edf5ff;
+  color: #007bff;
+  width: 51px;
+  height: 51px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 0 0 0 34px;
+  font-weight: bold;
+}
+.kitchen-profile-food-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.kitchen-profile-food-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Hover zoom-in effect on image */
+.kitchen-profile-food-card .food-image {
+  transition: transform 0.3s ease;
+}
+.kitchen-profile-food-card:hover .food-image {
+  transform: scale(1.05);
+}
+
+/* Hover effect for plus icon */
+.kitchen-profile-food-card .plus-icon {
+  transition: all 0.3s ease;
+}
+.kitchen-profile-food-card:hover .plus-icon {
+  background-color: #1b6dc1;
+  color: white;
+  box-shadow: 2px 3px 5px #4c4c4c;
+  /* transform: rotate(360deg); */
+}
+
+.kitchen-profile-food-card .food-type {
+  font-size: 12px;
+  color: white;
+  background-color: #1b6dc1;
+  padding: 2px 8px;
+  border-radius: 20px;
+  display: inline-block;
+  font-weight: 500;
+  margin-bottom: 6px;
+  text-transform: capitalize;
+}
+.kitchen-profile-food-card .food-active-time {
+  font-size: 13px;
+  color: #6c757d;
+}

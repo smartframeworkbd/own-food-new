@@ -1,0 +1,100 @@
+{
+  "name": "ownfood",
+  "homepage": "https://ownfood.net",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^35.3.2",
+    "@ckeditor/ckeditor5-react": "^5.0.3",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@material/tabs": "^2.3.0",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/material": "^5.11.4",
+    "@mui/styled-engine-sc": "^5.11.0",
+    "@paypal/react-paypal-js": "^7.8.3",
+    "@react-google-maps/api": "^2.19.2",
+    "@reduxjs/toolkit": "^1.9.3",
+    "@stripe/react-stripe-js": "^2.1.0",
+    "@stripe/stripe-js": "^1.52.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.3.4",
+    "base-64": "^1.0.0",
+    "cross-domain-storage": "^2.0.7",
+    "dotenv": "^16.4.1",
+    "leaflet": "^1.9.3",
+    "lucide-react": "^0.522.0",
+    "moment": "^2.29.4",
+    "rc-tooltip": "^5.3.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.7.0",
+    "react-code-input": "^3.10.1",
+    "react-datepicker": "^7.2.0",
+    "react-datetime": "^3.2.0",
+    "react-dom": "^18.2.0",
+    "react-geocode": "^0.2.3",
+    "react-google-maps": "^9.4.5",
+    "react-google-places-autocomplete": "^4.0.1",
+    "react-helmet": "^6.1.0",
+    "react-hot-toast": "^2.4.0",
+    "react-icons": "^4.7.1",
+    "react-image-gallery": "^1.2.11",
+    "react-image-lightbox": "^5.1.4",
+    "react-leaflet": "^4.2.0",
+    "react-loading-skeleton": "^3.4.0",
+    "react-modal-video": "^2.0.0",
+    "react-moment": "^1.1.3",
+    "react-places-autocomplete": "^7.3.0",
+    "react-player": "^2.12.0",
+    "react-rating": "^2.0.5",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.6.2",
+    "react-scripts": "^5.0.1",
+    "react-scroll-to-top": "^3.0.0",
+    "react-slick": "^0.29.0",
+    "react-sliding-pane": "^7.3.0",
+    "react-stacked-center-carousel": "^1.0.12",
+    "react-tabs": "^6.0.1",
+    "react-toastify": "^9.1.2",
+    "react-tooltip": "^5.6.0",
+    "react-video-js-player": "^1.1.1",
+    "react-visibility-sensor": "^5.1.1",
+    "redux": "^4.2.1",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^5.3.6",
+    "sweetalert2": "^11.6.13",
+    "sweetalert2-react-content": "^5.0.7",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "set PORT=3001 && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "sass": "^1.70.0",
+    "sass-loader": "^14.0.0",
+    "webpack": "^5.90.0"
+  }
+}

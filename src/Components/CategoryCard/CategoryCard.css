@@ -1,0 +1,30 @@
+.category-card {
+  display: flex;                    /* make items go side by side */
+  align-items: center;             /* vertically center image & text */
+  gap: 10px;                       /* space between image and text */
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: transform 0.2s;
+  cursor: pointer;
+  max-width: fit-content;
+  /* border: 1px solid # eee; */
+  width: 160px;
+  height: 80px;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+}
+
+.category-card .icon .icon-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+
+.category-card h5 {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}

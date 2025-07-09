@@ -1,0 +1,224 @@
+.Dairy {
+  padding: 20px 0;
+}
+.Dairy .headerText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+}
+.Dairy .sf_init_title {
+  font-weight: 700;
+  font-size: larger;
+  color: #333;
+}
+.Dairy .sf_text-theme {
+  font-family: var(--style-font);
+  color: #1b6dc1;
+  font-weight: 700;
+  font-size: larger;
+}
+.Dairy .blog-card {
+  margin-bottom: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.Dairy .blog-card:hover .blog-img img {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.Dairy .blog-media {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.Dairy .blog-img {
+  overflow: hidden;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+.Dairy .blog-img img {
+  width: 100%;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+
+.Dairy .blog-content .blog-meta {
+}
+
+.Dairy .blog-title {
+  font-size: 22px;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+
+.Dairy .blog-title a {
+  font-family: var(--pfamily);
+  color: var(--heading);
+  text-decoration: none;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+
+.Dairy .blog-title a:hover {
+  color: blue;
+}
+
+.Dairy .blog-desc {
+  overflow: hidden;
+  font-family: var(--pfamily);
+  font-size: 17px;
+  line-height: 28px;
+  color: var(--gray);
+  margin-bottom: 25px;
+}
+
+.Dairy .blog-btn {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--primary);
+  text-transform: uppercase;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+
+.Dairy .blog-btn li {
+  list-style: none;
+}
+
+.Dairy .blog-btn i {
+  font-size: 17px;
+  transition: all linear 0.3s;
+  -webkit-transition: all linear 0.3s;
+  -moz-transition: all linear 0.3s;
+  -ms-transition: all linear 0.3s;
+  -o-transition: all linear 0.3s;
+}
+
+.Dairy .blog-btn:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.Dairy .blog-btn:hover i {
+  margin-left: 5px;
+}
+
+.Dairy .custom__btn button {
+  padding: 15px 48px;
+  border: 2px solid #1b6dc1;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: 0.3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #1b6dc1;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.Dairy .custom__btn button::before {
+  content: "";
+  width: 0;
+  height: 400%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #1b6dc1;
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+
+.Dairy .custom__btn button:hover::before {
+  width: 105%;
+}
+
+.Dairy .custom__btn button:hover {
+  color: #fff;
+}
+
+@media (max-width: 575px) {
+  /* .blog-meta li {
+    margin-right: 25px;
+  }
+
+  .blog-content {
+    padding: 15px 8px 0px;
+  } */
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* .blog-content {
+    padding: 15px 12px 0px;
+  } */
+}
+
+@media (min-width: 351px) and (max-width: 575px) {
+  /* .offer-card {
+    width: 320px;
+    margin: 0px auto 30px;
+  } */
+}
+
+@media (max-width: 575px) {
+  /* .account-card {
+    padding: 0px 15px 15px;
+  } */
+}
+
+@media (max-width: 575px) {
+  /* .payment-card p span {
+    margin-right: 8px;
+  } */
+}
+
+@media (max-width: 575px) {
+  /* .team-card {
+    width: 290px;
+    margin: 0px auto 50px;
+  } */
+}
+
+@media (max-width: 767px) {
+  /* .header-top-welcome,
+  .header-top-list {
+    display: none;
+  }
+
+  .header-top-select {
+    width: 270px;
+    margin: 0px auto;
+  } */
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* .header-top-welcome {
+    text-align: center;
+    margin-bottom: 10px;
+  } */
+}

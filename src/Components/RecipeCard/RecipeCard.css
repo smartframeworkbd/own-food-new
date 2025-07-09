@@ -1,0 +1,63 @@
+.recipe-card {
+  width: 100%;
+  max-width: 368px;
+  margin: auto;
+  background-color: #f0f0f3; /* Slightly off-white for contrast */
+  box-shadow: 6px 6px 12px #d1d9e6, -6px -6px 12px #ffffff;
+  border-radius: 16px;
+  border: none;
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.recipe-card:hover {
+  box-shadow: 10px 10px 20px #c5c5c5, -10px -10px 20px #ffffff;
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+.main-img-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background-color: #f8f9fa;
+}
+
+.main-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.recipe-card:hover .main-img {
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+
+.thumb-row {
+  margin: 0;
+  --bs-gutter-x: 0; /* Bootstrap override to remove column gap */
+}
+
+.thumb-img {
+  width: 100%;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 2px solid #f1f1f1;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.thumb-img:hover {
+  border-color: #007bff;
+  transform: scale(1.02);
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.author img {
+  object-fit: cover;
+}

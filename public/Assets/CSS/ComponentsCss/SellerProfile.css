@@ -1,0 +1,412 @@
+.SellerProfile .ms-panel {
+  background: #fff;
+  -webkit-box-shadow: 0 1px 6px 1px rgba(69, 65, 78, 0.1);
+  -moz-box-shadow: 0 1px 6px 1px rgba(69, 65, 78, 0.1);
+  box-shadow: 0 1px 6px 1px rgba(69, 65, 78, 0.1);
+  margin-bottom: 30px;
+}
+
+.SellerProfile .ms-panel.ms-panel-fh {
+  height: calc(100% - 2rem);
+}
+
+.SellerProfile .ms-panel-body,
+.SellerProfile .ms-panel-footer {
+  position: relative;
+  padding: 1.5rem;
+}
+
+.SellerProfile .body-content {
+  position: relative;
+  background: #f0f0fa;
+  -webkit-transition: padding 0.3s;
+  transition: padding 0.3s;
+  min-height: 100vh;
+}
+.SellerProfile .ms-content-wrapper {
+  padding: 30px;
+}
+
+.SellerProfile .input-group-text,
+.SellerProfile .custom-file-label::after {
+  border: 0;
+  font-size: 0.875rem;
+  color: #878793;
+  background-color: #ebebed;
+}
+.SellerProfile .input-group {
+  margin-bottom: 1rem;
+}
+.SellerProfile .custom-file-label {
+  color: #778087;
+}
+input[type="submit"]:disabled,
+button[type="submit"]:disabled {
+  background: #e4e3e8;
+  border-color: #e4e3e8;
+  cursor: not-allowed;
+}
+.SellerProfile .input-group-prepend .btn,
+.SellerProfile .input-group-append .btn {
+  margin-top: 0;
+}
+
+.SellerProfile .switch-vertical {
+  position: absolute;
+  bottom: 14%;
+  left: 16px;
+  width: 29px;
+  height: 61px;
+  display: inline-block;
+}
+
+.SellerProfile .ms-switch {
+  position: relative;
+  display: inline-block;
+  width: 54px;
+  height: 28px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.SellerProfile .ms-switch-slider.ms-status-switch:before {
+  position: absolute;
+  content: "";
+  height: 21px;
+  width: 21px;
+  left: 37px;
+  bottom: 5px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background-color: #fff;
+}
+
+.SellerProfile input:checked + .ms-switch-slider.ms-status-switch:before {
+  -webkit-transform: translateX(-32px);
+  -ms-transform: translateX(-32px);
+  transform: translateX(-32px);
+  background-color: #fff;
+}
+
+.SellerProfile .ms-profile-overview {
+  position: relative;
+  height: 500px;
+  background-color: #fff;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0 1px 6px 1px rgba(69, 65, 78, 0.1);
+  -moz-box-shadow: 0 1px 6px 1px rgba(69, 65, 78, 0.1);
+  box-shadow: 0 1px 6px 1px rgba(69, 65, 78, 0.1);
+}
+.SellerProfile .ms-profile-cover {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  /* background-image: url("/Assets/Img/b1.jpg"); */
+  top: -116px;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  height: 87%;
+  width: 100%;
+  padding: 1.5rem;
+  padding-bottom: 0;
+  z-index: 1;
+}
+.SellerProfile .ms-profile-cover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.4),
+    rgba(255, 255, 255, 0)
+  );
+  z-index: -1;
+}
+.SellerProfile .ms-profile-cover img {
+  width: 140px;
+  margin-bottom: -57px;
+  border: 3px solid #fff;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.SellerProfile .ms-profile-user-info,
+.SellerProfile .ms-profile-user-buttons {
+  width: 90%;
+  padding: 0 0 1.5rem 1.5rem;
+  margin-bottom: -91px;
+  color: black;
+}
+.SellerProfile .ms-profile-user-buttons {
+  flex: 1 1 auto;
+  text-align: right;
+}
+.SellerProfile .ms-profile-user-buttons button i {
+  margin-right: 5px;
+}
+.SellerProfile .ms-profile-user-info h1,
+.SellerProfile .ms-profile-user-info h2 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+}
+.SellerProfile .ms-profile-user-info h2 {
+  font-size: 12px;
+  font-weight: 400;
+}
+.SellerProfile .ms-profile-skills {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 0 0;
+}
+.SellerProfile .ms-skill-list {
+  margin-bottom: 0;
+}
+.SellerProfile .ms-skill-list .ms-skill {
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem 0.5rem 0;
+  text-align: center;
+  min-width: 100px;
+  font-weight: 500;
+}
+.SellerProfile .ms-profile-information tr td {
+  text-align: right;
+}
+.SellerProfile .ms-profile-stats {
+  list-style-type: none;
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0 0 1rem 0;
+  margin-bottom: 1.5rem;
+}
+.SellerProfile .ms-profile-stats li {
+  flex: 1;
+  text-align: center;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+.SellerProfile .ms-profile-stats li:last-child {
+  border-right: 0;
+}
+.SellerProfile .pick-date:hover {
+  background-color: rgba(10, 13, 167, 0.932);
+  color: white;
+}
+.SellerProfile .pick-date:hover .pick-day {
+  color: rgb(255, 255, 255);
+}
+.SellerProfile .asidebar {
+  border: 1px solid rgb(230, 218, 218);
+}
+.SellerProfile .asidebar a {
+  padding: 10px 10px 10px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #3838389c;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  display: block;
+
+  border-bottom: 1px solid gainsboro;
+}
+
+.SellerProfile .asidebar a:hover {
+  color: #ffffff;
+
+  border-left: 6px solid rgb(0, 0, 0);
+  background-color: rgb(218, 215, 215);
+  color: #000000;
+}
+
+.SellerProfile .asidebar a:focus {
+  background-color: #1650cc;
+  color: black;
+}
+@media (max-width: 1024px) {
+  .ms-card.ms-card-fh {
+    height: auto;
+  }
+  .ms-todo-options {
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 1rem 0 0;
+    height: auto;
+  }
+  .ms-todo-options.ms-todo-nav {
+    align-items: flex-end;
+  }
+  .ms-todo-options li {
+    padding: 5px 15px;
+    border-right: 0;
+  }
+  .ms-chat-text p {
+    max-width: 100%;
+  }
+  .ms-hoverable-dropdown,
+  .ms-email .ms-email-time {
+    display: block;
+  }
+  .ms-email .ms-email-time {
+    float: right;
+    position: relative;
+    top: auto;
+  }
+  .ms-auth-bg,
+  .ms-auth-col:first-child {
+    display: none;
+  }
+  .ms-content-wrapper.ms-auth {
+    min-height: 100vh;
+  }
+  .ms-website-performance li.ms-list-item {
+    float: left;
+    width: 50%;
+  }
+  .ms-facebook-engagements li.ms-list-item {
+    float: left;
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* .display-4 {
+    font-size: 2rem;
+  }
+  .pagination-expanded .page-item-expanded {
+    display: none;
+  }
+  .ms-wizard-vertical.ms-form-wizard ul[role="tablist"] {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+  }
+  .ms-wizard-vertical.ms-form-wizard .content,
+  .ms-wizard-vertical.ms-form-wizard .actions,
+  .ms-wizard-vertical.ms-form-wizard ul[role="tablist"] li:not(:first-child) a {
+    margin-left: 0;
+  }
+  .ms-wizard-vertical.ms-form-wizard ul[role="tablist"] li:last-child {
+    margin-bottom: 0;
+  }
+  .section-title {
+    margin: 1.5rem 0;
+  }
+  .ms-todo-options,
+  .ms-todo-options.ms-todo-nav {
+    align-items: center;
+  }
+  .ms-email-panel .ms-panel-body {
+    flex-direction: column;
+  }
+  .ms-email-config {
+    margin-top: 1.5rem;
+  }
+  .ms-email-panel .ms-email-main {
+    width: 100%;
+  }
+  .ms-email .ms-email-time {
+    float: none;
+  }
+  .ms-email-details {
+    overflow: visible;
+  }
+  .ms-email-controls,
+  .ms-email-header,
+  .ms-email .ms-email-details p,
+  .ms-email-pagination li:first-child {
+    display: none;
+  }
+  .ms-auth-form {
+    display: block;
+  }
+  .ms-auth-form form {
+    padding: 3rem 1rem;
+  }
+  .ms-auth-form form {
+    width: 100%;
+  }
+  .ms-email .ms-hoverable-dropdown {
+    bottom: 100%;
+  }
+  .ms-profile-overview {
+    height: auto;
+  }
+  .ms-profile-cover {
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: auto;
+    padding-bottom: 1.5rem;
+    flex-direction: column;
+  }
+  .ms-profile-user-buttons {
+    flex: 0 0 auto;
+    text-align: left;
+  }
+  .ms-profile-cover img {
+    margin-bottom: 1rem;
+  }
+  .ms-profile-user-info,
+  .ms-profile-user-buttons {
+    padding: 0;
+  }
+  .ms-profile-navigation {
+    position: relative;
+    left: auto;
+    bottom: auto;
+  }
+  .ms-lock-screen-weather,
+  .ms-lock-screen-time,
+  .ms-lock-screen-nav {
+    display: none;
+  }
+  .ms-graph-meta ul {
+    display: none;
+  }
+  .ms-selected-website select,
+  .ms-selected-website h2 {
+    margin-bottom: 1rem;
+  }
+  .ms-selected-website button {
+    width: 100%;
+  }
+  .ms-portfolio-minimal .ms-portfolio-item::before {
+    height: 100%;
+  }
+  .ms-portfolio-minimal .ms-portfolio-item .ms-portfolio-item-content {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  .ms-graph-labels.column-direction {
+    display: none;
+  }
+  .ms-panel-footer .ms-device {
+    margin-bottom: 1.5rem;
+  }
+  div.dataTables_wrapper div.dataTables_length,
+  div.dataTables_wrapper div.dataTables_filter,
+  div.dataTables_wrapper div.dataTables_info,
+  div.dataTables_wrapper div.dataTables_paginate {
+    text-align: left;
+  }
+  div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"] {
+    padding: 0;
+  }
+  div.dataTables_wrapper div.dataTables_filter input {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    justify-content: flex-start;
+    margin: 20px 0 0;
+  } */
+}

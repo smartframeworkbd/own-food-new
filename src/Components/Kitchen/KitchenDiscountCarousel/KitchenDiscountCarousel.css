@@ -1,0 +1,41 @@
+.discount-card {
+  background: white;
+  border: 1px dashed #ccc;
+  border-radius: 12px;
+  padding: 1.2rem;
+  overflow: hidden;
+  max-width: 376px;
+  min-width: 300px;
+  min-height: 110px;
+  transition: transform 0.3s;
+}
+
+.discount-card:hover {
+  transform: scale(1.03);
+}
+
+.offer-badge {
+  display: inline-block;
+  height: 40px;
+  width: auto;
+}
+
+.blob{
+opacity: 1s;
+  position: absolute;
+  top: -34px;
+  left: -34px;
+  height: 85px;
+  width: 85px;
+  /* z-index: 1; */
+}
+
+.offer-text {
+  position: relative;
+  z-index: 2;
+  font-size: 40px;
+  font-weight: 700;
+
+  /* padding-left: 10px; */
+  line-height: 40px;
+}

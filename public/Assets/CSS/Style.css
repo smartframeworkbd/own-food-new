@@ -1,0 +1,53 @@
+/* ============== Default Style Start Here ============== */
+
+@import "./Default/Reset.css";
+
+/* ============== Components Style Start Here ============== */
+@import "./ComponentsCss/Header.css";
+@import "./ComponentsCss/ClientTop.css";
+@import "./ComponentsCss/CardSlider.css";
+@import "./ComponentsCss/CountryBaseFoodCategories.css";
+@import "./ComponentsCss/EarnMoney.css";
+@import "./ComponentsCss/Recipe_Gallery.css";
+@import "./ComponentsCss/Circle.css";
+@import "./ComponentsCss/Circle_2.css";
+@import "./ComponentsCss/ShoppingPopUp.css";
+@import "./ComponentsCss/OrderFoodCat.css";
+@import "./ComponentsCss/OpenAccountInfo.css";
+@import "./ComponentsCss/FoodCatGallery.css";
+@import "./ComponentsCss/FoodCatGallery.css";
+@import "./ComponentsCss/InstantFood.css";
+@import "./ComponentsCss/BrowseByKitchen.css";
+@import "./ComponentsCss/FoodNameCategory.css";
+@import "./ComponentsCss/Dariry.css";
+@import "./ComponentsCss/Map.css";
+@import "./ComponentsCss/Footer.css";
+@import "./ComponentsCss/SellerProfile.css";
+@import "./ComponentsCss/ProductsDetails.css";
+@import "./ComponentsCss/Category.css";
+@import "./ComponentsCss/CustomerLogin.css";
+@import "./ComponentsCss/CustomerRegistration.css";
+@import "./ComponentsCss/ForgetPassword.css";
+@import "./ComponentsCss/HowWeDo.css";
+@import "./ComponentsCss/RecipeBook.css";
+@import "./ComponentsCss/Receipebook_layoutTwo.css";
+@import "./ComponentsCss/CenterSlider.css";
+@import "./ComponentsCss/ProfileFoodGallery.css";
+@import "./ComponentsCss/Faq.css";
+@import "./ComponentsCss/PageLoading.css";
+@import "./ComponentsCss/filterCategory.css";
+@import "./ComponentsCss/OTP.css";
+@import "./ComponentsCss/CheckOut.css";
+@import "./ComponentsCss/singleDairy.css";
+@import "./ComponentsCss/CreateFood.css";
+@import "./ComponentsCss/ModalCheckOut.css";
+@import "./ComponentsCss/FoodGallery.css";
+@import "./ComponentsCss/UpdateSellerProfile.css";
+@import "./ComponentsCss//WhatsAppOTP.css";
+@import "./ComponentsCss/Loader.css";
+@import "./ComponentsCss/Reesponsive.css";
+@import "./ComponentsCss/MapSearch.css";
+@import "./ComponentsCss/aboutus.css";
+@import "./ComponentsCss/contactus.css";
+@import "./ComponentsCss/BannerCardImage.css";
+

@@ -1,0 +1,64 @@
+
+.recipe-card .allRecipeCatItem {
+    margin-top: 12px;
+  }
+
+  .recipe-card .allRecipeCatItem .row {
+    --bs-gutter-x: 14px !important;
+  }
+
+  .recipe-card .allRecipeCatItem .header-intro {
+    font-size: 36px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    margin-bottom: 3px;
+  }
+
+  .recipe-card .allRecipeCatItem .des {
+    font-size: 15px;
+    color: var(--gray);
+    margin-bottom: 25px;
+  }
+
+  .recipe-card .allRecipeCatItem .single-recipe-cat-items {
+    margin-bottom: 30px;
+  }
+
+  .recipe-card .allRecipeCatItem .single-recipe-cat-items .imgFile {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 6px 6px 0px 0px;
+    transition: all 0.2s linear;
+  }
+
+  .recipe-card .allRecipeCatItem .single-recipe-cat-items:hover .imgFile img {
+    transform: scale(110%);
+  }
+
+  .recipe-card .allRecipeCatItem .single-recipe-cat-items .imgFile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.2s linear;
+  }
+
+  /* .recipe-card .allRecipeCatItem .single-recipe-cat-items .textFile {
+    background: #eeeeee;
+    padding: 20px 15px;
+    border-radius: 0px 0px 8px 8px;
+    position: relative;
+  } */
+  .recipe-card .allRecipeCatItem .single-recipe-cat-items .textFile h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: yellow;
+    transition: all 0.2s linear;
+  }
+
+  .recipe-card .allRecipeCatItem .single-recipe-cat-items .textFile {
+    background: #1b6dc1;
+    padding: 20px 15px;
+    border-radius: 0px 0px 8px 8px;
+    position: relative;
+  }

@@ -1,0 +1,219 @@
+/* .checkOut {
+  margin: 100px;
+  padding: 0 140px;
+} */
+.checkOut .inner {
+}
+.checkOut .inner .leftWrapper {
+  background: #f6f6f6a1;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.checkoutpagepricebtn{
+    color: #808080;
+  border: 1px solid  #808080;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.checkoutpricebtn{
+  color: rgb(27,109,193);
+  border: 1px solid  rgb(27,109,193);
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.checkoutpricebtn:hover{
+  background-color: rgb(27,109,193);
+  color: white;
+  border: 1px solid  rgb(27,109,193);
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.checkOut .inner .leftWrapper .sellerName {
+  font-size: 30px;
+  font-weight: 600;
+}
+.checkOut .inner .leftWrapper .introDelivery {
+  margin-top: 30px;
+  border-bottom: 2px solid rgb(238, 238, 238);
+  padding-bottom: 15px;
+}
+.checkOut .inner .leftWrapper .introDelivery h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.checkOut .inner .leftWrapper .introDelivery p {
+  font-size: 15px;
+  margin-top: 5px;
+}
+.checkOut .inner .leftWrapper .introDelivery p {
+  font-size: 15px;
+  margin-top: 5px;
+  margin: 0;
+  padding: 0;
+}
+.checkOut .inner .leftWrapper .introDelivery .Priority .p-inner {
+  border: 2px solid #d2d2d2;
+  padding: 6px 20px;
+  border-radius: 5px;
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.checkOut .inner .leftWrapper .introDelivery .Priority .p-inner button {
+  background: #dadada;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.checkOut .inner .leftWrapper .introDelivery .Priority .p-inner-single {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgb(238, 238, 238);
+}
+.checkOut .inner .leftWrapper .introDelivery .Priority .p-inner-items {
+  margin-top: 20px;
+}
+.checkOut .inner .leftWrapper .introDelivery .Priority .p-inner-items span {
+  background: #dadada5c;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+.checkOut .inner .leftWrapper .introDelivery .Priority .p-inner-items li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.checkOut
+  .inner
+  .leftWrapper
+  .introDelivery
+  .Priority
+  .p-inner-items
+  .img-inner {
+  display: flex;
+  gap: 10px;
+}
+.checkOut
+  .inner
+  .leftWrapper
+  .introDelivery
+  .Priority
+  .p-inner-items
+  .img-inner
+  button {
+  display: flex;
+  gap: 10px;
+  background: #f0fdf4;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #22c55e;
+}
+.checkOut
+  .inner
+  .leftWrapper
+  .introDelivery
+  .Priority
+  .p-inner-items
+  li
+  .img-file {
+  width: 50px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.checkOut
+  .inner
+  .leftWrapper
+  .introDelivery
+  .Priority
+  .p-inner-items
+  li
+  .img-file
+  img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.checkOut .inner .rightWrapper {
+  background: #f6f6f6a1;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.checkOut .inner .rightWrapper .introDelivery {
+  margin-top: 30px;
+  border-bottom: 2px solid rgb(238, 238, 238);
+  padding-bottom: 15px;
+}
+
+.checkOut .inner .rightWrapper .introDelivery h4 {
+  font-size: 26px;
+  font-weight: 700;
+}
+.checkOut .inner .rightWrapper .order-intro-list {
+  margin-top: 18px;
+}
+.checkOut .inner .rightWrapper .order-intro-list li {
+  padding: 5px 0;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+}
+.checkOut .inner .rightWrapper .order-intro-list li:last-child {
+  border-bottom: 2px solid rgb(238, 238, 238);
+  padding-bottom: 10px;
+}
+.checkOut .inner .rightWrapper .total {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.checkOut .inner .rightWrapper .total p {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+}
+.checkOut .inner .rightWrapper .total span {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ef4444;
+}
+.checkOut .inner .rightWrapper .trams {
+  margin-top: 15px;
+}
+.checkOut .inner .rightWrapper .trams p {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.checkOut .inner .rightWrapper .payment-btn {
+  margin-top: 30px;
+}
+.checkOut .inner .rightWrapper .payment-btn button {
+  width: 100%;
+  padding: 18px 15px;
+  background: #333;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.2s linear;
+}
+.checkOut .inner .rightWrapper .payment-btn button:hover {
+  background: #333333e2;
+}

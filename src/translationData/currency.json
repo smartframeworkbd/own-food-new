@@ -1,0 +1,13 @@
+{
+    "country":"Bangladesh",
+    "currency":{
+        "usa":{
+            "name":"Dollar",
+            "symbol":"$"
+        },
+        "bdt":{
+            "name":"BDT",
+            "symbol":"৳"
+        }
+    }
+}

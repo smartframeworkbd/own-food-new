@@ -1,0 +1,180 @@
+{
+
+    "footerTitle": {
+        "en": "",
+        "bn": ""
+    },
+    "about-us-content": {
+        "en": "OWNFOOD is an online platform for selling homemade food. Our aim is to increase the familiarity of delicious homemade food with those who want to have healthy and delicious homemade food. Along with contacting potential vendors who sell home-cooked food, OWNFOOD is not only a platform for selling food but also providing many more services. Anyone can stand on their own feet through our platform.",
+        "bn": "OWNFOOD হল ঘরের তৈরি খাবার বিক্রির অনলাইন প্ল্যাটফর্ম। আমাদের লক্ষ্য হল যারা স্বাস্থ্যকর এবং সুস্বাদু ঘরের তৈরি খাবার পেতে চান, তাদের কাছে ঘরের মজাদার খাবারের পরিচিতি বাড়ানো। এর সাথে ঘরের খাবার তৈরি করে বিক্রি করেন এমন সম্ভাব্য বিক্রেতাদের সাথে যোগাযোগ করিয়ে দেওয়া। OWNFOOD শুধু খাবার বিক্রির প্ল্যাটফর্ম নয় আরও অনেক সার্ভিস প্রদান করছে এবং আমাদের এই প্ল্যাটফর্ম এর মাধ্যমে চাইলে যে কেউ নিজেই নিজের পায়ে দাড়াতে পারবেন।"
+    },
+    
+
+
+    "ourpurpos": {
+        "en": "About Us",
+        "bn": "আমাদের সম্পর্কে"
+    },
+    "contat": {
+        "en": "Contact Us",
+        "bn": "যোগাযোগ করুন"
+    },
+
+
+    "office": {
+        "en": "Corporate Office",
+        "bn": "কর্পোরেট অফিস"
+    },
+    "officeAddress": {
+        "en": "Software Technology Park, Bangkok MArket (level-6) 14 Agrabad access road, Chattogram, Bangladesh",
+        "bn": " সফটওয়্যার টেকনোলজি পার্ক, ব্যাংকক মার্কেট ১৪ আগ্রাবাদ এক্সেস রোডচট্টগ্রাম, বাংলাদেশ"
+    },
+    "HotlineNum": {
+        "en": "+8801326102605",
+        "bn": "+8801326102605"
+    },
+    "hotlinee": {
+        "en": "Hotline",
+        "bn": "হটলাইন"
+    },
+    "hotlineemail": {
+        "en": "Email",
+        "bn": "ইমেইল"
+    },
+    "HotlineEmail": {
+        "en": "info@ownfood.com",
+        "bn": "info@ownfood.com"
+    },
+    "HotlineEmail2": {
+        "en": "ownfoodinc@gmail.com",
+        "bn": "ownfoodinc@gmail.com"
+    },
+    "footerDescription": {
+        "en": "",
+        "bn": ""
+    },
+    "information": {
+        "en": "Information",
+        "bn": "ইনফরমেশন",
+        "about": {
+            "en": "About Us",
+            "bn": "আমাদের সম্পর্কে"
+        },
+        "contact": {
+            "en": "Contact Us",
+            "bn": "যোগাযোগ করুন"
+        },
+        "wishlist": {
+            "en": "Wish List",
+            "bn": "উইশ লিস্ট"
+        },
+        "portfolio": {
+            "en": "Portfolio",
+            "bn": "পোর্টফলিও"
+        },
+        "privacyPolicy": {
+            "en": "Privacy Policy",
+            "bn": "প্রাইভেসি পলিসি"
+        },
+        "frequently": {
+            "en": "Frequently",
+            "bn": "ফ্রিকুয়েন্টলি"
+        },
+        "terms": {
+            "en": "Terms & Condition",
+            "bn": "আমাদের নীতিমালা"
+        }
+    },
+    "categories": {
+        "en": "Categories",
+        "bn": "ক্যাটাগরি",
+        "popularKitchen": {
+            "en": "Popular Kitchen",
+            "bn": "জনপ্রিয় কিচেন"
+        },
+        "instantFood": {
+            "en": "Instant Food",
+            "bn": "ইন্সট্যান্ট ফুড"
+        },
+        "preOrderFood": {
+            "en": "Pre-order Food",
+            "bn": "প্রি-অর্ডার ফুড"
+        },
+        "wishOrder": {
+            "en": "Wish Order",
+            "bn": "উইস ফুড"
+        },
+        "cateringFood": {
+            "en": "Catering Food",
+            "bn": "ক্যাটেরিং ফুড"
+        },
+        "allCategories": {
+            "en": "All Categories",
+            "bn": "ক্যাটাগরি"
+        }
+    },
+    "links": {
+        "en": "Links",
+        "bn": "লিংকস",
+        "findState": {
+            "en": "Find Us in State",
+            "bn": "আমাদের খুঁজুন"
+        },
+        "earnMoney": {
+            "en": "Earn Money",
+            "bn": "আয় করুন"
+        },
+        "becomeaseller": {
+            "en": "Become A Seller",
+            "bn": "বিক্রেতার জন্য আবেদন"
+        },
+        "becomearider": {
+            "en": "Become A Rider",
+            "bn": "রাইডারের জন্য আবেদন"
+        },
+        "location": {
+            "en": "Location",
+            "bn": "লোকেশন"
+        },
+        "affiliates": {
+            "en": "Affiliates",
+            "bn": "এফিলিয়েটশ"
+        },
+        "contact": {
+            "en": "Contact",
+            "bn": "যোগাযোগ"
+        },
+        "career": {
+            "en": "Career",
+            "bn": "ক্যারিয়ার"
+        },
+        "faq": {
+            "en": "FAQ",
+            "bn": "প্রশ্ন"
+        }
+    },
+    "downloadAPP": {
+        "en": "Download App",
+        "bn": "ডাউনলোড এপ"
+    },
+
+    "address": {
+        
+        "addressTitle": {
+            "en":"Our Office",
+            "bn": "ঠিকানা"
+        },
+        "line1": {
+            "en":"Address: Software Technology Park Bangkok Market (level-6).",
+            "bn": "ঠিকানাঃ সফটওয়্যার টেকনোলজি পার্ক, ব্যাংকক মার্কেট"
+        },
+        "line2": {
+            "en": "14 Agrabad access road,",
+            "bn": "১৪ আগ্রাবাদ এক্সেস রোড"
+        },
+        "line3": {
+            "en": "Chattogram, Bangladesh.",
+            "bn": "চট্টগ্রাম, বাংলাদেশ"
+        }
+    }
+}

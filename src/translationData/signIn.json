@@ -1,0 +1,30 @@
+{
+    "formTitle":{
+        "en":"Sign Into Your Account",
+        "bn":"এ্যাকাউন্টে সাইন ইন করুন"
+    },
+    "email":{
+        "en":"Email Address/Mobile Number",
+        "bn":"ইমেইল/মোবাইল"
+    },
+    "password":{
+        "en":"Password",
+        "bn":"পাসওয়ার্ড"
+    },
+    "remember":{
+        "en":"Remember Me",
+        "bn":"মনে রাখুন"
+    },
+    "forgotPassword":{
+        "en":"Forgot Your Password?",
+        "bn":"পাসওয়ার্ড ভুলে গিয়েছেন?"
+    },
+    "formFooterTitle":{
+        "en":"Don't have an account?",
+        "bn":"অ্যাকাউন্ট নেই?",
+        "loginHere":{
+            "en":"Register here",
+            "bn":"রেজিস্টার করুন"
+        }
+    }
+}

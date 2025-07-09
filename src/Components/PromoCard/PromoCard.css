@@ -1,0 +1,54 @@
+.promo-card {
+  height: 170px;
+  width: 100%;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+.promo-card-content {
+  display: flex;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.promo-text {
+  flex: 2;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffd400;
+}
+
+.promo-image-container {
+  flex: 1;
+}
+
+.promo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.promo-card:hover .promo-image {
+  animation: fadeIn 0.5s ease-in-out forwards;
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.w-fit {
+  width: fit-content;
+}
