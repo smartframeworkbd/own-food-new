@@ -3,7 +3,7 @@ import "./Search.css";
 import LeftFilter from "../LeftFilter/LeftFilter";
 
 
-const Search = () => {
+const Search = ({setSearch,setFilters}) => {
   const [showSidebar, setShowSidebar] = useState(false);
 
   const toggleSidebar = () => {
@@ -15,6 +15,7 @@ const Search = () => {
       <div className="search-bar-container">
         <input
           type="text"
+          onChange={(e)=>setSearch(e.target.value)}
           className="search-input"
           placeholder="Search for food"
         />
@@ -29,7 +30,7 @@ const Search = () => {
           ✖
         </button>
         {/* FilterSidebar component call */}
-        <LeftFilter />
+        <LeftFilter setFilters={setFilters} />
       </div>
 
       {/* Overlay */}

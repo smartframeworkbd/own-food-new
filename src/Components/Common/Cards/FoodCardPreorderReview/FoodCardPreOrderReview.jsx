@@ -14,21 +14,28 @@ import {
 } from "lucide-react";
 // import sampleImg from './food-sample.jpg'; // Replace with your image path
 
-const FoodCardPreOrderReview = () => {
+const FoodCardPreOrderReview = ({item}) => {
+  console.log(item)
   return (
     
     <div className="card food-card-preorder shadow-sm p-0 m-2">
       <div className="row g-0">
-        <div className="col-auto label-vertical">Dhaka Special Kitchen</div>
+        <div className="col-auto label-vertical">  {item?.sellerInfo?.[0]?.kitchenName || "Unknown Kitchen"}</div>
 
         <div className="col position-relative">
-          <img src={image} alt="food" className="img-fluid food-img" />
+          <img src={item?.foodImage && item?.foodImage[0]?.extraLarge?.imageUrl} alt="food" className="img-fluid food-img" />
 
           {/* Discount Badge */}
           {/* <div className="badge bg-primary discount-badge d-flex justify-content-center align-items-center"><span> 40% OFF</span></div> */}
-          <div class="starburst example" id="example-2">
-            <span>12% OFF</span>
-          </div>
+           {(!!item?.foodDiscountPrice || !!item?.foodDiscountPercentage) && (
+            <div className="starburst example" id="example-2">
+              <span>
+                {item?.foodDiscountPrice
+                  ? `${item?.foodDiscountPrice} TK OFF`
+                  : `${item?.foodDiscountPercentage}% OFF`}
+              </span>
+            </div>
+          )}
           {/* Right Icons */}
           <div className="icon-list text-white justify-content-center h-100">
             <div className="d-flex flex-column justify-content-center align-items-center">
@@ -57,7 +64,7 @@ const FoodCardPreOrderReview = () => {
 
           <div className="overlay-text-fw justify-content-between">
             <div>
-              <span>Pre Order</span>
+              <span>{item?.foodType}</span>
             </div>
             <div className="d-flex gap-1">
               <span>
@@ -76,7 +83,7 @@ const FoodCardPreOrderReview = () => {
             </div>
             <div className="col-8">
               <div className="text-truncate fw-medium">
-                Pouring honey on .....
+                {item?.foodName || "Untitled Food"}
               </div>
 
               {/* Reactions */}
@@ -97,13 +104,27 @@ const FoodCardPreOrderReview = () => {
               {/* Price */}
               <div className="d-flex justify-content-between align-items-center">
                 <div>
-                  <span className="fw-bold text-dark fs-5">৳ 160</span>
-                  <span className="text-muted text-decoration-line-through ms-1 font-bold">
-                    ৳ 180
-                  </span>
+                  <span className="fw-bold text-dark fs-5">   ৳ {item?.foodSalePrice}</span>
+                  {item?.foodPrice && item?.foodPrice !== item?.foodSalePrice && (
+                    <span className="text-muted text-decoration-line-through ms-1">
+                      ৳ {item.foodPrice}
+                    </span>
+                  )}
                 </div>
               </div>
+              
             </div>
+              <div className="footer-actions d-flex justify-content-around align-items-center border-top py-2">
+                          <div className="action-item d-flex align-items-center gap-1">
+                            <ThumbsUp size={16} /> <span>Like</span>
+                          </div>
+                          <div className="action-item d-flex align-items-center gap-1">
+                            <Heart size={16} /> <span>Love</span>
+                          </div>
+                          <div className="action-item d-flex align-items-center gap-1">
+                            <Share2 size={16} /> <span>Share</span>
+                          </div>
+                        </div>
           </div>
         </div>
       </div>

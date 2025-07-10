@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Range.css";
 
-const Range = ({ min, max, label }) => {
+const Range = ({ min, max, label, onChange }) => {
   const [minVal, setMinVal] = useState(min);
   const [maxVal, setMaxVal] = useState(max);
+
+  useEffect(() => {
+    if (onChange) {
+      onChange(minVal, maxVal); 
+    }
+  }, [minVal, maxVal]); 
 
   return (
     <div className="range-wrapper mb-4">

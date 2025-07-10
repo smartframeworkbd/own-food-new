@@ -22,7 +22,7 @@ const KitchenDiscountCarousel = () => {
   useEffect(()=>{
     getCoupon()
   },[])
-  useElements
+ 
   const settings = {
     dots: false,
     infinite: true,
