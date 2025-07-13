@@ -8,6 +8,7 @@ import ShowLocation from './Common/ShowLocation/ShowLocation';
 import SearchBox from './Header/SearchBox';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import SearchBar from './Header/SearchBar/SearchBar';
 const NavigationBar = () => {
   const [userAddress, setUserAddress] = useState(null);
   const [openSearch, setOpenSearch] = useState(false);
@@ -46,14 +47,19 @@ const NavigationBar = () => {
                 </div>
               </div>
             </Link>
-            <div onClick={() => {
+
+
+            <div>
+              <SearchBar />
+            </div>
+            {/* <div onClick={() => {
               handleOpen();
             }} className='search-icon'>
               <div className='search-icon-box'>
                 <Search />
 
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Center Section - Action Buttons */}

@@ -38,7 +38,7 @@ input[type="range"]::-moz-range-thumb {
 
 /* Slider Base Track */
 .slider-track {
-  position: absolute;
+  /* position: absolute; */
   height: 6px;
   border-radius: 3px;
   background-color: #e0e0e0;

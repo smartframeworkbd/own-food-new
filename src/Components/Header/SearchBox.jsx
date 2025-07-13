@@ -62,7 +62,6 @@ const SearchBox = ({handleClose,openSearch,SetpanLeft,handleSubmit}) => {
           `${BaseURL}/topbar-search?query=${query}&tab=${tab}&userLat=${coordinate.lat}&userLan=${coordinate.lon}`
         );
 
-        console.log(response.data,"from-header")
         setResults(response.data);
       } catch (error) {
         console.error("Error fetching search data:", error);

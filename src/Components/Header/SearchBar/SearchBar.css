@@ -1,0 +1,151 @@
+/* styles/search.css */
+
+.ownfood-search-container {
+  position: relative;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.ownfood-search-input-wrapper {
+  position: relative;
+}
+
+.ownfood-search-input {
+  width: 100%;
+  padding: 10px 40px 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.ownfood-search-icon {
+  position: absolute;
+  right: 10px;
+  top: 9px;
+  font-size: 18px;
+  color: #777;
+}
+
+.ownfood-search-dropdown {
+  background: #fff;
+  border: 1px solid #eee;
+  border-top: none;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  max-height: 420px;
+  overflow-y: auto;
+  border-radius: 0 0 6px 6px;
+}
+
+.ownfood-search-tabs {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  background: #fafafa;
+  padding: 5px;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.ownfood-tab {
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 5px;
+  color: #444;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  white-space: nowrap;
+}
+
+.ownfood-tab:hover {
+  background: #ffebeb;
+  color: #d60000;
+}
+
+.ownfood-tab.active {
+  background: #ff3d3d;
+  color: #fff;
+  font-weight: bold;
+}
+
+.ownfood-search-results {
+  padding: 10px;
+}
+
+.ownfood-product-card {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  align-items: center;
+  transition: background 0.2s ease;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.ownfood-product-card:hover {
+  background: #f9f9f9;
+}
+
+.ownfood-product-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 4px;
+  border: 1px solid #eee;
+}
+
+.ownfood-product-title {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.ownfood-price-area {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.ownfood-price {
+  color: red;
+  font-weight: bold;
+}
+
+.ownfood-old-price {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.ownfood-search-footer {
+  padding: 10px;
+  text-align: center;
+  background: #fff6f6;
+}
+
+.ownfood-see-all-btn {
+  border: none;
+  background: #ffe5e5;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.ownfood-see-all-btn:hover {
+  background: #ffcccc;
+  color: #c70000;
+}
+
+.ownfood-no-result {
+  padding: 15px;
+  text-align: center;
+  color: #888;
+}
