@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import image1 from '../../assets/promo1.png'
 import image2 from '../../assets/promo2.png'
 import image3 from '../../assets/promo3.png'
@@ -6,6 +6,8 @@ import PromoCard from '../PromoCard/PromoCard'
 import Slider from 'react-slick'
 import './PromoCardParent.css'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
+import { getBannersAPI } from '../../API/BannersAPI'
+import { useSelector } from 'react-redux'
 
 const PromoCardParent = () => {
   const data = [
@@ -27,13 +29,18 @@ const PromoCardParent = () => {
     image: image3,
     bgColor: '#4caf50',
   },
-  // {
-  //   title: 'Free Drinks on 3rd Order!',
-  //   buttonText: 'Order Now',
-  //   image: 'https://source.unsplash.com/400x300/?drink',
-  //   bgColor: '#3f51b5',
-  // },
+
 ];
+
+
+  useEffect(() => {
+    getBannersAPI().then((res) => {
+      if (res === true) {
+      }
+    });
+  }, []);
+
+  let BannerList = useSelector((state) => state.banner.allBannerList);
   const NextArrow = (props) => {
     const { onClick } = props;
     return <div className="slick-arrow custom-arrow slick-next d-flex justify-content-center align-items-center" onClick={onClick}>
@@ -77,7 +84,8 @@ const settings = {
   return (
        <div className="container my-4 promo-card-parent">
       <Slider {...settings}>
-        {data.map((item, index) => (
+        {BannerList.length > 0 &&
+                BannerList?.map((item, index) => (
           <PromoCard key={index} data={item} />
         ))}
       </Slider>

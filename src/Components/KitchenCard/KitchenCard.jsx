@@ -4,14 +4,14 @@ import { Locate, LocateFixedIcon, MapPin, Star } from 'lucide-react';
 import { Button } from 'react-bootstrap';
 import kitchen1 from '../../assets/kitchen1.png';
 
-const KitchenCard = (item) => {
-  console.log(item)
+const KitchenCard = ({item}) => {
+
   return (
     <div className="kitchen-card">
       <div className="kitchen-info-section row">
         <div className="kitchen-image col-12  text-center d-flex justify-content-center mb-3">
           <img src={
-            item.sellerProfilePhoto.length > 0?
+            item?.sellerProfilePhoto?.length > 0?
                             (() => {
                               const imageUrl = item?.sellerProfilePhoto[0]?.extraLarge?.imageUrl
 

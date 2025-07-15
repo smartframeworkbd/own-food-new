@@ -2,14 +2,17 @@ import { Menu, ShoppingCart, User, ChevronDown, SearchXIcon, Search, BanknoteArr
 import logo from '../assets/ownfood.png';
 import "./Header.css"
 import SideBar from './Common/SideBar/SideBar';
-import { useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import DrawerRight from './Header/DrawerRight';
 import ShowLocation from './Common/ShowLocation/ShowLocation';
 import SearchBox from './Header/SearchBox';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import SearchBar from './Header/SearchBar/SearchBar';
+import { LanguageContext } from '../Context/LanguageContext';
 const NavigationBar = () => {
+    const { currentLanguage, setCurrentLanguage } = useContext(LanguageContext);
+  
   const [userAddress, setUserAddress] = useState(null);
   const [openSearch, setOpenSearch] = useState(false);
 
@@ -20,6 +23,31 @@ const NavigationBar = () => {
   const handleOpen = () => setOpenSearch(true);
   const handleClose = () => setOpenSearch(false);
   const cart = useSelector((state) => state.cart.cartItems);
+
+
+  const [selectedLang, setSelectedLang] = useState("en");
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  const toggleDropdown = () => setIsOpen(!isOpen);
+
+  const handleSelect = (lang) => {
+     setCurrentLanguage(currentLanguage === "en" ? "bn" : "en");
+    setSelectedLang(lang);
+    setIsOpen(false);
+  };
+
+  // Close dropdown if clicked outside
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
 
   return (
     <>
@@ -109,11 +137,39 @@ const NavigationBar = () => {
               <span className="login-text"><Link to={'/CustomerLogin'}>Login</Link> / <Link to={'/CustomerRegistration '}>Join</Link></span>
             </button>
 
-            <button className="language-button">
-              <span className="language-icon">🌐</span>
-              <span className="language-text">ENG</span>
-              <ChevronDown size={16} />
-            </button>
+            <div className="dropdown" ref={dropdownRef}>
+              <button
+                className="btn btn-light dropdown-toggle d-flex align-items-center gap-1"
+                type="button"
+                onClick={toggleDropdown}
+              >
+                🌐 <span>{selectedLang}</span> 
+                
+                {/* <ChevronDown size={16} /> */}
+              </button>
+
+              <ul
+                className={`dropdown-menu ${isOpen ? "show" : ""}`}
+                style={{ minWidth: "auto" }}
+              >
+                <li>
+                  <button
+                    className="dropdown-item d-flex align-items-center gap-2"
+                    onClick={() => handleSelect("bn")}
+                  >
+                    🇧🇩 BD
+                  </button>
+                </li>
+                <li>
+                  <button
+                    className="dropdown-item d-flex align-items-center gap-2"
+                    onClick={() => handleSelect("en")}
+                  >
+                    🇺🇸 EN
+                  </button>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </nav>

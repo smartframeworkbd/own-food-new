@@ -34,79 +34,80 @@ const NewHomePage = () => {
   }, []);
 
   useEffect(() => {
-      getHomePageSections();
-    }, []);
-  
-    let HomePageList = useSelector((state) => state.homePage.homePageList);
+    getHomePageSections();
+  }, []);
+
+  let HomePageList = useSelector((state) => state.homePage.homePageList);
   return (
     <>
       {/* {isMobile ? <MobileHeader /> : <NavigationBar  />} */}
-      
-    {/* <FoodTypeCard/> */}
-    <FoodTypeParent/>
-    <CategoryParent/>
-    <PromoCardParent/>
-    <PartnerPromoSection/>
-        <>
+
+      {/* <FoodTypeCard/> */}
+      <FoodTypeParent />
+      <CategoryParent />
+      <PromoCardParent />
+      <PartnerPromoSection />
+      <>
         {HomePageList.map((item, index) => {
-         
 
 
-          //problem
-        //   if (item.sectionStyle === "Style4") {
-        //     return <OrderFoodCat key={index} data={item} />;
-        //   }
 
-        //   if (item.sectionStyle === "Style5") {
-        //     return <FoodCatGallery key={index} data={item} />;
-        //   }
+
 
           if (item.sectionStyle === "Style6") {
-            return <LazyWrapper><KitchenParent key={index} data={item} /></LazyWrapper> 
-            
+            return <LazyWrapper><KitchenParent key={index} data={item} /></LazyWrapper>
+
             // <BrowseByKitchen key={index} data={item} />;
           }
 
-        //   if (item.sectionStyle === "Style7") {
-        //     return <HowWeDo key={index} data={item} />;
-        //   }
+          //   if (item.sectionStyle === "Style7") {
+          //     return <HowWeDo key={index} data={item} />;
+          //   }
 
           //problem
-        //   if (item.sectionStyle === "Style9") {
-        //     return <FoodNameCategory key={index} data={item} />;
-        //   }
+          //   if (item.sectionStyle === "Style9") {
+          //     return <FoodNameCategory key={index} data={item} />;
+          //   }
 
-        //   if (item.sectionStyle === "Style10") {
-        //     return <Dairy key={index} data={item} />;
-        //   }
+          //   if (item.sectionStyle === "Style10") {
+          //     return <Dairy key={index} data={item} />;
+          //   }
 
           if (item.sectionStyle === "Style11") {
-            return <LazyWrapper><RecipeParent key={index} data={item} /></LazyWrapper> 
+            return <LazyWrapper><RecipeParent key={index} data={item} /></LazyWrapper>
             //  <Receipebook_layoutTwo key={index} data={item} />;
           }
 
-          
+
           if (item.sectionStyle === "Style12") {
-            return <LazyWrapper><PreOrderFoodParent key={index} data={item}/></LazyWrapper> 
-            
-            
-            
-            
-            
+            return <LazyWrapper><PreOrderFoodParent key={index} data={item} /></LazyWrapper>
+
+
+
+
+
             // <AllFoodLayoutDesign key={index} data={item} />;
           }
+          // if (item.sectionStyle === "Style14" && item.sectionCardColor=="Kitchen") {
+          //   return <LazyWrapper><NearestKitchen key={index} data={item} /></LazyWrapper>
 
-        //   if (item.sectionStyle === "Style13") {
-        //     return <BannerSection key={index} data={item} />;
-        //   }
+
+          // }
+           if (item.sectionStyle === "Style14" ) {
+            return <LazyWrapper><NearestKitchen key={index} data={item} /></LazyWrapper>
+
+
+          }
+          //   if (item.sectionStyle === "Style13") {
+          //     return <BannerSection key={index} data={item} />;
+          //   }
 
           return <></>;
         })}
       </>
       {/* <TipsAndTricks/> */}
- <Tips/>
-  <NearestKitchen/>
-{/* <OfferFoodParent/>
+      <Tips />
+      {/* <OfferFoodParent/>
 <PreOrderFoodParent/>
 <RecipeParent/>
 <KitchenParent/>
@@ -117,7 +118,7 @@ const NewHomePage = () => {
     <NearestKitchen/>
    
     <CateringFoodParent/> */}
- 
+
     </>
   )
 }

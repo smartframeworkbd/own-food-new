@@ -3,18 +3,19 @@ import { Card, Container, Row, Col } from 'react-bootstrap';
 import './ChefCard.css';
 import chefImage from '../../assets/chef.png'; // replace with actual image path
 
-const ChefCard = () => {
+const ChefCard = ({data}) => {
+  console.log(data)
   return (
     <Container className="my-3">
       <Row className="justify-content-center">
         <Col xs={10} sm={6} md={4} lg={3}>
           <Card className="chef-card">
-            <Card.Img variant="top" src={chefImage} className="chef-img" />
+            <Card.Img variant="top" src={data?.userData?.userProfilePhoto?.[0]?.extraLarge?.imageUrl||chefImage} className="chef-img" />
             <Card.Body className="chef-body">
-              <Card.Title className="chef-name">Mr Maruf Hasan</Card.Title>
+              <Card.Title className="chef-name">{data?.userData?.userFullName}</Card.Title>
               <Card.Text className="chef-desc">
                 Best of: Vort & Birany <br />
-                Origine: Indian
+                Origine: {data?.userData?.address}
               </Card.Text>
             </Card.Body>
           </Card>

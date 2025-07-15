@@ -1,4 +1,4 @@
-/* Section background and padding */
+/* ===== Common Styles ===== */
 .nearest-kitchen-section {
   background: #f5f7fd;
   border-radius: 12px;
@@ -6,20 +6,17 @@
   padding-bottom: 3rem;
 }
 
-/* Icon above title */
 .kitchen-icon {
   width: 80px;
   height: 80px;
 }
 
-/* Section title */
 .section-title {
   font-weight: 700;
   font-size: 1.8rem;
   color: #333;
 }
 
-/* Card layout */
 .nearest-kitchen-card {
   background: white;
   border-radius: 12px;
@@ -27,9 +24,6 @@
   width: 100%;
   max-width: 250px;
   text-align: center;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
   padding: 1.5rem 1rem;
   transition: transform 0.2s ease;
 }
@@ -38,27 +32,24 @@
   transform: translateY(-3px);
 }
 
-/* Circle background for image */
 .kitchen-icon-circle {
   width: 60px;
   height: 60px;
   background-color: #f0f0f0;
   border-radius: 50%;
-  overflow: hidden; /* Make sure image stays inside the circle */
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
 }
 
-/* Kitchen image styling */
 .kitchen-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* Kitchen name text */
 .kitchen-name {
   font-weight: 600;
   font-size: 1rem;
@@ -67,13 +58,11 @@
   margin-bottom: 4px;
 }
 
-/* Food count text */
 .food-count {
   font-size: 0.9rem;
   color: #6c757d;
 }
 
-/* Pagination controls */
 .pagination-controls {
   margin-top: 2rem;
 }
@@ -102,35 +91,60 @@
   font-size: 1rem;
 }
 
-/* Responsive adjustments */
+/* ===== Mobile View Styling ===== */
 @media (max-width: 576px) {
   .nearest-kitchen-card {
     padding: 10px;
-    max-width: 188px;
-    margin: 10px;
-    height: 57px;
-    min-width: 150px;
-
-    /* min-width: 90%; */
+    width: 188px;
+    height: 58px !important;
+    margin: 0 auto;
+    /* min-width: 110px; */
+    height: auto;
+    border-radius: 12px;
   }
 
-  .card-container{
-    /* width: 188px; */
-  }
-  .kitchen-icon-circle{
-        width: 40px;
+  .kitchen-icon-circle {
+    width: 40px;
     height: 40px;
+    margin-bottom: 6px;
   }
-  .kitchen-name{
-    font-size:12px;
-    /* text-wrap: unset; */
-    text-overflow: ellipsis;
+
+  .kitchen-name {
+    font-size: 12px;
     font-weight: 500;
     white-space: nowrap;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
-  .food-count{
+
+  .food-count {
     font-size: 10px;
     font-weight: 400;
-     white-space: nowrap;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  .mobile-slide-card-wrapper {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+  }
+
+  .mobile-slide-card-wrapper:nth-child(1),
+  .mobile-slide-card-wrapper:nth-child(3) {
+    z-index: 1;
+    opacity: 0.6;
+  }
+
+  .mobile-slide-card-wrapper:nth-child(2) {
+    z-index: 2;
+  }
+
+  .nearest-kitchen-mobile-section {
+    background-color: #fefefe;
+    padding: 2rem 1rem;
   }
 }
