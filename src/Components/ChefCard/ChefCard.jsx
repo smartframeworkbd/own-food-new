@@ -2,11 +2,14 @@ import React from 'react';
 import { Card, Container, Row, Col } from 'react-bootstrap';
 import './ChefCard.css';
 import chefImage from '../../assets/chef.png'; // replace with actual image path
+import { Link } from 'react-router-dom';
 
 const ChefCard = ({data}) => {
-  console.log(data)
+  // console.log(data)
   return (
-    <Container className="my-3">
+
+    <Link to={`/SellerProfile/${data?._id}`}>
+        <Container className="my-3">
       <Row className="justify-content-center">
         <Col xs={10} sm={6} md={4} lg={3}>
           <Card className="chef-card">
@@ -22,6 +25,8 @@ const ChefCard = ({data}) => {
         </Col>
       </Row>
     </Container>
+    </Link>
+  
   );
 };
 

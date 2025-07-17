@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import kitchenLogo from "../../assets/kitchnTitle.png";
 import axios from "axios";
 import { BaseURL } from "../../Helper/config";
+import { Link } from "react-router-dom";
 
 const chunkArrayWithPadding = (arr, size) => {
   const chunked = [];
@@ -41,8 +42,8 @@ const NearestKitchen = ({ data }) => {
     fetchKitchens();
   }, [data]);
 
-  const kitchenChunks = chunkArrayWithPadding(kitchenData, 7); // Desktop
-  const mobileChunks = chunkArrayWithPadding(kitchenData, 5); // Mobile
+  const kitchenChunks = chunkArrayWithPadding(kitchenData, 7); 
+  const mobileChunks = chunkArrayWithPadding(kitchenData, 5); 
 
   const desktopSettings = {
     dots: true,
@@ -80,9 +81,12 @@ const NearestKitchen = ({ data }) => {
 
     const title = isChef ? kitchen?.userData?.userFullName : kitchen?.kitchenName;
     const subtitle = isChef ? kitchen?.kitchenName : `ACTIVE FOOD: ${kitchen?.foodCount || 0}`;
-
+    
+    // console.log(data)
+    const linkKitchen=kitchen?._id
     return (
-      <div className="nearest-kitchen-card text-center d-flex gap-3 p-3">
+      <Link to={`/SellerProfile/${linkKitchen}`}>
+        <div className="nearest-kitchen-card text-center d-flex gap-3 p-3">
         <div className="kitchen-icon-circle mb-2">
           <img src={imageSrc} alt={title} className="kitchen-img" />
         </div>
@@ -91,6 +95,8 @@ const NearestKitchen = ({ data }) => {
           <div className="food-count">{subtitle}</div>
         </div>
       </div>
+      </Link>
+    
     );
   };
 

@@ -121,9 +121,9 @@ const NavigationBar = () => {
           {/* Right Section - User Controls */}
           <div className="navbar-right">
 
-            <a target='_blank' className="text-link" href={`/${DashBoardLink}/become-seller`}>Become a Seller</a>
+            <a target='_blank' className="text-link" href={`${DashBoardLink}/become-seller`}>Become a Seller</a>
      
-            <a  target='_blank' className="text-link" href={`/${DashBoardLink}/become-rider`}>Join as a Hero</a>
+            <a  target='_blank' className="text-link" href={`${DashBoardLink}/become-rider`}>Join as a Hero</a>
 
 
             <button onClick={() => {
