@@ -1,32 +1,81 @@
 import React from 'react';
 import Slider from 'react-slick';
 import FoodTypeCard from '../FoodTypeCard/FoodTypeCard';
-import './FoodTypeParent.css'
+import {
+  Utensils,
+  ShoppingBag,
+  CookingPot,
+  UtensilsCrossed,
+  BookOpen,
+  Home,
+  ChefHat,
+  Lightbulb
+} from 'lucide-react';
+import './FoodTypeParent.css';
+
 const foodTypes = [
-  'Instant Food', 'Healthy Food', 'Vegan Food', 'Fast Food',
-  'Desserts', 'Snacks', 'Drinks', 'Grill',
-  // 'BBQ', 'Soups', 'Burgers', 'Pasta',
+  {
+    title: 'Instant Food',
+    icon: Utensils,
+  },
+  {
+    title: 'Pre-Order',
+    icon: ShoppingBag,
+  },
+  {
+    title: 'Cook & Sell',
+    icon: CookingPot,
+  },
+  {
+    title: 'Catering',
+    icon: UtensilsCrossed, // <-- fixed here
+  },
+  {
+    title: 'Recipe',
+    icon: BookOpen,
+  },
+  {
+    title: 'Kitchen',
+    icon: Home,
+  },
+  {
+    title: 'Chefs',
+    icon: ChefHat,
+  },
+  {
+    title: 'Tips & Trick',
+    icon: Lightbulb,
+  },
 ];
+
 const NextArrow = (props) => {
   const { onClick } = props;
-  return <div className="slick-next d-flex align-items-center justify-content-center" onClick={onClick}>→</div>;
+  return (
+    <div className="slick-next d-flex align-items-center justify-content-center" onClick={onClick}>
+      →
+    </div>
+  );
 };
 
 const PrevArrow = (props) => {
   const { onClick } = props;
-  return <div className="slick-prev d-flex align-items-center justify-content-center" onClick={onClick}>←</div>;
+  return (
+    <div className="slick-prev d-flex align-items-center justify-content-center" onClick={onClick}>
+      ←
+    </div>
+  );
 };
 
-const FoodTypeParent = () => {
+const FoodTypeParent = ({ onTypeClick }) => {
   const settings = {
     dots: false,
     infinite: false,
     speed: 500,
-    arrow:false,
+    arrow: false,
     slidesToShow: 8,
     slidesToScroll: 2,
-      nextArrow: <NextArrow />,
-  prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 1200,
@@ -38,7 +87,7 @@ const FoodTypeParent = () => {
       },
       {
         breakpoint: 768,
-        settings: { slidesToShow: 3, dots: true, },
+        settings: { slidesToShow: 3, dots: true },
       },
       {
         breakpoint: 576,
@@ -48,29 +97,14 @@ const FoodTypeParent = () => {
   };
 
   return (
-
-    <div className="food-type-slider-container" style={{ padding: '20px',marginTop:"150px" }}>
+    <div className="food-type-slider-container" style={{ padding: '20px', marginTop: '150px' }}>
       <Slider {...settings}>
         {foodTypes.map((type, index) => (
- 
-            <FoodTypeCard label={type} />
-     
-        ))}
+          <div key={index} onClick={() => onTypeClick(type.title)} style={{ cursor: 'pointer' }}>
+            <FoodTypeCard label={type.title} icon={<type.icon size={32} color="#fff" />} />
+          </div>))}
       </Slider>
     </div>
-    // <div className="food-slider-container" style={{ padding: '20px' }}>
-    //   <div className='row gap-3'>
-
-    //      {foodTypes.map((type, index) => (
- 
-    //         <FoodTypeCard label={type} />
-     
-    //     ))}
-    //   </div>
-      // {/* <Slider {...settings}>
-       
-      // </Slider> */}
-    // </div>
   );
 };
 
