@@ -98,6 +98,13 @@ const NewHomePage = () => {
 
 
           }
+
+
+          if(item.sectionStyle==="Style15")
+          {
+        return <LazyWrapper><Tips key={index} data={item} /></LazyWrapper>
+
+          }
           //   if (item.sectionStyle === "Style13") {
           //     return <BannerSection key={index} data={item} />;
           //   }
@@ -106,7 +113,7 @@ const NewHomePage = () => {
         })}
       </>
       {/* <TipsAndTricks/> */}
-      <Tips />
+      {/* <Tips /> */}
       {/* <OfferFoodParent/>
 <PreOrderFoodParent/>
 <RecipeParent/>

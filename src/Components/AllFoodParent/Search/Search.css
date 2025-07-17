@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-.search-input {
+.search-bar-container .search-input {
   width: 100%;
   padding: 10px 15px 10px 40px;
   border-radius: 8px;
@@ -28,7 +28,7 @@
 }
 
 /* Filter button (visible only on mobile) */
-.filter-button {
+.search-bar-container .filter-button {
   display: none;
   margin-left: 10px;
   padding: 12px 12px;
@@ -40,13 +40,13 @@
 }
 
 @media (max-width: 768px) {
-  .filter-button {
+  .search-bar-container .filter-button {
     display: inline-block;
   }
 }
 
 /* Sidebar */
-.sidebar {
+.search-bar-container  .sidebar {
   position: fixed;
   top: 0;
   left: -250px;
@@ -59,12 +59,12 @@
   z-index: 1001;
 }
 
-.sidebar.show {
+.search-bar-container .sidebar.show {
   left: 0;
 }
 
 /* Close button inside sidebar */
-.close-btn {
+.search-bar-container .close-btn {
   background: none;
   border: none;
   font-size: 20px;
@@ -73,7 +73,7 @@
 }
 
 /* Overlay */
-.overlay {
+.search-bar-container .overlay {
   position: fixed;
   top: 0;
   left: 0;

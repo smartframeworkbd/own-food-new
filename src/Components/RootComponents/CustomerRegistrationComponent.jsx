@@ -6,7 +6,7 @@ import Header from "../Common/Header";
 const CustomerRegistrationComponent = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <div className='Space__For__Header'></div>
       <CustomerRegistration />
       {/* <Footer /> */}

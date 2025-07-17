@@ -6,7 +6,7 @@ import Header from "../Common/Header";
 const CustomerLoginComponent = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <div className='Space__For__Header'></div>
       <CustomerLogin />
       {/* <Footer /> */}

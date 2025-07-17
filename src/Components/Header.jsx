@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import SearchBar from './Header/SearchBar/SearchBar';
 import { LanguageContext } from '../Context/LanguageContext';
+import { DashBoardLink } from '../Helper/config';
 const NavigationBar = () => {
     const { currentLanguage, setCurrentLanguage } = useContext(LanguageContext);
   
@@ -119,9 +120,11 @@ const NavigationBar = () => {
 
           {/* Right Section - User Controls */}
           <div className="navbar-right">
-            <a href="#" className="text-link">Become a Seller</a>
 
-            <a href="#" className="text-link">Join as a Hero</a>
+            <a target='_blank' className="text-link" href={`/${DashBoardLink}/become-seller`}>Become a Seller</a>
+     
+            <a  target='_blank' className="text-link" href={`/${DashBoardLink}/become-rider`}>Join as a Hero</a>
+
 
             <button onClick={() => {
               setState({ isPaneOpen: true });
@@ -134,7 +137,7 @@ const NavigationBar = () => {
 
             <button className="login-button">
               <User size={16} color="#6b7280" />
-              <span className="login-text"><Link to={'/CustomerLogin'}>Login</Link> / <Link to={'/CustomerRegistration '}>Join</Link></span>
+              <span className="login-text"><Link to={'/CustomerLogin'}>Login</Link> / <Link to={'/CustomerRegistration'}>Join</Link></span>
             </button>
 
             <div className="dropdown" ref={dropdownRef}>
