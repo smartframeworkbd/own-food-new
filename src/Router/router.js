@@ -73,83 +73,83 @@ export const routes = createBrowserRouter([
         element:<AllFood/>
       },
       {
-        path: "/kitchen/:id",
+        path: "/SellerProfile/:id",
         element: <Kitchen />
       },
       {
         path: "/ProductsDetails/:id",
         element: <ProductsDetailsPage />,
       },
-      {
-        path: "/SellerProfile/:id",
-        element: <UpdateSellerProfile />,
+      // {
+      //   path: "/SellerProfile/:id",
+      //   element: <UpdateSellerProfile />,
 
 
-        children: [
-          {
-            path: "",
-            element: <AllFoodSeller />,
-          },
-          {
-            path: "instant",
-            element: <InstantFoodSeller />,
-          },
-          {
-            path: "catering",
-            element: <CateringFoodSeller />,
-          },
-          {
-            path: "experimental",
-            element: <ExperimentalFood />,
-          },
-          {
-            path: "amazing-dish",
-            element: <AmazingDish />,
-          },
-          {
-            path: "near-seller",
-            element: <h1>not found</h1>,
+      //   children: [
+      //     {
+      //       path: "",
+      //       element: <AllFoodSeller />,
+      //     },
+      //     {
+      //       path: "instant",
+      //       element: <InstantFoodSeller />,
+      //     },
+      //     {
+      //       path: "catering",
+      //       element: <CateringFoodSeller />,
+      //     },
+      //     {
+      //       path: "experimental",
+      //       element: <ExperimentalFood />,
+      //     },
+      //     {
+      //       path: "amazing-dish",
+      //       element: <AmazingDish />,
+      //     },
+      //     {
+      //       path: "near-seller",
+      //       element: <h1>not found</h1>,
 
-          },
+      //     },
 
-          {
-            path: "wish-order",
-            element: <h1>not found </h1>,
-            // element: <WishOrder />,
-          },
+      //     {
+      //       path: "wish-order",
+      //       element: <h1>not found </h1>,
+      //       // element: <WishOrder />,
+      //     },
 
-          {
-            path: "pre-order",
-            element: <PreOrderFoodSeller />,
-          },
-          // {
-          //   path: "pre-order",
-          //   element: <h1>pre order food</h1>,
-          // },
-          {
-            path: "review",
-            element: <Review />,
-          },
-          {
-            path: "recipe",
-            // element:<h1>not found</h1>
-            element: <SellerRecipe />,
-          },
-          {
-            path: "diary",
-            // element:<h1>not found</h1>
-            element: <SellerDiary />,
-          },
-          // {
-          //   path:'',
-          //   element:<AllRecipeCategoryComponent/>,
-          // },
-          // {
-          //   path:'All-SellerFood',
-          //   element:<AllRecipeCategoryComponent/>
-          // }
-        ],
-      },
+      //     {
+      //       path: "pre-order",
+      //       element: <PreOrderFoodSeller />,
+      //     },
+      //     // {
+      //     //   path: "pre-order",
+      //     //   element: <h1>pre order food</h1>,
+      //     // },
+      //     {
+      //       path: "review",
+      //       element: <Review />,
+      //     },
+      //     {
+      //       path: "recipe",
+      //       // element:<h1>not found</h1>
+      //       element: <SellerRecipe />,
+      //     },
+      //     {
+      //       path: "diary",
+      //       // element:<h1>not found</h1>
+      //       element: <SellerDiary />,
+      //     },
+      //     // {
+      //     //   path:'',
+      //     //   element:<AllRecipeCategoryComponent/>,
+      //     // },
+      //     // {
+      //     //   path:'All-SellerFood',
+      //     //   element:<AllRecipeCategoryComponent/>
+      //     // }
+      //   ],
+      // },
       {
         path: "/Category/:id",
         element: <CategoryPage />,
