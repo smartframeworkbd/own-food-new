@@ -1,3 +1,9 @@
 .all-food {
   margin-top: 200px;
 }
+
+@media (max-width: 767.98px) {
+  .all-food {
+    margin-top: 10px;
+  }
+}

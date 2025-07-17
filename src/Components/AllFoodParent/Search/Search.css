@@ -1,4 +1,4 @@
-.search-bar-container {
+.allfood-search-bar-container {
   margin-top: 20px;
   margin-bottom: 10px;
   width: 100%;
@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-.search-bar-container .search-input {
+.allfood-search-input {
   width: 100%;
   padding: 10px 15px 10px 40px;
   border-radius: 8px;
@@ -18,7 +18,7 @@
   box-sizing: border-box;
 }
 
-.search-bar-container::before {
+.allfood-search-bar-container::before {
   content: "🔍";
   position: absolute;
   left: 12px;
@@ -27,53 +27,71 @@
   pointer-events: none;
 }
 
-/* Filter button (visible only on mobile) */
-.search-bar-container .filter-button {
+.allfood-filter-button {
   display: none;
   margin-left: 10px;
-  padding: 12px 12px;
+  padding: 10px 14px;
   background-color: #0d6efd;
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.allfood-filter-icon {
+  display: inline-block;
+  vertical-align: middle;
+  stroke-width: 2.5; /* optional: make icon lines thicker */
 }
 
 @media (max-width: 768px) {
-  .search-bar-container .filter-button {
-    display: inline-block;
+  .allfood-filter-button {
+    display: flex;
   }
 }
 
 /* Sidebar */
-.search-bar-container  .sidebar {
+.allfood-sidebar {
   position: fixed;
   top: 0;
-  left: -250px;
+  left: 0;
   height: 100%;
-  width: 250px;
+  width: 320px; /* wider sidebar */
   background-color: #ffffff;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  transition: left 0.3s ease-in-out;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
   z-index: 1001;
+  display: flex;
+  flex-direction: column;
 }
 
-.search-bar-container .sidebar.show {
-  left: 0;
+.allfood-sidebar.show {
+  transform: translateX(0);
 }
 
-/* Close button inside sidebar */
-.search-bar-container .close-btn {
+.allfood-close-btn {
   background: none;
   border: none;
   font-size: 20px;
-  float: right;
+  padding: 10px;
+  align-self: flex-end;
   cursor: pointer;
 }
 
+/* Sidebar content scrollable */
+.allfood-sidebar-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 10px 20px;
+}
+
 /* Overlay */
-.search-bar-container .overlay {
+.allfood-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -81,4 +99,12 @@
   width: 100%;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 1000;
+}
+
+/* Hide sidebar and overlay on large screens */
+@media (min-width: 769px) {
+  .allfood-sidebar,
+  .allfood-overlay {
+    display: none !important;
+  }
 }
