@@ -22,7 +22,7 @@ const FoodCardPreOrderReview = ({item}) => {
       <div className="row g-0">
         <div className="col-auto label-vertical">  {item?.sellerInfo?.[0]?.kitchenName || "Unknown Kitchen"}</div>
 
-        <div className="col position-relative">
+        <div className="imageparents col position-relative">
           <img src={item?.foodImage && item?.foodImage[0]?.extraLarge?.imageUrl} alt="food" className="img-fluid food-img" />
 
           {/* Discount Badge */}

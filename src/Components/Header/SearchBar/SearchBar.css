@@ -31,7 +31,7 @@
   border: 1px solid #eee;
   border-top: none;
   position: absolute;
-  width: 100%;
+  width: 500px !important; /* Fixed width */
   z-index: 10;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   max-height: 420px;
@@ -50,7 +50,7 @@
 
 .ownfood-tab {
   padding: 6px 10px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   background: #f5f5f5;
   border: none;
@@ -73,18 +73,24 @@
 }
 
 .ownfood-search-results {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 10px;
   padding: 10px;
 }
 
 .ownfood-product-card {
   display: flex;
+  flex-direction: row; /* Image + info side by side */
+  width: 100%; /* Full width */
   gap: 10px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  align-items: center;
-  transition: background 0.2s ease;
-  padding: 6px;
+  padding: 8px;
   border-radius: 6px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #eee;
+  transition: background 0.2s ease;
+  cursor: pointer;
 }
 
 .ownfood-product-card:hover {
