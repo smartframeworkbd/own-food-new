@@ -12,6 +12,8 @@ import { DashBoardLink, FrontEndLink } from "../../../Helper/config";
 import { FiPhoneCall } from "react-icons/fi";
 
 const SideBar = ({ SetpanLeft, paneLeft }) => {
+
+
   const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
   const toggleOffcanvas = () => setShow(!show);
@@ -95,19 +97,7 @@ const SideBar = ({ SetpanLeft, paneLeft }) => {
                     <FaAngleRight size={25} />
                   </div>
                 </div>
-                {/* <div className="sidebar-item">
-                  <Link
-                    to={"https://ownfood.net/Category/64da6841bd44061552443a53"}
-                    className="d-block"
-                    onClick={() => SetpanLeft(false)} // Close sidebar on click
-                  >
-                    <div className="sidebar-title">
-                      <span>
-                        {getTranslation("catering", currentLanguage, labels)}
-                      </span>
-                    </div>
-                  </Link>
-                </div> */}
+               
                 <div className="sidebar-item">
                   <Link
                     to={"/AllRecipe"}

@@ -35,7 +35,7 @@ const ProductsDetailsComponent = () => {
   }, [productCategoryId])
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <div className="Space__For__Header"></div>
       <ProductsDetails setProductType={setProductType} setProductCategoryId={setProductCategoryId} />
 

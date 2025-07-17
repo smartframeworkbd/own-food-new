@@ -6,10 +6,10 @@ import Header from "../Common/Header";
 const OTPComponent = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <div className='Space__For__Header'></div>
       <OTP />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
