@@ -8,52 +8,70 @@ import { BaseURL } from "../../Helper/config";
 import FoodCard from "../FoodCard/FoodCard";
 // import FoodCard from "../FoodCard/FoodCard";
 
-const PreOrderFoodParent = ({data}) => {
-  console.log(data)
+const PreOrderFoodParent = ({ data }) => {
+  const [selectedTab, setSelectedTab] = useState("Latest");
+  const [selectedFoodType, setSelectedFoodType] = useState("ALL");
   const sliderRef = React.useRef();
-    const [foodItems, setFoodItems] = useState([]);
-      const [loading, setLoading] = useState(false);
-      const { coordinate, error } = useSelector((state) => state.location);
-  
-  
-      const { sectionCategories1, sectionFoodTypeCategories1, sectionTitle1, sectionCardColor } = data;
-  
-      const getFood = async () => {
-          if (!coordinate || !coordinate.lat || !coordinate.lon) {
-              console.error("Coordinates are missing or invalid.");
-              return; // Prevent calling the API if coordinates are missing or invalid
-          }
-  
-          setLoading(true);
-  
-          const payload = {
-              categoryID: [
-                  ...sectionCategories1.map((cat) => cat.value),
-              ],
-              foodType: [
-                  ...sectionFoodTypeCategories1.map((type) => type.value),
-              ],
-          };
-  // console.log(payload)
-          try {
-              const res = await axios.post(
-                  BaseURL + `/filter?lat=${coordinate.lat}&lon=${coordinate.lon}`,
-                  payload
-              );
-              setFoodItems(res?.data?.data);
-          } catch (err) {
-              console.error("Error fetching food data:", err);
-          } finally {
-              setLoading(false);
-          }
-      };
-  
-      useEffect(() => {
-         
-          if (coordinate && coordinate.lat !== null && coordinate.lon !== null) {
-              getFood();
-          }
-      }, [coordinate, data]); 
+  const [foodItems, setFoodItems] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const { coordinate, error } = useSelector((state) => state.location);
+
+  const handleTabClick = (tab) => {
+    setSelectedTab(tab);
+  };
+
+  const handleFoodTypeChange = (e) => {
+    setSelectedFoodType(e.target.value);
+  };
+  const { sectionCategories1, sectionFoodTypeCategories1, sectionTitle1, sectionCardColor } = data;
+
+  const getFood = async () => {
+    if (!coordinate || !coordinate.lat || !coordinate.lon) {
+      console.error("Coordinates are missing or invalid.");
+      return;
+    }
+
+    setLoading(true);
+
+    const payload = {
+      categoryID: sectionCategories1.map((cat) => cat.value),
+      foodType:
+        selectedFoodType === "ALL"
+          ? sectionFoodTypeCategories1.map((type) => type.value)
+          : [selectedFoodType],
+    };
+
+    try {
+      const res = await axios.post(
+        `${BaseURL}/filter?lat=${coordinate.lat}&lon=${coordinate.lon}`,
+        payload
+      );
+      let fetchedItems = res?.data?.data || [];
+
+
+      if (selectedTab === "Latest") {
+        fetchedItems.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+      } else if (selectedTab === "Top") {
+        fetchedItems.sort((a, b) => (b.rating || 0) - (a.rating || 0)); 
+      } else if (selectedTab === "Offer") {
+        fetchedItems = fetchedItems.filter((item) => item.discountPrice > 0); 
+      }
+
+      setFoodItems(fetchedItems);
+    } catch (err) {
+      console.error("Error fetching food data:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+
+  useEffect(() => {
+
+    if (coordinate && coordinate.lat !== null && coordinate.lon !== null) {
+      getFood();
+    }
+  }, [coordinate, data,selectedTab]);
 
   // const foodData = [
   //   {
@@ -128,12 +146,19 @@ const PreOrderFoodParent = ({data}) => {
 
   return (
     <div className=" offer-foods-wrapper py-3">
-         <div className="row mb-3">
+      <div className="row mb-3">
         {/* Title & Dropdown (Row 1) */}
         <div className="col-12 d-flex justify-content-between align-items-center mb-2">
-          <h4 className="fw-bold m-0">Offer Foods</h4>
-          <select className="form-select food-type-dropdown w-auto">
+          <h4 className="fw-bold m-0">{data.sectionTitle1}</h4>
+          <select className="form-select food-type-dropdown w-auto" 
+           value={selectedFoodType}
+  onChange={handleFoodTypeChange}>
             <option>Food Type</option>
+            {sectionFoodTypeCategories1.map((type) => (
+              <option key={type.value} value={type.value}>
+                {type.label}
+              </option>
+            ))}
           </select>
         </div>
 
@@ -142,9 +167,15 @@ const PreOrderFoodParent = ({data}) => {
           {/* Tabs */}
           <div className="d-flex tab-buttons">
             <div className="border rounded">
-              <button className="tab-btn active">Offer</button>
-              <button className="tab-btn">Latest</button>
-              <button className="tab-btn">Top</button>
+              {["Offer", "Latest", "Top"].map((tab) => (
+                <button
+                  key={tab}
+                  className={`tab-btn ${selectedTab === tab ? "active" : ""}`}
+                  onClick={() => handleTabClick(tab)}
+                >
+                  {tab}
+                </button>
+              ))}
             </div>
           </div>
 
@@ -156,27 +187,19 @@ const PreOrderFoodParent = ({data}) => {
           </div>
         </div>
       </div>
-{
-  console.log(foodItems)
-}
-      <Slider {...settings} ref={sliderRef} className="custom-slider">
-        {foodItems.map((food, index) => (
-          <div className="slider-item" key={index}>
-            {
-             console.log(food.foodType) 
-            }
-            {
-              food.foodType=="PREORDER" &&  <FoodCardPreorder {...food} />
-            }
-            {
-              food.foodType=="INSTANT" && <FoodCard
-              {...food}
-              />
-            }
-           
-          </div>
-        ))}
-      </Slider>
+
+      {loading ? (
+        <div className="text-center py-5">Loading...</div>
+      ) : (
+        <Slider {...settings} ref={sliderRef} className="custom-slider">
+          {foodItems.map((food, index) => (
+            <div className="slider-item" key={index}>
+              {food.foodType === "PREORDER" && <FoodCardPreorder {...food} />}
+              {food.foodType === "INSTANT" && <FoodCard {...food} />}
+            </div>
+          ))}
+        </Slider>
+      )}
     </div>
   );
 };

@@ -10,13 +10,15 @@ const partnerData = [
     buttonText: 'Become a Seller',
     image:image1 , 
     bgColor: '#fff4d6',
+    type:"seller",
     btnClass: 'btn-primary'
   },
   {
     title: 'Become A Ownfood Hero',
     description: 'Are you a man of speed and a master of navigation? Become a Ownfood Hero and earn  .',
     buttonText: 'Join as a Hero',
-    image: image2, // Replace with real path
+   type:"rider",
+    image: image2, 
     bgColor: '#e8f0ff',
     btnClass: 'btn-primary'
   }

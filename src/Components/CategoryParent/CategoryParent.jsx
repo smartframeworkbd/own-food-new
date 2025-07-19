@@ -20,7 +20,6 @@ const CategoryParent = () => {
   
     let AllCategoryList = useSelector((state) => state.category.allCategoryList);
   
- console.log(AllCategoryList)
   const NextArrow = (props) => {
     const { onClick } = props;
     return <div className="slick-arrow slick-next d-flex align-items-center justify-content-center" onClick={onClick}>

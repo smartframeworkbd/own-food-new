@@ -6,12 +6,15 @@ import FoodCardPreOrderReview from "../../Common/Cards/FoodCardPreorderReview/Fo
 import "./AllFood.css";
 import axios from "axios";
 import { BaseURL } from "../../../Helper/config";
+import { useSearchParams } from "react-router-dom";
 const AllFood = () => {
   const [filters, setFilters] = useState({});
   const [foodList, setFoodList] = useState([]);
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
-  // Convert filters object to query string
+  const [searchParams] = useSearchParams();
+  const categoryId = searchParams.get("categoryId")||"";
+  
   const buildQueryParams = (obj) => {
     const params = new URLSearchParams();
     if (search) {
@@ -36,7 +39,6 @@ const AllFood = () => {
       setLoading(true);
       const query = buildQueryParams(filters);
       const res = await axios.get(`${BaseURL}/get-all-food?${query}`);
-      console.log(res);
       if (res.data.status === "Success") {
         setFoodList(res.data.data);
       }
@@ -56,7 +58,7 @@ const AllFood = () => {
     <div className="container all-food">
       <div className="row">
         <div className="col-md-3 d-none d-md-block">
-          <LeftFilter filters={filters} setFilters={setFilters} />
+          <LeftFilter filters={filters} setFilters={setFilters} defaultCategoryId={categoryId}/>
         </div>
 
         <div className="col-md-9">

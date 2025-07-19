@@ -4,11 +4,11 @@ import Range from "../../Common/Range/Range";
 import { GetAllCategoryAPI } from "../../../API/CategoryAPI";
 import { useSelector } from "react-redux";
 
-const LeftFilter = ({ setFilters }) => {
+const LeftFilter = ({ setFilters, defaultCategoryId }) => {
   const [filterState, setFilterState] = useState({
     foodType: "",
     mealType: [],
-    categoryID: "", 
+    categoryID: defaultCategoryId || "",
     priceMin: 0,
     priceMax: 1200,
   });
@@ -17,21 +17,26 @@ const LeftFilter = ({ setFilters }) => {
 
   const foodTypes = ["Ready", "Instant", "Catering", "PreOrder"];
   const mealTypes = ["Breakfast", "Lunch", "Evening Snacks", "Dinner"];
-
+  useEffect(() => {
+    if (defaultCategoryId && defaultCategoryId !== filterState.categoryID) {
+      setFilterState((prev) => ({ ...prev, categoryID: defaultCategoryId }));
+      setFilters((prev) => ({ ...prev, categoryID: defaultCategoryId }));
+    }
+  }, [defaultCategoryId]); 
   const allCategoryList = useSelector((state) => state.category.allCategoryList);
 
   useEffect(() => {
-    GetAllCategoryAPI(); // Load categories
+    GetAllCategoryAPI();
   }, []);
 
   const memoizedCategories = useMemo(() => allCategoryList || [], [allCategoryList]);
-const filterCategories = useMemo(()=>{
-   return memoizedCategories.filter(cat =>
-    cat.categoryName.toLowerCase().includes(categorySearch.toLowerCase())
-  );
-},
-[memoizedCategories, categorySearch]
-)
+  const filterCategories = useMemo(() => {
+    return memoizedCategories.filter(cat =>
+      cat.categoryName.toLowerCase().includes(categorySearch.toLowerCase())
+    );
+  },
+    [memoizedCategories, categorySearch]
+  )
   const handleFoodTypeChange = (e) => {
     const updated = { ...filterState, foodType: e.target.value };
     setFilterState(updated);
@@ -146,10 +151,10 @@ const filterCategories = useMemo(()=>{
       {/* Food Categories */}
       <div className="mb-2">
         <h6>Food Categories</h6>
-        <input type="text" className="form-control mb-2" placeholder="Search" 
-        
+        <input type="text" className="form-control mb-2" placeholder="Search"
+
           value={categorySearch}
-    onChange={(e) => setCategorySearch(e.target.value)}
+          onChange={(e) => setCategorySearch(e.target.value)}
         />
         <div className="form-check">
           <input
