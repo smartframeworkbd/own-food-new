@@ -12,22 +12,38 @@ import {
   ShoppingCart,
   ThumbsUp,
 } from "lucide-react";
+import { useDispatch } from "react-redux";
+import { addItem } from "../../../../Redux/State-slice/CartSlice";
+import toast from "react-hot-toast";
 // import sampleImg from './food-sample.jpg'; // Replace with your image path
 
-const FoodCardPreOrderReview = ({item}) => {
-  console.log(item)
+const FoodCardPreOrderReview = ({ item }) => {
+ 
+  const dispatch = useDispatch();
+  const handleAddToCart = (item) => {
+    dispatch(addItem(item));
+    toast.success("Food add successful!", {
+      position: "bottom-center",
+    });
+  };
   return (
-    
     <div className="card food-card-preorder shadow-sm p-0 m-2">
       <div className="row g-0">
-        <div className="col-auto label-vertical">  {item?.sellerInfo?.[0]?.kitchenName || "Unknown Kitchen"}</div>
+        <div className="col-auto label-vertical">
+          {" "}
+          {item?.sellerInfo?.[0]?.kitchenName || "Unknown Kitchen"}
+        </div>
 
         <div className="imageparents col position-relative">
-          <img src={item?.foodImage && item?.foodImage[0]?.extraLarge?.imageUrl} alt="food" className="img-fluid food-img" />
+          <img
+            src={item?.foodImage && item?.foodImage[0]?.extraLarge?.imageUrl}
+            alt="food"
+            className="img-fluid food-img"
+          />
 
           {/* Discount Badge */}
           {/* <div className="badge bg-primary discount-badge d-flex justify-content-center align-items-center"><span> 40% OFF</span></div> */}
-           {(!!item?.foodDiscountPrice || !!item?.foodDiscountPercentage) && (
+          {(!!item?.foodDiscountPrice || !!item?.foodDiscountPercentage) && (
             <div className="starburst example" id="example-2">
               <span>
                 {item?.foodDiscountPrice
@@ -50,7 +66,10 @@ const FoodCardPreOrderReview = ({item}) => {
               </span>
               <span>1.32K</span>
             </div>
-            <div className="d-flex flex-column justify-content-center align-items-center">
+            <div
+              onClick={() => handleAddToCart(item)}
+              className=" d-flex flex-column justify-content-center align-items-center"
+            >
               <span className="icon-item">
                 <ShoppingCart />
               </span>
@@ -104,27 +123,30 @@ const FoodCardPreOrderReview = ({item}) => {
               {/* Price */}
               <div className="d-flex justify-content-between align-items-center">
                 <div>
-                  <span className="fw-bold text-dark fs-5">   ৳ {item?.foodSalePrice}</span>
-                  {item?.foodPrice && item?.foodPrice !== item?.foodSalePrice && (
-                    <span className="text-muted text-decoration-line-through ms-1">
-                      ৳ {item.foodPrice}
-                    </span>
-                  )}
+                  <span className="fw-bold text-dark fs-5">
+                    {" "}
+                    ৳ {item?.foodSalePrice}
+                  </span>
+                  {item?.foodPrice &&
+                    item?.foodPrice !== item?.foodSalePrice && (
+                      <span className="text-muted text-decoration-line-through ms-1">
+                        ৳ {item.foodPrice}
+                      </span>
+                    )}
                 </div>
               </div>
-              
             </div>
-              <div className="footer-actions d-flex justify-content-around align-items-center border-top py-2">
-                          <div className="action-item d-flex align-items-center gap-1">
-                            <ThumbsUp size={16} /> <span>Like</span>
-                          </div>
-                          <div className="action-item d-flex align-items-center gap-1">
-                            <Heart size={16} /> <span>Love</span>
-                          </div>
-                          <div className="action-item d-flex align-items-center gap-1">
-                            <Share2 size={16} /> <span>Share</span>
-                          </div>
-                        </div>
+            <div className="footer-actions d-flex justify-content-around align-items-center border-top py-2">
+              <div className="action-item d-flex align-items-center gap-1">
+                <ThumbsUp size={16} /> <span>Like</span>
+              </div>
+              <div className="action-item d-flex align-items-center gap-1">
+                <Heart size={16} /> <span>Love</span>
+              </div>
+              <div className="action-item d-flex align-items-center gap-1">
+                <Share2 size={16} /> <span>Share</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

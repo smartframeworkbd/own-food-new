@@ -157,7 +157,7 @@ const PreOrderFoodParent = ({data}) => {
         </div>
       </div>
 {
-  console.log(foodItems)
+  // console.log(foodItems)
 }
       <Slider {...settings} ref={sliderRef} className="custom-slider">
         {foodItems.map((food, index) => (
