@@ -3,7 +3,7 @@ import FoodTypeParent from '../Components/FoodTypeParent/FoodTypeParent';
 import CateringFoodParent from '../Components/CateringFoodParent/CateringFoodParent';
 import CategoryParent from '../Components/CategoryParent/CategoryParent';
 import MobileHeader from '../Components/MobileHeader/MobileHeader';
-import NavigationBar from '../Components/Header';
+import NavigationBar from '../Components/Header/Header';
 import PromoCardParent from '../Components/PromoCardParent/PromoCardParent';
 import PartnerPromoSection from '../Components/PromoPartnerParent/PromoPartnerParent';
 import OfferFoodParent from '../Components/OfferFoodParent/OfferFoodParent';
@@ -67,7 +67,9 @@ const NewHomePage = () => {
 
 
           if (item.sectionStyle === "Style6") {
-            return <div ref={kitchenRef} key={index}>            <LazyWrapper><KitchenParent key={index} data={item} /></LazyWrapper>
+            return <div ref={kitchenRef} key={index}>
+              <LazyWrapper><KitchenParent key={index} data={item} />
+              </LazyWrapper>
             </div>
 
 
@@ -78,13 +80,17 @@ const NewHomePage = () => {
 
 
           if (item.sectionStyle === "Style11") {
-            return<div ref={recipeRef}> <LazyWrapper ><RecipeParent key={index} data={item} /></LazyWrapper></div>
+            return <div ref={recipeRef}> 
+            <LazyWrapper ><RecipeParent key={index} data={item} />
+            </LazyWrapper></div>
 
           }
 
 
           if (item.sectionStyle === "Style12") {
-            return<div ref={preOrderRef}><LazyWrapper><PreOrderFoodParent key={index} data={item} /></LazyWrapper></div> 
+            return <div ref={preOrderRef}>
+              <LazyWrapper><PreOrderFoodParent key={index} data={item} />
+              </LazyWrapper></div>
 
 
 

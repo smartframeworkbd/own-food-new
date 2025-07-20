@@ -1,16 +1,16 @@
 import { Menu, ShoppingCart, User, ChevronDown, SearchXIcon, Search, BanknoteArrowDown, ShoppingCartIcon } from 'lucide-react';
-import logo from '../assets/ownfood.png';
+import logo from '../../assets/ownfood.png';
 import "./Header.css"
-import SideBar from './Common/SideBar/SideBar';
+import SideBar from '../Common/SideBar/SideBar';
 import { useContext, useEffect, useRef, useState } from 'react';
-import DrawerRight from './Header/DrawerRight';
-import ShowLocation from './Common/ShowLocation/ShowLocation';
-import SearchBox from './Header/SearchBox';
+import DrawerRight from './DrawerRight';
+import ShowLocation from '../Common/ShowLocation/ShowLocation';
+import SearchBox from './SearchBox';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import SearchBar from './Header/SearchBar/SearchBar';
-import { LanguageContext } from '../Context/LanguageContext';
-import { DashBoardLink } from '../Helper/config';
+import SearchBar from './SearchBar/SearchBar';
+import { LanguageContext } from '../../Context/LanguageContext';
+import { DashBoardLink } from '../../Helper/config';
 const NavigationBar = () => {
     const { currentLanguage, setCurrentLanguage } = useContext(LanguageContext);
   
@@ -93,29 +93,29 @@ const NavigationBar = () => {
 
           {/* Center Section - Action Buttons */}
           <div className="navbar-center">
-            <button className="action-button">
+            <Link to={'/earn-money'} className="action-button">
               <span>Earn Money</span>
               <span>
 
                 <BanknoteArrowDown />
               </span>
 
-            </button>
+            </Link>
 
-            <button className="action-button">
+            <Link to={'/all-food'} className="action-button">
 
               <span>  Order Now</span>
               <span>
                 <ShoppingCartIcon />
               </span>
 
-            </button>
+            </Link>
 
-            <button className="action-button">
+            {/* <button className="action-button">
 
               <span>Party Orders</span>
               <span>🎉</span>
-            </button>
+            </button> */}
           </div>
 
           {/* Right Section - User Controls */}
@@ -159,8 +159,9 @@ const NavigationBar = () => {
                   <button
                     className="dropdown-item d-flex align-items-center gap-2"
                     onClick={() => handleSelect("bn")}
-                  >
-                    🇧🇩 BD
+                  >                    <img style={{width:'20px'}} src='/Assets/Img/countryflag/bangladesh.png'/>
+
+                 BN
                   </button>
                 </li>
                 <li>
@@ -168,7 +169,8 @@ const NavigationBar = () => {
                     className="dropdown-item d-flex align-items-center gap-2"
                     onClick={() => handleSelect("en")}
                   >
-                    🇺🇸 EN
+                    <img style={{width:'20px'}} src='/Assets/Img/countryflag/united-states.png'/>
+                    EN
                   </button>
                 </li>
               </ul>

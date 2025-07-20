@@ -9,7 +9,7 @@ import { CircleHelp, Coffee, Eye, Heart, Share2, ShoppingCart, ThumbsUp } from '
 import { useDispatch } from 'react-redux';
 import { addItem } from '../../Redux/State-slice/CartSlice';
 import toast from 'react-hot-toast';
-// import sampleImg from './food-sample.jpg'; // Replace with your image path
+import { Link } from 'react-router-dom';
 
 const FoodCardPreorder = (item) => {
   const sellerImgUrlRaw = item?.sellerInfo?.[0]?.sellerProfilePhoto?.[0]?.extraLarge?.imageUrl;
@@ -44,7 +44,6 @@ const sellerImgUrl = sellerImgUrlRaw
       : ''
           } alt="food" className="img-fluid food-img" />
 
-          {/* Discount Badge */}
 
           {(!!item.foodDiscountPrice || !!item.foodDiscountPercentage) && (
                                 <>
@@ -63,8 +62,7 @@ const sellerImgUrl = sellerImgUrlRaw
                                     )}
                                 </>
                             )}
-          {/* <div class="starburst example" id="example-2"><span>12% OFF</span></div> */}
-          {/* Right Icons */}
+     
          <div className="icon-list text-white justify-content-center h-100">
             <div className='d-flex flex-column justify-content-center align-items-center'>
               <span className='icon-item'>
@@ -114,12 +112,19 @@ const sellerImgUrl = sellerImgUrlRaw
         <div className="footer-info ">
           <div className="row align-items-center px-2 py-1 mb-1">
             <div className="col-4 d-flex justify-content-end">
+
+              <Link to={`/SellerProfile/${item?.sellerInfo?.[0]?._id}`} className="text-decoration-none text-dark">
+             
               <div className="avatar bg-secondary rounded-circle">
                 <img className="avatar bg-secondary rounded-circle" src={sellerImgUrl} />
               </div>
+               </Link>
             </div>
             <div className="col-8">
+
+              <Link to={`/ProductsDetails/${item._id}`} className="text-decoration-none text-dark">
               <div className="text-truncate fw-medium">{item.foodName}</div>
+              </Link>
 
               <div className="d-flex justify-content-between align-items-center">
                 <span  className="d-flex align-items-end "><img src={review} style={{ height: '20px', width: "20px" }} /> <span className='ms-1'>9.5%</span></span>

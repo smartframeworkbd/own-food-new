@@ -2,7 +2,7 @@
 
 .ownfood-search-container {
   position: relative;
-  max-width: 500px;
+  max-width:200px;
   margin: 20px auto;
 }
 
@@ -74,7 +74,7 @@
 
 .ownfood-search-results {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
+  flex-direction: column; 
   gap: 10px;
   padding: 10px;
 }

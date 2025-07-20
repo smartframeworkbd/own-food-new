@@ -6,6 +6,7 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 import { BaseURL } from "../../Helper/config";
 import FoodCard from "../FoodCard/FoodCard";
+import { Link } from "react-router-dom";
 // import FoodCard from "../FoodCard/FoodCard";
 
 const PreOrderFoodParent = ({ data }) => {
@@ -181,7 +182,7 @@ const PreOrderFoodParent = ({ data }) => {
 
           {/* See More + Nav Buttons */}
           <div className="d-flex align-items-center gap-2 ms-auto">
-            <a href="#" className="see-more-link">See More</a>
+            <Link to={'/all-food'} className="see-more-link">See More</Link>
             <button className="nav-btn" onClick={() => sliderRef.current.slickPrev()}>{'<'}</button>
             <button className="nav-btn" onClick={() => sliderRef.current.slickNext()}>{'>'}</button>
           </div>
