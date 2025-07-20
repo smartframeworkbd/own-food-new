@@ -27,7 +27,9 @@ const WishOrder = () => {
   const QueryIDSeller = searchParams.get("sellerId");
   useEffect(() => {
     const stateItem = state;
+    if(stateItem && stateItem.length > 0) {
     setItem(stateItem[0]);
+    }
   }, []);
 
   const [dropDatePart, setDropDatePart] = useState({

@@ -91,7 +91,7 @@ const NearestKitchen = ({ data }) => {
           <img src={imageSrc} alt={title} className="kitchen-img" />
         </div>
         <div>
-          <div className="kitchen-name">{title}</div>
+          <div className="kitchen-name">{title.length>15?title.slice(0.15):title}</div>
           <div className="food-count">{subtitle}</div>
         </div>
       </div>

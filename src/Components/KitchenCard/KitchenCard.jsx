@@ -64,11 +64,16 @@ const KitchenCard = ({ item }) => {
           </div>
         </div>
       </div>
-      <div className="kitchen-button mt-3">
+
+      <Link to={`wish-order?sellerId=${item?._id}`} state={[item]}>
+       <div className="kitchen-button mt-3">
         <Button variant="primary" className="w-100 rounded">
           Any WISH?
         </Button>
       </div>
+      </Link>
+
+     
     </div>
   );
 };

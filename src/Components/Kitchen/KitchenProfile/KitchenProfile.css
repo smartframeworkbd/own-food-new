@@ -4,7 +4,7 @@
 
 .kitchen-profile-container {
   max-width: 1240px;
-  margin-top: 120px;
+  margin: 150px auto 0;
 }
 .title-text {
   font-family: 'Roboto', sans-serif;

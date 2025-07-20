@@ -12,8 +12,8 @@ const OfferItems = ({ items = [], title = "", loading }) => {
   return (
     <div className="container party-cack-container">
       <div className="heading-section d-flex justify-content-between align-items-center mt-4 mb-3">
-        <h3 className="heading-title">{title}</h3> {/* ✅ dynamic foodType label */}
-        <Button className="wish-btn">Wish Your Food</Button>
+        <h3 className="heading-title">{title}</h3> 
+        {/* <Button className="wish-btn">Wish Your Food</Button> */}
       </div>
 
       <Row className="gy-4">

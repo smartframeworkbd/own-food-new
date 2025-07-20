@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import SearchProductCard from "../../../Common/Cards/SearchProductCard/SearchProductCard";
 
-const SearchDropdown = ({ results, activeTab, setActiveTab, fullResult }) => {
+const SearchDropdown = ({ results, activeTab, setActiveTab, fullResult,setShowDropdown }) => {
   const tabs=["foods","kitchen","categories"]
   // const tabs = useMemo(() => {
   //   return fullResult.map(obj => Object.keys(obj)[0]);
@@ -24,7 +24,7 @@ const SearchDropdown = ({ results, activeTab, setActiveTab, fullResult }) => {
       <div className="ownfood-search-results">
         {results.length > 0 ? (
           results.map((item, i) => (
-            <SearchProductCard key={item._id || i} item={item} />
+            <SearchProductCard setShowDropdown={setShowDropdown} key={item._id || i} item={item} />
           ))
         ) : (
           <p className="ownfood-no-result">No items found</p>
