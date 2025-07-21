@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import kitchenLogo from "../../assets/kitchnTitle.png";
+import ChefTitleLogo from "../../assets/ChefTitleIcon.png";
+
 import axios from "axios";
 import { BaseURL } from "../../Helper/config";
 import { Link } from "react-router-dom";
@@ -42,8 +44,8 @@ const NearestKitchen = ({ data }) => {
     fetchKitchens();
   }, [data]);
 
-  const kitchenChunks = chunkArrayWithPadding(kitchenData, 7); 
-  const mobileChunks = chunkArrayWithPadding(kitchenData, 5); 
+  const kitchenChunks = chunkArrayWithPadding(kitchenData, 7);
+  const mobileChunks = chunkArrayWithPadding(kitchenData, 5);
 
   const desktopSettings = {
     dots: true,
@@ -74,29 +76,28 @@ const NearestKitchen = ({ data }) => {
     const imageSrc = isChef
       ? kitchen?.userData?.userProfilePhoto?.[0]?.extraLarge?.imageUrl
       : kitchen?.sellerProfilePhoto?.[0]?.extraLarge?.imageUrl ||
-        kitchen.kitchenImage ||
-        kitchen.kitchenPhoto ||
-        kitchen.logo ||
-        kitchen.image;
+      kitchen.kitchenImage ||
+      kitchen.kitchenPhoto ||
+      kitchen.logo ||
+      kitchen.image;
 
     const title = isChef ? kitchen?.userData?.userFullName : kitchen?.kitchenName;
     const subtitle = isChef ? kitchen?.kitchenName : `ACTIVE FOOD: ${kitchen?.foodCount || 0}`;
-    
-    // console.log(data)
-    const linkKitchen=kitchen?._id
+
+    const linkKitchen = kitchen?._id
     return (
       <Link to={`/SellerProfile/${linkKitchen}`}>
         <div className="nearest-kitchen-card text-center d-flex gap-3 p-3">
-        <div className="kitchen-icon-circle mb-2">
-          <img src={imageSrc} alt={title} className="kitchen-img" />
+          <div className="kitchen-icon-circle mb-2">
+            <img src={imageSrc || kitchenLogo} alt={title} className="kitchen-img" />
+          </div>
+          <div>
+            <div className="kitchen-name">{title.length > 15 ? title.slice(0, 13) : title}</div>
+            <div className="food-count">{subtitle}</div>
+          </div>
         </div>
-        <div>
-          <div className="kitchen-name">{title.length>15?title.slice(0.15):title}</div>
-          <div className="food-count">{subtitle}</div>
-        </div>
-      </div>
       </Link>
-    
+
     );
   };
 
@@ -106,7 +107,7 @@ const NearestKitchen = ({ data }) => {
       <section className="nearest-kitchen-section text-center py-5 d-none d-lg-block">
         <div className="container">
           <div className="icon-wrapper mb-3">
-            <img src={kitchenLogo} alt="kitchen icon" className="kitchen-icon" />
+            <img src={data?.sectionCardColor === "Chef" ? ChefTitleLogo : kitchenLogo} alt="kitchen icon" className="kitchen-icon" />
           </div>
           <h2 className="section-title mb-4">{data?.sectionTitle1}</h2>
 
@@ -117,7 +118,7 @@ const NearestKitchen = ({ data }) => {
                   {chunk.map((kitchen, idx) => (
                     <div
                       key={idx}
-                      className="col-10 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center"
+                      className="col-10 col-sm-6 col-md-4 col-lg-3 col-xlg-3 mb-4 d-flex justify-content-center"
                     >
                       {renderCard(kitchen)}
                     </div>

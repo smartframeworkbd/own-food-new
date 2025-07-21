@@ -35,7 +35,7 @@ const OffcanvasSideBar = ({ show, handleCloseSidebar, data }) => {
           <div className="sidebar-item" key={item?._id}>
             <Link
               className="sidebar-titleinside"
-              to={`/Category/${item?._id}`}
+              to={`/all-food?categoryId=${item?._id}`}
               onClick={handleCloseSidebar}
             >
               {item.categoryName}

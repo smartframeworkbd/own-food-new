@@ -79,7 +79,7 @@ const FoodCardPreOrderReview = ({ item }) => {
           </div>
 
           {/* Overlay Discount Text */}
-          <div className="overlay-text text-warning">5% DISCOUNT</div>
+          {/* <div className="overlay-text text-warning">5% DISCOUNT</div> */}
 
           <div className="overlay-text-fw justify-content-between">
             <div>

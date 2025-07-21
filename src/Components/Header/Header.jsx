@@ -1,4 +1,4 @@
-import { Menu, ShoppingCart, User, ChevronDown, SearchXIcon, Search, BanknoteArrowDown, ShoppingCartIcon } from 'lucide-react';
+import { Menu, ShoppingCart, User, ChevronDown, SearchXIcon, Search, BanknoteArrowDown, ShoppingCartIcon, Globe } from 'lucide-react';
 import logo from '../../assets/ownfood.png';
 import "./Header.css"
 import SideBar from '../Common/SideBar/SideBar';
@@ -146,7 +146,7 @@ const NavigationBar = () => {
                 type="button"
                 onClick={toggleDropdown}
               >
-                🌐 <span>{selectedLang}</span> 
+                <Globe size={15}/> <span>{selectedLang}</span> 
                 
                 {/* <ChevronDown size={16} /> */}
               </button>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./FoodCard.css";
 import review from "../../assets/review.png";
 import {
@@ -14,6 +14,8 @@ import { addItem } from "../../Redux/State-slice/CartSlice";
 import { toast } from "react-toastify";
 
 const FoodCard = (item) => {
+  const [showShareOptions, setShowShareOptions] = useState(false);
+
   const imageUrl = item?.foodImage[0]?.extraLarge?.imageUrl;
   // console.log(item);
 
@@ -86,7 +88,7 @@ const FoodCard = (item) => {
           </div>
 
           {/* Overlay Discount Text */}
-          <div className="overlay-text text-warning">5% DISCOUNT</div>
+          {/* <div className="overlay-text text-warning">5% DISCOUNT</div> */}
         </div>
 
         {/* Footer Info */}
@@ -148,6 +150,36 @@ const FoodCard = (item) => {
             </div>
             <div className="action-item d-flex align-items-center gap-1">
               <Share2 size={16} /> <span>Share</span>
+               {showShareOptions && (
+    <div className="share-options bg-white border shadow-sm rounded p-2 position-absolute z-10" style={{ top: "120%", right: 0 }}>
+      <div
+        className="dropdown-item"
+        onClick={() => {
+          navigator.clipboard.writeText(window.location.href);
+          toast.success("Link copied to clipboard!");
+          setShowShareOptions(false);
+        }}
+      >
+        📋 Copy Link
+      </div>
+      <a
+        href={`https://wa.me/?text=${encodeURIComponent(window.location.href)}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="dropdown-item"
+      >
+        🟢 WhatsApp
+      </a>
+      <a
+        href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="dropdown-item"
+      >
+        🔵 Facebook
+      </a>
+    </div>
+  )}
             </div>
           </div>
         </div>
