@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { addItem } from "../../../Redux/State-slice/CartSlice";
 import toast from "react-hot-toast";
 import logo from "../../../assets/ownfood.png";
+import { Link } from "react-router-dom";
 const SellerProfileFoodCard = ({ food }) => {
   function calculateTimeRemaining(nowTime, expiryDate) {
     const now = new Date(nowTime);
@@ -37,9 +38,12 @@ const SellerProfileFoodCard = ({ food }) => {
     <div className="card kitchen-profile-food-card shadow-sm">
       <div className="card-body row g-0">
         <div className="col-8 pe-1">
-          <h5 className="fw-semibold mb-1 food-title small">
+
+          <Link to={`/ProductsDetails/${food?._id}` } className="d-block text-decoration-none text-dark">
+           <h5 className="fw-semibold mb-1 food-title small">
             {food?.foodName}
-          </h5>
+          </h5></Link>
+         
 
           <span className="food-type px-1 bg-primary rounded">
             {food?.foodType}

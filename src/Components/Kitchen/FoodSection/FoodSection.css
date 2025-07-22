@@ -1,0 +1,7 @@
+.seller-food-section .category-nav{
+    position: sticky;
+    top: 150px;
+    z-index: 99;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

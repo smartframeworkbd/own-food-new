@@ -8,7 +8,7 @@ import { BaseURL } from '../../../Helper/config';
 
 const OfferItems = ({ items = [], title = "", loading }) => {
 
-
+// console.log(title)
   return (
     <div className="container party-cack-container">
       <div className="heading-section d-flex justify-content-between align-items-center mt-4 mb-3">

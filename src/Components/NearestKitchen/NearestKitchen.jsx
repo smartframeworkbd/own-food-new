@@ -93,7 +93,7 @@ const NearestKitchen = ({ data }) => {
           </div>
           <div>
             <div className="kitchen-name">{title.length > 15 ? title.slice(0, 13) : title}</div>
-            <div className="food-count">{subtitle}</div>
+            <div className="food-count">{subtitle.length> 15 ? title.slice(0, 13) : subtitle}</div>
           </div>
         </div>
       </Link>
