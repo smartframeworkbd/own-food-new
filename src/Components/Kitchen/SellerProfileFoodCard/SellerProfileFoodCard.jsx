@@ -55,7 +55,7 @@ const SellerProfileFoodCard = ({ food }) => {
             }}
           ></p>
 
-          {food?.foodIsDiscountAny !== "NoDiscount" && (
+          {food?.foodIsDiscountAny !== "NoDiscount" &&  food?.foodPrice !== food?.foodSalePrice && (
             <p className="offer-text mb-2 ">
               <span className="badge p-0  d-flex align-items-center  fw-semibold">
                 <svg
@@ -113,7 +113,7 @@ const SellerProfileFoodCard = ({ food }) => {
 
         <div className="col-4 position-relative">
           <img
-            src={food?.foodImage[0]?.medium?.imageUrl || logo}
+            src={`${food?.foodImage[0]?.extraLarge?.imageUrl}?height=120&width=112` || logo}
             className="img-fluid food-image rounded"
             alt="food"
           />

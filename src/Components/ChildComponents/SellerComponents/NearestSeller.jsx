@@ -30,7 +30,7 @@ const NearestSeller = ({ coordinates }) => {
   // Initially show 10 items
   useEffect(() => {
     if (sellerData && sellerData.length > 0) {
-      setSliderData(sellerData.slice(0, 10));  // Show first 10 items
+      setSliderData(sellerData.slice(0, 10));  
     }
   }, [sellerData]);
 

@@ -7,13 +7,18 @@ import { Link, useParams } from 'react-router-dom';
 import { GetSellerAPI } from '../../../API/SellerAPI';
 
 const categories = ['Kitchen', 'Showcase', 'Offer', 'Review', 'Food', 'Recipe', 'Tips & Tricks'];
-
+const toCamelCase = (str) => {
+  return str
+    ?.toLowerCase()
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+};
 const KitchenProfile = () => {
   let { id } = useParams();
   const [isLoading, setIsLoading] = useState(true);
 
   const sellerData = useSelector((state) => state.seller.getSellerInfo);
-  // console.log(sellerData,"kitche-data")
   useEffect(() => {
     setIsLoading(true);
 
@@ -50,14 +55,14 @@ const KitchenProfile = () => {
           <Col xs="auto">
 
             <Image
-              src={sellerData[0]?.userData[0]?.userProfilePhoto[0]?.small?.imageUrl}
+              src={sellerData[0]?.userData[0]?.userProfilePhoto[0]?.extraLarge?.imageUrl}
               alt="Avatar"
               width={70}
               height={70}
             />
           </Col>
           <Col>
-            <h4 className="mb-1 fw-bold title-text">{sellerData[0]?.kitchenName}</h4>
+            <h4 className="mb-1 fw-bold title-text">{toCamelCase(sellerData[0]?.kitchenName)}</h4>
             <div className="d-flex align-items-center flex-wrap gap-2">
               <span className="text-muted details-text">Active Food: 0</span>
               <span className="text-warning fw-bold">
@@ -111,7 +116,8 @@ const KitchenProfile = () => {
             <p className="chef-details">
               {
                 sellerData[0]?.userData[0]?.description
-              }            </p>
+              }       
+              </p>
           </div>
         </div>
 

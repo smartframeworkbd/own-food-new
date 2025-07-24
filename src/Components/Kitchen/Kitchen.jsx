@@ -10,6 +10,9 @@ import OfferItems from './OfferItems/OfferItems'
 import GoogleMap from './Map/Map'
 import FoodSection from './FoodSection/FoodSection'
 import KitchenRecipeParents from './KitchenRecipeParents/KitchenRecipeParents'
+import SellerTipsComponent from './SellerTipsComponent/SellerTipsComponent'
+import SellerTipsShowCaseComponent from './SellerTipsShowCaseComponent/SellerTipsShowCaseComponent'
+import NearestKitchenSeller from './NearestKitchenSeller/NearestKitchenSeller'
 
 const Kitchen = () => {
   return (
@@ -17,7 +20,8 @@ const Kitchen = () => {
     
 
         <KitchenProfile/>
-        <Tips/>
+        <SellerTipsComponent/>
+        {/* <Tips/> */}
         <KitchenDiscountCarousel/>
         <Reviews/>
         <FoodSection/>
@@ -26,9 +30,11 @@ const Kitchen = () => {
 
       
      <KitchenRecipeParents/>
-        <Tips/>
-   
+        {/* <Tips/> */}
 
+        <SellerTipsShowCaseComponent/>
+   
+<NearestKitchenSeller/>
         <GoogleMap/>
     </div>
   )

@@ -19,6 +19,7 @@ import { useEffect, useRef, useState } from 'react';
 import { getHomePageSections } from '../API/HomePageSectionAPI';
 import { useSelector } from 'react-redux';
 import LazyWrapper from '../Components/Common/LazyWrapper/LazyWrapper';
+import TipsComponent from '../Components/ChildComponents/TipsComponent';
 const NewHomePage = () => {
   const [isMobile, setIsMobile] = useState(false);
   const kitchenRef = useRef(null);
@@ -107,7 +108,7 @@ const NewHomePage = () => {
 
 
           if (item.sectionStyle === "Style15") {
-            return <div ref={tipsRef}> <LazyWrapper><Tips key={index} data={item} /></LazyWrapper></div>
+            return <div ref={tipsRef}> <LazyWrapper><TipsComponent key={index} data={item} /></LazyWrapper></div>
 
           }
 
