@@ -14,11 +14,13 @@ const toCamelCase = (str) => {
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 };
-const KitchenProfile = () => {
+const KitchenProfile = ({onTypeClick}) => {
   let { id } = useParams();
   const [isLoading, setIsLoading] = useState(true);
 
   const sellerData = useSelector((state) => state.seller.getSellerInfo);
+  console.log(sellerData);
+  
   useEffect(() => {
     setIsLoading(true);
 
@@ -44,7 +46,7 @@ const KitchenProfile = () => {
     <div className="py-4 kitchen-profile-container">
       <div className="category-bar d-flex flex-wrap justify-content-center gap-2 mb-3">
         {categories.map((cat, idx) => (
-          <Button key={idx} variant="primary" className=" px-3 py-1 text-nowrap">
+          <Button key={idx} variant="primary" onClick={()=>onTypeClick(cat)} className=" px-3 py-1 text-nowrap">
             {cat}
           </Button>
         ))}
@@ -64,7 +66,7 @@ const KitchenProfile = () => {
           <Col>
             <h4 className="mb-1 fw-bold title-text">{toCamelCase(sellerData[0]?.kitchenName)}</h4>
             <div className="d-flex align-items-center flex-wrap gap-2">
-              <span className="text-muted details-text">Active Food: 0</span>
+              <span className="text-muted details-text">Active Food: {sellerData[0]?.foodCount}</span>
               <span className="text-warning fw-bold">
                 ★ 0 <small className="text-muted details-text">(0)</small>
               </span>
@@ -112,7 +114,7 @@ const KitchenProfile = () => {
           <div className="col-12 col-md-9">
             <h2 className="chef-name">{sellerData[0] &&
               sellerData[0]?.userData[0] &&
-              sellerData[0]?.userData[0]?.userFullName}</h2>
+            toCamelCase(sellerData[0]?.userData[0]?.userFullName)  }</h2>
             <p className="chef-details">
               {
                 sellerData[0]?.userData[0]?.description

@@ -12,8 +12,8 @@ const FoodSection = () => {
   const [featuredItems, setFeaturedItems] = useState([]);
   const [foodType, setFoodType] = useState("ALL");
   const [loading, setLoading] = useState(false);
-  const [categories, setCategories] = useState([{ _id: "Asian", categoryName: "Asian" }]);
-  const [activeCategory, setActiveCategory] = useState("Asian");
+  const [categories, setCategories] = useState([{ _id: "Default", categoryName: "Default" }]);
+  const [activeCategory, setActiveCategory] = useState("Default");
   const sectionRefs = useRef({});
   // Fetch foods
   const fetchFood = async () => {
@@ -38,7 +38,7 @@ const FoodSection = () => {
           }
 
           if (allItems.length > 0) {
-            grouped.push({ _id: group._id, categoryName: group.categoryName, items: allItems });
+            grouped.push({ _id: group._id, subcategoryName: group.subcategoryName, items: allItems });
           }
         }
       });
@@ -58,7 +58,7 @@ const FoodSection = () => {
       const res = await axios.get(`${BaseURL}/get-subcategory-by-seller/${id}`);
       if (res.data?.data?.length > 0) {
         const newCategories = [
-          { _id: "Asian", categoryName: "Asian" },
+          { _id: "Default", categoryName: "Default" },
           ...res.data.data
         ];
         setCategories(newCategories);
@@ -113,7 +113,7 @@ const FoodSection = () => {
         </Nav>
 
         {foodGroups.map((group, index) => {
-          const categoryKey =  group.categoryName;
+          const categoryKey =  group.subcategoryName;
           // console.log(categoryKey, "categoryKey")
           return <div key={categoryKey}
             ref={(el) => (sectionRefs.current[categoryKey] = el)}
@@ -122,7 +122,7 @@ const FoodSection = () => {
 
             <OfferItems
               key={index}
-              title={group.categoryName || "Unnamed Category"}
+              title={group.subcategoryName || "Unnamed Category"}
               items={group.items}
               loading={loading}
             />
