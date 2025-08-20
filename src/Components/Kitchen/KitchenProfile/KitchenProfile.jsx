@@ -19,7 +19,7 @@ const KitchenProfile = ({onTypeClick}) => {
   const [isLoading, setIsLoading] = useState(true);
 
   const sellerData = useSelector((state) => state.seller.getSellerInfo);
-  console.log(sellerData);
+  // console.log(sellerData);
   
   useEffect(() => {
     setIsLoading(true);

@@ -51,7 +51,7 @@ const SellerProfileFoodCard = ({ food }) => {
           <p
             className="text-muted food-details-text  mb-2"
             dangerouslySetInnerHTML={{
-              __html: food?.foodDescription?.slice(0, 120),
+              __html: food?.foodDescription?.slice(0, 100),
             }}
           ></p>
 

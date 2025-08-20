@@ -1,4 +1,4 @@
-import { Menu, ShoppingCart, User, ChevronDown, SearchXIcon, Search, BanknoteArrowDown, ShoppingCartIcon, Globe } from 'lucide-react';
+import { Menu, ShoppingCart, ChevronDown, SearchXIcon, Search, BanknoteArrowDown, ShoppingCartIcon, Globe, User2 } from 'lucide-react';
 import logo from '../../assets/ownfood.png';
 import "./Header.css"
 import SideBar from '../Common/SideBar/SideBar';
@@ -11,9 +11,13 @@ import { useSelector } from 'react-redux';
 import SearchBar from './SearchBar/SearchBar';
 import { LanguageContext } from '../../Context/LanguageContext';
 import { DashBoardLink } from '../../Helper/config';
+import labels from "../../translationData/menu.json";
+import getTranslation from "../../Helper/getTranslationUtility";
+
 const NavigationBar = () => {
-    const { currentLanguage, setCurrentLanguage } = useContext(LanguageContext);
-  
+  const { currentLanguage, setCurrentLanguage } = useContext(LanguageContext);
+  const User = JSON.parse(localStorage.getItem("UserDetails"));
+const [user, setUser] = useState(null);
   const [userAddress, setUserAddress] = useState(null);
   const [openSearch, setOpenSearch] = useState(false);
 
@@ -33,12 +37,29 @@ const NavigationBar = () => {
   const toggleDropdown = () => setIsOpen(!isOpen);
 
   const handleSelect = (lang) => {
-     setCurrentLanguage(currentLanguage === "en" ? "bn" : "en");
+    setCurrentLanguage(currentLanguage === "en" ? "bn" : "en");
     setSelectedLang(lang);
     setIsOpen(false);
   };
 
-  // Close dropdown if clicked outside
+
+  useEffect(() => {
+  const checkUser = () => {
+    const userData = JSON.parse(localStorage.getItem("UserDetails"));
+    setUser(userData);
+  };
+
+  checkUser(); // On mount
+
+  window.addEventListener("storage", checkUser);
+
+  return () => window.removeEventListener("storage", checkUser);
+}, []);
+const handleLogout = () => {
+  localStorage.removeItem("UserDetails");
+  localStorage.removeItem("Token");
+  window.location.reload(false);
+};
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -122,8 +143,8 @@ const NavigationBar = () => {
           <div className="navbar-right">
 
             <a target='_blank' className="text-link" href={`${DashBoardLink}/become-seller`}>Become a Seller</a>
-     
-            <a  target='_blank' className="text-link" href={`${DashBoardLink}/become-rider`}>Join as a Hero</a>
+
+            <a target='_blank' className="text-link" href={`${DashBoardLink}/become-rider`}>Join as a Hero</a>
 
 
             <button onClick={() => {
@@ -135,10 +156,83 @@ const NavigationBar = () => {
               </span>
             </button>
 
-            <button className="login-button">
-              <User size={16} color="#6b7280" />
-              <span className="login-text"><Link to={'/CustomerLogin'}>Login</Link> / <Link to={'/CustomerRegistration'}>Join</Link></span>
-            </button>
+
+           
+
+            {
+              user!=null  ? (
+                <ul class="navbar-list bg-white ">
+                  <li class="navbar-item dropdown">
+
+                    <a class="navbar-link" href="#">
+
+                      <img
+                        src={
+                          User?.userProfilePhoto?.length > 0
+                            ? User?.userProfilePhoto[0]?.small?.imageUrl
+                            :
+                            "https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
+                        }
+                        alt="User Profile"
+                        className="rounded-circle  top-0 end-0 m-2"
+                        style={{ width: "50px", height: "50px", objectFit: "cover" }}
+                      />
+                    </a>
+                    <ul class="dropdown-position-list" id="profDropDown">
+                      <li>
+                        <a target="_parent" href={DashBoardLink}>
+                          Hi, {User?.userFullName?.split(" ")[0]}
+                        </a>
+                      </li>
+
+                      <li>
+                        <a target="_parent" href={DashBoardLink}>
+                          {User.userMobileNo}
+                        </a>
+                      </li>
+                      <hr style={{ margin: "0px" }} />
+                      <li>
+                        <a target="_parent" href={DashBoardLink}>
+                          {/* {labels.profile.dashboard.bn} */}
+                          {getTranslation(
+                            "dashboard",
+                            currentLanguage,
+                            labels.profile
+                          )}
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#">
+                          {/* {labels.profile.notification.bn} */}
+                          {getTranslation(
+                            "notification",
+                            currentLanguage,
+                            labels.profile
+                          )}
+                        </a>
+                      </li>
+
+                      <li>
+                        <a onClick={() => handleLogout()}>
+                          <i class="fa-solid fa-right-to-bracket me-1"></i>
+                          {/* {labels.profile.logout.bn} */}
+                          {getTranslation(
+                            "logout",
+                            currentLanguage,
+                            labels.profile
+                          )}
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>) : <button className="login-button">
+                <User2 size={16} color="#6b7280" />
+                <span className="login-text"><Link to={'/CustomerLogin'}>Login</Link> / <Link to={'/CustomerRegistration'}>Join</Link></span>
+              </button>
+            }
+
+
 
             <div className="dropdown" ref={dropdownRef}>
               <button
@@ -146,8 +240,8 @@ const NavigationBar = () => {
                 type="button"
                 onClick={toggleDropdown}
               >
-                <Globe size={15}/> <span>{selectedLang}</span> 
-                
+                <Globe size={15} /> <span>{selectedLang}</span>
+
                 {/* <ChevronDown size={16} /> */}
               </button>
 
@@ -159,9 +253,9 @@ const NavigationBar = () => {
                   <button
                     className="dropdown-item d-flex align-items-center gap-2"
                     onClick={() => handleSelect("bn")}
-                  >                    <img style={{width:'20px'}} src='/Assets/Img/countryflag/bangladesh.png'/>
+                  >                    <img style={{ width: '20px' }} src='/Assets/Img/countryflag/bangladesh.png' />
 
-                 BN
+                    BN
                   </button>
                 </li>
                 <li>
@@ -169,7 +263,7 @@ const NavigationBar = () => {
                     className="dropdown-item d-flex align-items-center gap-2"
                     onClick={() => handleSelect("en")}
                   >
-                    <img style={{width:'20px'}} src='/Assets/Img/countryflag/united-states.png'/>
+                    <img style={{ width: '20px' }} src='/Assets/Img/countryflag/united-states.png' />
                     EN
                   </button>
                 </li>
