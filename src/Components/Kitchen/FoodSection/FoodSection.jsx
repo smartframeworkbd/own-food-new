@@ -6,7 +6,7 @@ import OfferItems from "../OfferItems/OfferItems";
 import { Nav } from "react-bootstrap";
 import FeaturedItems from "../FeaturedItems/FeaturedItems";
 import "./FoodSection.css";
-const FoodSection = () => {
+const FoodSection = ({isKitchenOpen}) => {
   const { id } = useParams();
   const [foodGroups, setFoodGroups] = useState([]);
   const [featuredItems, setFeaturedItems] = useState([]);
@@ -92,8 +92,17 @@ const FoodSection = () => {
       ref.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
+  // const isKitchenOpen = false;
   return (
-    <div className="seller-food-section">
+    <div className="seller-food-section" style={{ position: "relative" }}>
+       {!isKitchenOpen && (
+        <div className="kitchen-closed-overlay">
+          <div className="overlay-content">
+            <h2>Kitchen is Closed</h2>
+            <p>You can browse food but ordering is disabled.</p>
+          </div>
+        </div>
+      )}
       <FeaturedItems items={featuredItems} loading={loading} setFoodType={setFoodType} foodType={foodType} />
 
       <div className="container party-cack-container">

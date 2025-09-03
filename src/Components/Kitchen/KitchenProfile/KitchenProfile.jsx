@@ -14,13 +14,13 @@ const toCamelCase = (str) => {
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 };
-const KitchenProfile = ({onTypeClick}) => {
+const KitchenProfile = ({ onTypeClick, setIsKitchenOpen }) => {
   let { id } = useParams();
   const [isLoading, setIsLoading] = useState(true);
 
   const sellerData = useSelector((state) => state.seller.getSellerInfo);
   // console.log(sellerData);
-  
+
   useEffect(() => {
     setIsLoading(true);
 
@@ -39,6 +39,8 @@ const KitchenProfile = ({onTypeClick}) => {
     fetchData();
 
 
+    setIsKitchenOpen(sellerData[0]?.status === "Active" ? true : false);
+    console.log(sellerData[0]?.status);
 
 
   }, [id]);
@@ -46,7 +48,7 @@ const KitchenProfile = ({onTypeClick}) => {
     <div className="py-4 kitchen-profile-container">
       <div className="category-bar d-flex flex-wrap justify-content-center gap-2 mb-3">
         {categories.map((cat, idx) => (
-          <Button key={idx} variant="primary" onClick={()=>onTypeClick(cat)} className=" px-3 py-1 text-nowrap">
+          <Button key={idx} variant="primary" onClick={() => onTypeClick(cat)} className=" px-3 py-1 text-nowrap">
             {cat}
           </Button>
         ))}
@@ -114,12 +116,12 @@ const KitchenProfile = ({onTypeClick}) => {
           <div className="col-12 col-md-9">
             <h2 className="chef-name">{sellerData[0] &&
               sellerData[0]?.userData[0] &&
-            toCamelCase(sellerData[0]?.userData[0]?.userFullName)  }</h2>
+              toCamelCase(sellerData[0]?.userData[0]?.userFullName)}</h2>
             <p className="chef-details">
               {
                 sellerData[0]?.userData[0]?.description
-              }       
-              </p>
+              }
+            </p>
           </div>
         </div>
 

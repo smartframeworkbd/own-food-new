@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import KitchenProfile from './KitchenProfile/KitchenProfile'
 import Tips from '../Tips/Tips'
 import KitchenDiscountCarousel from './KitchenDiscountCarousel/KitchenDiscountCarousel'
@@ -15,6 +15,7 @@ import SellerTipsShowCaseComponent from './SellerTipsShowCaseComponent/SellerTip
 import NearestKitchenSeller from './NearestKitchenSeller/NearestKitchenSeller'
 
 const Kitchen = () => {
+  const [isKitchenOpen, setIsKitchenOpen] = useState(false);
 const recipeRef = useRef(null);
   const reviewRef = useRef(null);
   const foodRef = useRef(null);
@@ -23,7 +24,7 @@ const recipeRef = useRef(null);
 
     const onTypeClick = (type) => {
 
-      console.log(type);
+      // console.log(type);
       
     if (type === 'Kitchen') window.scrollTo({ top: 0, behavior: 'smooth' });
     if (type === 'Recipe' && recipeRef.current) recipeRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -39,11 +40,11 @@ const recipeRef = useRef(null);
     
   return (
    <div>
-      <KitchenProfile onTypeClick={onTypeClick} />
+      <KitchenProfile onTypeClick={onTypeClick} setIsKitchenOpen={setIsKitchenOpen}/>
       <div ref={showcaseRef}><SellerTipsComponent /></div>
       <KitchenDiscountCarousel />
       <div ref={reviewRef}><Reviews /></div>
-      <div ref={foodRef}><FoodSection /></div>
+      <div ref={foodRef}><FoodSection isKitchenOpen={isKitchenOpen} /></div>
 
       {/* <FeaturedItems />
       <OfferItems /> */}
