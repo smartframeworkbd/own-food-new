@@ -6,10 +6,10 @@ import Header from "../Common/Header";
 const SellerProfileComponent = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <div className='Space__For__Header'></div>
       <SellerProfile />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

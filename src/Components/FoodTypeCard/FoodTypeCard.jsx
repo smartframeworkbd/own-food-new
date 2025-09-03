@@ -2,13 +2,16 @@ import { ChefHat } from 'lucide-react'
 import React from 'react'
 import './FoodTypeCard.css'
 
-const FoodTypeCard = () => {
+const FoodTypeCard = ({ label, icon }) => {
   return (
     <div className="food-type-card col">
       <div className="icon-circle">
-        <ChefHat className="icon" />
+        {
+          icon
+        }
+        {/* <ChefHat className="icon" /> */}
       </div>
-      <div className="card-label">Instant Food</div>
+      <div className="card-label">{label}</div>
     </div>
   )
 }

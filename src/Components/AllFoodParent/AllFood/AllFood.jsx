@@ -1,26 +1,33 @@
-import React, { useEffect, useState } from 'react'
-import LeftFilter from '../LeftFilter/LeftFilter'
-import Search from '../Search/Search'
-import DailyDeals from '../DailyDeals/DailyDeals'
-import FoodCardPreOrderReview from '../../Common/Cards/FoodCardPreorderReview/FoodCardPreOrderReview'
-import './AllFood.css'
-import axios from 'axios'
-import { BaseURL } from '../../../Helper/config'
+import React, { useEffect, useState } from "react";
+import LeftFilter from "../LeftFilter/LeftFilter";
+import Search from "../Search/Search";
+import DailyDeals from "../DailyDeals/DailyDeals";
+import FoodCardPreOrderReview from "../../Common/Cards/FoodCardPreorderReview/FoodCardPreOrderReview";
+import "./AllFood.css";
+import axios from "axios";
+import { BaseURL } from "../../../Helper/config";
+import { useSearchParams } from "react-router-dom";
 const AllFood = () => {
   const [filters, setFilters] = useState({});
   const [foodList, setFoodList] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [search, setSearch] = useState("")
-  // Convert filters object to query string
+  const [search, setSearch] = useState("");
+  const [searchParams] = useSearchParams();
+  const categoryId = searchParams.get("categoryId")||"";
+  
   const buildQueryParams = (obj) => {
     const params = new URLSearchParams();
     if (search) {
-      params.append("searchTerm", search)
+      params.append("searchTerm", search);
     }
     for (let key in obj) {
       if (Array.isArray(obj[key])) {
-        obj[key].forEach(val => params.append(key, val));
-      } else if (obj[key] !== "" && obj[key] !== null && obj[key] !== undefined) {
+        obj[key].forEach((val) => params.append(key, val));
+      } else if (
+        obj[key] !== "" &&
+        obj[key] !== null &&
+        obj[key] !== undefined
+      ) {
         params.append(key, obj[key]);
       }
     }
@@ -32,7 +39,6 @@ const AllFood = () => {
       setLoading(true);
       const query = buildQueryParams(filters);
       const res = await axios.get(`${BaseURL}/get-all-food?${query}`);
-      console.log(res)
       if (res.data.status === "Success") {
         setFoodList(res.data.data);
       }
@@ -52,7 +58,7 @@ const AllFood = () => {
     <div className="container all-food">
       <div className="row">
         <div className="col-md-3 d-none d-md-block">
-          <LeftFilter filters={filters} setFilters={setFilters} />
+          <LeftFilter filters={filters} setFilters={setFilters} defaultCategoryId={categoryId}/>
         </div>
 
         <div className="col-md-9">
@@ -64,7 +70,10 @@ const AllFood = () => {
           <h5 className="Foodcard-title">Indian</h5>
           <div className="row">
             {foodList.map((item, index) => (
-              <div className="col-md-4 mb-3" key={index}>
+              <div
+                className="col-12 col-md-4 mb-3 d-flex justify-content-center"
+                key={index}
+              >
                 <FoodCardPreOrderReview item={item} />
               </div>
             ))}
@@ -72,7 +81,7 @@ const AllFood = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AllFood
+export default AllFood;

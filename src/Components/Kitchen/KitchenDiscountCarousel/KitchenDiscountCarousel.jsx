@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import './KitchenDiscountCarousel.css';
 import { Copy } from 'lucide-react';
@@ -13,16 +13,19 @@ const offers = [
 ];
 
 const KitchenDiscountCarousel = () => {
-  const id = useParams("id")
-
-  const getCoupon = async()=>{
+  const [coupons, setCoupons] = useState([]);
+  let { id } = useParams();
+  console.log(id, "id")
+  const getCoupon = async () => {
     const res = await axios.get(`${BaseURL}/get-coupon-by-seller/${id}`)
-    console.log(res)
+
+    setCoupons(res.data?.data || []);
+
   }
-  useEffect(()=>{
+  useEffect(() => {
     getCoupon()
-  },[])
- 
+  }, [id])
+
   const settings = {
     dots: false,
     infinite: true,
@@ -48,28 +51,36 @@ const KitchenDiscountCarousel = () => {
 
   return (
     <div className="container py-4">
-      <Slider {...settings}>
-        {offers.map((offer) => (
-          <div key={offer.id} className="px-2">
-            <div className="discount-card shadow-sm">
-            <div className="offer-badge" style={{ color: offer.color }}>
-  <div className="position-relative top-0 left-0">
-      <svg className='blob' width="85" height="73" viewBox="0 0 85 73" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M35.7885 -22.1273C36.4851 -22.8581 37.6512 -22.8581 38.3478 -22.1273L41.5116 -18.8083C42.0903 -18.2013 43.0158 -18.0843 43.7273 -18.5284L47.6171 -20.9563C48.4736 -21.4909 49.603 -21.2009 50.096 -20.3199L52.335 -16.3183C52.7445 -15.5864 53.6119 -15.243 54.4115 -15.4962L58.7829 -16.8805C59.7454 -17.1853 60.7672 -16.6235 61.0256 -15.6476L62.1991 -11.2149C62.4138 -10.4042 63.1685 -9.8558 64.0059 -9.9022L68.5843 -10.1559C69.5923 -10.2117 70.4423 -9.41349 70.4499 -8.40394L70.4842 -3.81869C70.4905 -2.98004 71.0851 -2.26121 71.9077 -2.0979L76.4054 -1.20501C77.3956 -1.00842 78.0204 -0.0238743 77.7767 0.955833L76.6696 5.40557C76.4671 6.21943 76.8643 7.06356 77.6205 7.42632L81.7547 9.40967C82.665 9.84634 83.0253 10.9553 82.5456 11.8437L80.3667 15.8783C79.9682 16.6162 80.143 17.5326 80.7852 18.072L84.2963 21.0212C85.0694 21.6705 85.1426 22.8343 84.457 23.5754L81.3432 26.9414C80.7737 27.557 80.7151 28.4881 81.203 29.1703L83.8703 32.9C84.4576 33.7212 84.2391 34.8666 83.3908 35.4139L79.5377 37.8998C78.833 38.3544 78.5447 39.2417 78.8476 40.0238L80.5036 44.2997C80.8682 45.2411 80.3718 46.2962 79.414 46.6153L75.0637 48.0649C74.2681 48.33 73.7682 49.1177 73.8671 49.9505L74.4077 54.5039C74.5267 55.5064 73.7835 56.4049 72.7764 56.4758L68.2023 56.798C67.3657 56.8569 66.6857 57.4956 66.5743 58.3268L65.9656 62.8716C65.8316 63.8722 64.8882 64.5576 63.8951 64.3759L59.3847 63.5504C58.5597 63.3994 57.7422 63.8488 57.4276 64.6263L55.7078 68.8769C55.3291 69.8128 54.2449 70.2421 53.3282 69.819L49.1648 67.8978C48.4033 67.5464 47.4997 67.7784 47.0016 68.4532L44.2787 72.1426C43.6792 72.9549 42.5224 73.101 41.7397 72.4633L38.1848 69.567C37.5346 69.0373 36.6017 69.0373 35.9515 69.567L32.3966 72.4633C31.6139 73.101 30.4571 72.9549 29.8576 72.1426L27.1347 68.4532C26.6366 67.7784 25.733 67.5464 24.9715 67.8978L20.8081 69.819C19.8914 70.2421 18.8072 69.8128 18.4285 68.8769L16.7087 64.6263C16.3941 63.8488 15.5766 63.3994 14.7516 63.5504L10.2412 64.3759C9.24809 64.5576 8.30472 63.8722 8.1707 62.8716L7.56197 58.3268C7.45064 57.4956 6.77057 56.8569 5.93397 56.798L1.35991 56.4758C0.352837 56.4049 -0.39044 55.5064 -0.271404 54.5039L0.26924 49.9505C0.368126 49.1177 -0.131755 48.33 -0.927421 48.0649L-5.27766 46.6153C-6.23546 46.2962 -6.73194 45.2411 -6.36733 44.2997L-4.71129 40.0238C-4.40839 39.2417 -4.69668 38.3544 -5.40141 37.8998L-9.25449 35.4139C-10.1028 34.8666 -10.3213 33.7212 -9.73404 32.9L-7.06665 29.1703C-6.57878 28.4881 -6.63736 27.557 -7.20688 26.9414L-10.3207 23.5754C-11.0063 22.8343 -10.933 21.6705 -10.16 21.0212L-6.64887 18.072C-6.00668 17.5326 -5.83187 16.6162 -6.23039 15.8783L-8.40929 11.8437C-8.88902 10.9553 -8.52868 9.84634 -7.61844 9.40967L-3.48418 7.42632C-2.72802 7.06356 -2.33081 6.21943 -2.53329 5.40557L-3.64036 0.955832C-3.88411 -0.0238762 -3.2593 -1.00842 -2.26905 -1.20501L2.22855 -2.0979C3.05117 -2.26121 3.64584 -2.98004 3.65211 -3.81869L3.68642 -8.40394C3.69398 -9.41349 4.544 -10.2117 5.55203 -10.1559L10.1304 -9.9022C10.9678 -9.8558 11.7225 -10.4042 11.9372 -11.2149L13.1107 -15.6476C13.3691 -16.6235 14.3909 -17.1853 15.3534 -16.8805L19.7248 -15.4962C20.5244 -15.243 21.3918 -15.5864 21.8013 -16.3183L24.0403 -20.3199C24.5333 -21.2009 25.6627 -21.4909 26.5192 -20.9563L30.409 -18.5284C31.1205 -18.0843 32.046 -18.2013 32.6247 -18.8083L35.7885 -22.1273Z" fill="#FFF2C4"/>
-</svg>
-    {/* <img src={yellowBlob} alt="blob" className="blob position-absolute " /> */}
-    <span className="position-relative offer-text ">25% OFF</span>
-  </div>
-</div>
-              <div className="offer-code text-muted">
-                {offer.code} 
-
-                <Copy height={16} width={16} className='ms-1'/>
+      {coupons.length === 0 ? (
+        <p>No offers available</p>
+      ) : (
+        <Slider {...settings}>
+          {coupons.map((offer, index) => (
+            <div key={index} className="px-2">
+              <div className="discount-card shadow-sm">
+                <div className="offer-badge" style={{ color: offer.color || '#1A73E8' }}>
+                  <div className="position-relative top-0 left-0">
+                    <svg className="blob" /* svg content here */ />
+                    <span className="position-relative offer-text">
+                      {offer.couponAmount}
+                      {
+                        offer.couponIsPercentage ? '%' : '৳'
+                      }
+                    </span>
+                  </div>
+                </div>
+                <div className="offer-code text-muted d-flex align-items-center">
+                  {offer.couponCode}
+                  <Copy onClick={() => {
+                    navigator.clipboard.writeText(offer.couponCode);
+                    alert("Coupon code copied!");
+                  }} height={16} width={16} className="ms-1" />
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </Slider>
+          ))}
+        </Slider>
+      )}
     </div>
   );
 };

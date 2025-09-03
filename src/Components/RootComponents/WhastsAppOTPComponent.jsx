@@ -6,10 +6,10 @@ import Footer from '../Common/Footer';
 const WhastsAppOTPComponent = () => {
     return (
         <div>
-            <Header/>
+            {/* <Header/> */}
             <div className='Space__For__Header'></div>
             <WhatsAppOTP/>
-            <Footer/>
+            {/* <Footer/> */}
 
         </div>
     );

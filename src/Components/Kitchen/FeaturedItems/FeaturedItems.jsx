@@ -26,7 +26,7 @@ const FeaturedItems = ({ items = [], loading ,setFoodType,foodType}) => {
       {/* Title + CTA */}
       <div className="d-flex justify-content-start align-items-center mb-3">
         <h4 className="fw-semibold mb-0">Featured items</h4>
-        <button className="btn btn-outline-primary ms-2">Wish Your Food</button>
+        {/* <button className="btn btn-outline-primary ms-2">Wish Your Food</button> */}
       </div>
 
       {/* Cards Grid */}

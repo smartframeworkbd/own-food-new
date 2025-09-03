@@ -1,20 +1,20 @@
 import axios from "axios";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import { BaseURL } from "../../../Helper/config";
 import OfferItems from "../OfferItems/OfferItems";
 import { Nav } from "react-bootstrap";
 import FeaturedItems from "../FeaturedItems/FeaturedItems";
-
-const FoodSection = () => {
+import "./FoodSection.css";
+const FoodSection = ({isKitchenOpen}) => {
   const { id } = useParams();
   const [foodGroups, setFoodGroups] = useState([]);
   const [featuredItems, setFeaturedItems] = useState([]);
   const [foodType, setFoodType] = useState("ALL");
   const [loading, setLoading] = useState(false);
-  const [categories, setCategories] = useState([{ _id: "default", categoryName: "Default" }]);
-  const [activeCategory, setActiveCategory] = useState("default");
-
+  const [categories, setCategories] = useState([{ _id: "Default", categoryName: "Default" }]);
+  const [activeCategory, setActiveCategory] = useState("Default");
+  const sectionRefs = useRef({});
   // Fetch foods
   const fetchFood = async () => {
     try {
@@ -31,14 +31,14 @@ const FoodSection = () => {
         if (Array.isArray(group.items)) {
           const allItems = [];
           for (const item of group.items) {
-            if (featured.length<4) { //item.isFeatured
+            if (featured.length < 4) {
               featured.push(item);
             }
             allItems.push(item);
           }
 
           if (allItems.length > 0) {
-            grouped.push({ _id: group._id, items: allItems });
+            grouped.push({ _id: group._id, subcategoryName: group.subcategoryName, items: allItems });
           }
         }
       });
@@ -58,7 +58,7 @@ const FoodSection = () => {
       const res = await axios.get(`${BaseURL}/get-subcategory-by-seller/${id}`);
       if (res.data?.data?.length > 0) {
         const newCategories = [
-          { _id: "default", categoryName: "Default" },
+          { _id: "Default", categoryName: "Default" },
           ...res.data.data
         ];
         setCategories(newCategories);
@@ -73,26 +73,44 @@ const FoodSection = () => {
     fetchCategories();
   }, [id, foodType]);
 
-  const filteredFoodGroups = useMemo(() => {
-    return foodGroups.map(group => {
-      if (activeCategory === "default") {
-        return group;
-      }
-      const filteredItems = group.items.filter(item => item.category === activeCategory);
-      return { ...group, items: filteredItems };
-    }).filter(group => group.items.length > 0); 
-  }, [foodGroups, activeCategory]);
+  // const filteredFoodGroups = useMemo(() => {
+  //   return foodGroups.map(group => {
+  //     if (activeCategory === "default") {
+  //       return group;
+  //     }
+  //     const filteredItems = group.items.filter(item => item.category === activeCategory);
+  //     return { ...group, items: filteredItems };
+  //   }).filter(group => group.items.length > 0);
+  // }, [foodGroups, activeCategory]);
+  const handleCategoryClick = (selectedKey) => {
+    setActiveCategory(selectedKey);
 
+  
+    const ref = sectionRefs.current[selectedKey];
+    console.log(ref,selectedKey, "ref")
+    if (ref && ref.scrollIntoView) {
+      ref.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+  // const isKitchenOpen = false;
   return (
-    <div>
-      <FeaturedItems items={featuredItems} loading={loading} setFoodType={setFoodType} foodType={foodType}/>
+    <div className="seller-food-section" style={{ position: "relative" }}>
+       {!isKitchenOpen && (
+        <div className="kitchen-closed-overlay">
+          <div className="overlay-content">
+            <h2>Kitchen is Closed</h2>
+            <p>You can browse food but ordering is disabled.</p>
+          </div>
+        </div>
+      )}
+      <FeaturedItems items={featuredItems} loading={loading} setFoodType={setFoodType} foodType={foodType} />
 
       <div className="container party-cack-container">
         <Nav
           variant="tabs"
           activeKey={activeCategory}
           className="category-nav"
-          onSelect={(selectedKey) => setActiveCategory(selectedKey)}
+          onSelect={handleCategoryClick}
         >
           {categories.map((cat, index) => (
             <Nav.Item key={cat._id || index}>
@@ -103,14 +121,24 @@ const FoodSection = () => {
           ))}
         </Nav>
 
-        {filteredFoodGroups.map((group, index) => (
-          <OfferItems
-            key={index}
-            title={group._id}
-            items={group.items}
-            loading={loading}
-          />
-        ))}
+        {foodGroups.map((group, index) => {
+          const categoryKey =  group.subcategoryName;
+          // console.log(categoryKey, "categoryKey")
+          return <div key={categoryKey}
+            ref={(el) => (sectionRefs.current[categoryKey] = el)}
+                        style={{ scrollMarginTop: "200px" }}>
+
+
+            <OfferItems
+              key={index}
+              title={group.subcategoryName || "Unnamed Category"}
+              items={group.items}
+              loading={loading}
+            />
+          </div>
+        }
+
+        )}
       </div>
     </div>
   );

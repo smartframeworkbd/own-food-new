@@ -4,29 +4,9 @@ import useIsMobile from '../../customHooks/useIsMobile';
 import { BaseURL } from '../../Helper/config';
 import axios from 'axios';
 
-const Tips = ({ data }) => {
+const Tips = ({ cards=[],title }) => {
   const isMobile = useIsMobile();
-  const [cards, setCards] = useState([]);
-
-  useEffect(() => {
-    const postBody = data?.sectionCategories1?.map((x) => x.value) || [];
-    if (postBody?.length === 0) return;
-
-    axios
-      .post(`${BaseURL}/get-how-do-we-do-home-page`, { _id: postBody })
-      .then((res) => {
-        const fetchedCards = res.data?.data?.map((item, index) => ({
-          id: index + 1,
-          title: item.title || "Untitled",
-          image: item.beforeImage?.[0]?.large?.imageUrl || "", // fallback image logic
-          hasPlayButton: false
-          
-          // !!item.videoURL.length>0,
-        })) || [];
-        setCards(fetchedCards);
-      })
-      .catch((err) => console.error("Failed to fetch kitchen data:", err));
-  }, [data]);
+  
 
   const getCardWidth = (id) => {
     const widths = {
@@ -69,7 +49,7 @@ const Tips = ({ data }) => {
   return (
     <div className="Tips tips-tricks-containerx">
       <div className="section-header">
-        <h2 className="section-title">{data?.sectionTitle1}</h2>
+        <h2 className="section-title">{title}</h2>
         <div className="see-more-container">
           <span className="see-more-text">See More</span>
           <button className="nav-button prev"><span>‹</span></button>

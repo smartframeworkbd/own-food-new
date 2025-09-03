@@ -3,9 +3,10 @@ import { Outlet } from 'react-router-dom'
 // import Footer from '../Common/Footer'
 import useIsMobile from '../../customHooks/useIsMobile'
 import BottomBar from '../../MobileLayout/BottomBar'
-import Header from '../Header'
+// import Header from '../Header'
 import Footer from '../Footer/Footer'
 import MobileHeader from '../MobileHeader/MobileHeader'
+import NavigationBar from '../Header/Header'
 const HomeLayout = () => {
   const isMobile = useIsMobile();
   return (
@@ -14,7 +15,8 @@ const HomeLayout = () => {
         {/* <Header /> */}
 
         {
-          isMobile? <MobileHeader/>:   <Header/>
+          isMobile? <MobileHeader/>:   <NavigationBar
+          />
 
         }
      

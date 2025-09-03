@@ -27,7 +27,10 @@ const WishOrder = () => {
   const QueryIDSeller = searchParams.get("sellerId");
   useEffect(() => {
     const stateItem = state;
+    
+    if(stateItem && stateItem.length > 0) {
     setItem(stateItem[0]);
+    }
   }, []);
 
   const [dropDatePart, setDropDatePart] = useState({
@@ -390,15 +393,19 @@ const WishOrder = () => {
                       paddingRight: "5px",
                     }}
                   >
+
+                    {
+                      console.log(item)
+                    }
                     <div className='col-12 mt-3'>
                       <Button className='restriction mt-2'>
                         {" "}
-                        {item?.kitchenName} Restrictions
+                        {item?.kitchenName} 
                       </Button>
                     </div>
                     <div className='col-12 mb-3'>
                       <ul className='row p-2'>
-                        {item?.myRestrictions.map((data) => {
+                        {item?.myRestrictions && item?.myRestrictions?.map((data) => {
                           return (
                             <div className='col-12 col-xl-3 col-lg-3 col-md-3 gap-2 text-center mb-2 mt-2'>
                               <li className='restrictionList'>{data}</li>

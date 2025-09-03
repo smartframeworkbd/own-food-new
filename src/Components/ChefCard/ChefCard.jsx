@@ -8,10 +8,10 @@ const ChefCard = ({data}) => {
   // console.log(data)
   return (
 
-    <Link to={`/SellerProfile/${data?._id}`}>
+    <Link id='kitchen-chef-ref' to={`/SellerProfile/${data?._id}`}>
         <Container className="my-3">
       <Row className="justify-content-center">
-        <Col xs={10} sm={6} md={4} lg={3}>
+        <Col>
           <Card className="chef-card">
             <Card.Img variant="top" src={data?.userData?.userProfilePhoto?.[0]?.extraLarge?.imageUrl||chefImage} className="chef-img" />
             <Card.Body className="chef-body">

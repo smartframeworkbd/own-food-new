@@ -18,7 +18,9 @@
 .Header .navbar-left {
   display: flex;
   align-items: center;
-  gap: 16px;
+  /* gap: 16px; */
+    gap: 10px;
+
 }
 
 .Header .menu-button {
@@ -96,7 +98,7 @@
 .Header .navbar-right {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 

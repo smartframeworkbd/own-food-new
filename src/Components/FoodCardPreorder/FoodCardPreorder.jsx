@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './FoodCardPreorder.css';
 import image from '../../assets/food.png'
 import review from '../../assets/review.png'
@@ -9,9 +9,13 @@ import { CircleHelp, Coffee, Eye, Heart, Share2, ShoppingCart, ThumbsUp } from '
 import { useDispatch } from 'react-redux';
 import { addItem } from '../../Redux/State-slice/CartSlice';
 import toast from 'react-hot-toast';
-// import sampleImg from './food-sample.jpg'; // Replace with your image path
+import { Link } from 'react-router-dom';
+import ReuseableModel from '../Modal/ReuseableModel';
+import { Button } from 'react-bootstrap';
 
 const FoodCardPreorder = (item) => {
+const [isShareModalOpen, setIsShareModalOpen] = useState(false);
+  
   const sellerImgUrlRaw = item?.sellerInfo?.[0]?.sellerProfilePhoto?.[0]?.extraLarge?.imageUrl;
 
 const sellerImgUrl = sellerImgUrlRaw
@@ -29,6 +33,7 @@ const sellerImgUrl = sellerImgUrlRaw
       };
   return (
     <div className="card food-card-preorder shadow-sm p-0 m-2">
+      
       <div className="row g-0">
         <div className="col-auto label-vertical ">
           {item?.sellerInfo && item?.sellerInfo[0]?.kitchenName}
@@ -44,7 +49,6 @@ const sellerImgUrl = sellerImgUrlRaw
       : ''
           } alt="food" className="img-fluid food-img" />
 
-          {/* Discount Badge */}
 
           {(!!item.foodDiscountPrice || !!item.foodDiscountPercentage) && (
                                 <>
@@ -63,8 +67,7 @@ const sellerImgUrl = sellerImgUrlRaw
                                     )}
                                 </>
                             )}
-          {/* <div class="starburst example" id="example-2"><span>12% OFF</span></div> */}
-          {/* Right Icons */}
+     
          <div className="icon-list text-white justify-content-center h-100">
             <div className='d-flex flex-column justify-content-center align-items-center'>
               <span className='icon-item'>
@@ -90,7 +93,7 @@ const sellerImgUrl = sellerImgUrlRaw
           </div>
 
           {/* Overlay Discount Text */}
-          <div className="overlay-text text-warning">5% DISCOUNT</div>
+          {/* <div className="overlay-text text-warning">5% DISCOUNT</div> */}
 
           <div className='overlay-text-fw justify-content-between'>
 
@@ -114,12 +117,19 @@ const sellerImgUrl = sellerImgUrlRaw
         <div className="footer-info ">
           <div className="row align-items-center px-2 py-1 mb-1">
             <div className="col-4 d-flex justify-content-end">
+
+              <Link to={`/SellerProfile/${item?.sellerInfo?.[0]?._id}`} className="text-decoration-none text-dark">
+             
               <div className="avatar bg-secondary rounded-circle">
                 <img className="avatar bg-secondary rounded-circle" src={sellerImgUrl} />
               </div>
+               </Link>
             </div>
             <div className="col-8">
+
+              <Link to={`/ProductsDetails/${item._id}`} className="text-decoration-none text-dark">
               <div className="text-truncate fw-medium">{item.foodName}</div>
+              </Link>
 
               <div className="d-flex justify-content-between align-items-center">
                 <span  className="d-flex align-items-end "><img src={review} style={{ height: '20px', width: "20px" }} /> <span className='ms-1'>9.5%</span></span>
@@ -156,12 +166,66 @@ const sellerImgUrl = sellerImgUrlRaw
             <div className="action-item d-flex align-items-center gap-1">
               <Heart size={16} /> <span>Love</span>
             </div>
-            <div className="action-item d-flex align-items-center gap-1">
-              <Share2 size={16} /> <span>Share</span>
-            </div>
+          <div className="action-item d-flex align-items-center gap-1 position-relative">
+  <span onClick={() =>  setIsShareModalOpen(true)}style={{ cursor: "pointer" }}>
+    <Share2 size={16} /> <span>Share</span>
+  </span>
+
+ 
+</div>
           </div>
         </div>
       </div>
+   <ReuseableModel
+  title="Share this food"
+  show={isShareModalOpen}
+  handleClose={() => setIsShareModalOpen(false)}
+>
+  <div className="container py-3">
+    <h5 className="mb-3 text-center">Share this with others</h5>
+
+    <div className="row text-center justify-content-center g-3">
+      <div className="col-4">
+        <a
+          href={`https://wa.me/?text=${encodeURIComponent(window.location.href)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-outline-success w-100 d-flex flex-column align-items-center"
+        >
+          <i className="bi bi-whatsapp fs-3"></i>
+          WhatsApp
+        </a>
+      </div>
+
+      <div className="col-4">
+        <a
+          href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-outline-primary w-100 d-flex flex-column align-items-center"
+        >
+          <i className="bi bi-facebook fs-3"></i>
+          Facebook
+        </a>
+      </div>
+
+      <div className="col-4">
+        <button
+          onClick={() => {
+            navigator.clipboard.writeText(`${window.location.href}ProductsDetails/${item._id}`);
+            toast.success("Link copied!");
+            setIsShareModalOpen(false);
+          }}
+          className="btn btn-outline-secondary w-100 d-flex flex-column align-items-center"
+        >
+          <i className="bi bi-clipboard fs-3"></i>
+          Copy Link
+        </button>
+      </div>
+    </div>
+  </div>
+</ReuseableModel>
+
     </div>
   );
 };

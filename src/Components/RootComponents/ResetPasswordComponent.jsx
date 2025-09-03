@@ -6,10 +6,10 @@ import Header from "../Common/Header";
 const ResetPasswordComponent = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <div className='Space__For__Header'></div>
       <ResetPassword />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

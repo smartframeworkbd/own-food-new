@@ -65,7 +65,7 @@ const KitchenParent = ({ data }) => {
         {foodData.map((item, index) => (
           <div className="slider-item" key={index}>
             {data?.sectionCardColor === "Chef" ? (
-              <ChefCard data={item} />
+              <ChefCard  data={item} />
             ) : (
               <KitchenCard item={item} />
             )}
