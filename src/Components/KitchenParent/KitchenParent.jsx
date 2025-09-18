@@ -15,7 +15,7 @@ const KitchenParent = ({ data }) => {
     if (postBody?.length === 0) return;
 
     axios
-      .post(`${BaseURL}/get-seller-with-food-details`, { _id: postBody })
+      .post(`${BaseURL}/get-home-nearest-seller`, { _id: postBody })
       .then((res) => {
         setFoodData(res.data.data || []);
       })
@@ -62,7 +62,8 @@ const KitchenParent = ({ data }) => {
       </div>
 
       <Slider {...settings} ref={sliderRef} className="custom-slider">
-        {foodData.map((item, index) => (
+       
+        { Array.isArray(foodData) && foodData?.length>0 && foodData?.map((item, index) => (
           <div className="slider-item" key={index}>
             {data?.sectionCardColor === "Chef" ? (
               <ChefCard  data={item} />

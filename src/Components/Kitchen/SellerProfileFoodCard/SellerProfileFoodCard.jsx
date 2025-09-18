@@ -34,6 +34,7 @@ const SellerProfileFoodCard = ({ food }) => {
       position: "bottom-center",
     });
   };
+  console.log(food)
   return (
     <div className="card kitchen-profile-food-card shadow-sm">
       <div className="card-body row g-0">
@@ -124,15 +125,15 @@ const SellerProfileFoodCard = ({ food }) => {
           <div className="feedback-footer d-flex justify-content-between align-items-center pt-2 px-1">
             <div className="text-center text-danger small">
               <Hand size={16} />
-              <div>9.5%</div>
+              <div>{food.totalGood}</div>
             </div>
             <div className="text-center text-danger small">
               <Smile size={16} />
-              <div>9.5%</div>
+              <div>{food.totalBest}</div>
             </div>
             <div className="text-center text-danger small">
               <Frown size={16} />
-              <div>47.6%</div>
+              <div>{food.totalBetter}</div>
             </div>
           </div>
         </div>

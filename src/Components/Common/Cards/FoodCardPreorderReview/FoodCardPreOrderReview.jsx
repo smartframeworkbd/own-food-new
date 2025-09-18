@@ -136,7 +136,7 @@ const FoodCardPreOrderReview = ({ item }) => {
                 </div>
               </div>
             </div>
-            <div className="footer-actions d-flex justify-content-around align-items-center border-top py-2">
+            {/* <div className="footer-actions d-flex justify-content-around align-items-center border-top py-2">
               <div className="action-item d-flex align-items-center gap-1">
                 <ThumbsUp size={16} /> <span>Like</span>
               </div>
@@ -146,7 +146,7 @@ const FoodCardPreOrderReview = ({ item }) => {
               <div className="action-item d-flex align-items-center gap-1">
                 <Share2 size={16} /> <span>Share</span>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

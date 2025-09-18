@@ -92,6 +92,8 @@ const FoodSection = ({isKitchenOpen}) => {
       ref.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
+
+  // console.log(isKitchenOpen)
   // const isKitchenOpen = false;
   return (
     <div className="seller-food-section" style={{ position: "relative" }}>
