@@ -233,6 +233,8 @@ const CheckOut = () => {
       couponAmount: couponPrice,
       deliveryFeeForRider: deliveryFeeRider,
       paySystemName,
+     isUseWallet: useWallet,
+     walletBalance
     };
 
     if (coupon.length > 0) {

@@ -775,7 +775,7 @@ const Header = () => {
                     <div className="cart-media">
                       <a>
                         <img
-                          src={item?.foodImage && item?.foodImage[0]?.orginalImageUrl}
+                          src={item?.foodImage && item?.foodImage[0]?.extraLarge?.imageUrl}
                           alt="product"
                         />
                       </a>

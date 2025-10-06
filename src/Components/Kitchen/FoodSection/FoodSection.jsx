@@ -83,11 +83,12 @@ const FoodSection = ({isKitchenOpen}) => {
   //   }).filter(group => group.items.length > 0);
   // }, [foodGroups, activeCategory]);
   const handleCategoryClick = (selectedKey) => {
+    // console.log(selectedKey, "selectedKey");
     setActiveCategory(selectedKey);
 
   
     const ref = sectionRefs.current[selectedKey];
-    console.log(ref,selectedKey, "ref")
+    // console.log(ref,selectedKey, "ref")
     if (ref && ref.scrollIntoView) {
       ref.scrollIntoView({ behavior: "smooth", block: "start" });
     }
@@ -116,7 +117,7 @@ const FoodSection = ({isKitchenOpen}) => {
         >
           {categories.map((cat, index) => (
             <Nav.Item key={cat._id || index}>
-              <Nav.Link eventKey={cat._id} className="category-tab">
+              <Nav.Link eventKey={cat.categoryName} className="category-tab">
                 {cat.categoryName}
               </Nav.Link>
             </Nav.Item>
@@ -124,8 +125,8 @@ const FoodSection = ({isKitchenOpen}) => {
         </Nav>
 
         {foodGroups.map((group, index) => {
-          const categoryKey =  group.subcategoryName;
-          // console.log(categoryKey, "categoryKey")
+        const categoryKey = group.subcategoryName;
+        // console.log(group, "categoryKey");
           return <div key={categoryKey}
             ref={(el) => (sectionRefs.current[categoryKey] = el)}
                         style={{ scrollMarginTop: "200px" }}>
