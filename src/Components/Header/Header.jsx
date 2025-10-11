@@ -14,52 +14,52 @@ import { DashBoardLink } from '../../Helper/config';
 import labels from "../../translationData/menu.json";
 import getTranslation from "../../Helper/getTranslationUtility";
 
-const NavigationBar = () => {
+const NavigationBar = ({ paneLeft, SetpanLeft, cart = [], state, setState, userAddress, setUserAddress }) => {
   const { currentLanguage, setCurrentLanguage } = useContext(LanguageContext);
   const User = JSON.parse(localStorage.getItem("UserDetails"));
-const [user, setUser] = useState(null);
-  const [userAddress, setUserAddress] = useState(null);
+  const [user, setUser] = useState(null);
+  // const [userAddress, setUserAddress] = useState(null);
   const [openSearch, setOpenSearch] = useState(false);
 
-  const [paneLeft, SetpanLeft] = useState(false);
-  const [state, setState] = useState({
-    isPaneOpen: false,
-  });
-  const handleOpen = () => setOpenSearch(true);
+  // const [paneLeft, SetpanLeft] = useState(false);
+
+  // const handleOpen = () => setOpenSearch(true);
   const handleClose = () => setOpenSearch(false);
-  const cart = useSelector((state) => state.cart.cartItems);
+  // const cart = useSelector((state) => state.cart.cartItems);
 
 
-  const [selectedLang, setSelectedLang] = useState("en");
+  const [selectedLang, setSelectedLang] = useState("bn");
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
+  // console.log(currentLanguage,"language")
 
   const handleSelect = (lang) => {
-    setCurrentLanguage(currentLanguage === "en" ? "bn" : "en");
+
+    setCurrentLanguage(lang)
     setSelectedLang(lang);
     setIsOpen(false);
   };
 
 
   useEffect(() => {
-  const checkUser = () => {
-    const userData = JSON.parse(localStorage.getItem("UserDetails"));
-    setUser(userData);
+    const checkUser = () => {
+      const userData = JSON.parse(localStorage.getItem("UserDetails"));
+      setUser(userData);
+    };
+
+    checkUser(); // On mount
+
+    window.addEventListener("storage", checkUser);
+
+    return () => window.removeEventListener("storage", checkUser);
+  }, []);
+  const handleLogout = () => {
+    localStorage.removeItem("UserDetails");
+    localStorage.removeItem("Token");
+    window.location.reload(false);
   };
-
-  checkUser(); // On mount
-
-  window.addEventListener("storage", checkUser);
-
-  return () => window.removeEventListener("storage", checkUser);
-}, []);
-const handleLogout = () => {
-  localStorage.removeItem("UserDetails");
-  localStorage.removeItem("Token");
-  window.location.reload(false);
-};
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -115,7 +115,12 @@ const handleLogout = () => {
           {/* Center Section - Action Buttons */}
           <div className="navbar-center">
             <Link to={'/earn-money'} className="action-button">
-              <span>Earn Money</span>
+              <span> {getTranslation(
+                "earnMoney",
+                currentLanguage,
+                labels
+              )}</span>
+              {/* earnMoney */}
               <span>
 
                 <BanknoteArrowDown />
@@ -125,7 +130,11 @@ const handleLogout = () => {
 
             <Link to={'/all-food'} className="action-button">
 
-              <span>  Order Now</span>
+              <span> {getTranslation(
+                "orderNow",
+                currentLanguage,
+                labels
+              )}</span>
               <span>
                 <ShoppingCartIcon />
               </span>
@@ -142,9 +151,17 @@ const handleLogout = () => {
           {/* Right Section - User Controls */}
           <div className="navbar-right">
 
-            <a target='_blank' className="text-link" href={`${DashBoardLink}/become-seller`}>Become a Seller</a>
+            <a target='_blank' className="text-link" href={`${DashBoardLink}/become-seller`}>{getTranslation(
+              "becomeSeller",
+              currentLanguage,
+              labels
+            )}</a>
 
-            <a target='_blank' className="text-link" href={`${DashBoardLink}/become-rider`}>Join as a Hero</a>
+            <a target='_blank' className="text-link" href={`${DashBoardLink}/become-rider`}>{getTranslation(
+              "becomeRider",
+              currentLanguage,
+              labels
+            )}</a>
 
 
             <button onClick={() => {
@@ -157,10 +174,10 @@ const handleLogout = () => {
             </button>
 
 
-           
+
 
             {
-              user!=null  ? (
+              user != null ? (
                 <ul class="navbar-list bg-white ">
                   <li class="navbar-item dropdown">
 
@@ -169,7 +186,7 @@ const handleLogout = () => {
                       <img
                         src={
                           User?.userProfilePhoto?.length > 0
-                            ? User?.userProfilePhoto[0]?.small?.imageUrl
+                            ? User?.userProfilePhoto[0]?.extraLarge?.imageUrl
                             :
                             "https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
                         }
@@ -214,7 +231,7 @@ const handleLogout = () => {
                       </li>
 
                       <li>
-                        <a onClick={() => handleLogout()}>
+                        <a style={{cursor:"pointer"}} onClick={() => handleLogout()}>
                           <i class="fa-solid fa-right-to-bracket me-1"></i>
                           {/* {labels.profile.logout.bn} */}
                           {getTranslation(
@@ -228,7 +245,15 @@ const handleLogout = () => {
                   </li>
                 </ul>) : <button className="login-button">
                 <User2 size={16} color="#6b7280" />
-                <span className="login-text"><Link to={'/CustomerLogin'}>Login</Link> / <Link to={'/CustomerRegistration'}>Join</Link></span>
+                <span className="login-text"><Link to={'/CustomerLogin'}>{getTranslation(
+                  "signIN",
+                  currentLanguage,
+                  labels
+                )}</Link> / <Link to={'/CustomerRegistration'}>{getTranslation(
+                  "openAccount",
+                  currentLanguage,
+                  labels
+                )}</Link></span>
               </button>
             }
 
@@ -240,6 +265,7 @@ const handleLogout = () => {
                 type="button"
                 onClick={toggleDropdown}
               >
+
                 <Globe size={15} /> <span>{selectedLang}</span>
 
                 {/* <ChevronDown size={16} /> */}

@@ -3,8 +3,20 @@
     "en": "EARN MONEY",
     "bn": "আয় করুন"
   },
+  "orderNow": {
+    "en": "ORDER NOW",
+    "bn": "অর্ডার করুন"
+  },
+  "becomeSeller": {
+    "en": "Become a Seller",
+    "bn": "বিক্রেতা হন"
+  },
+  "becomeRider": {
+    "en": "Become a Rider",
+    "bn": "রাইডার হন"
+  },
   "openAccount": {
-    "en": "OPEN YOUR ACCOUNT",
+    "en": "Join",
     "bn": "একাউন্ট  খুলুন"
   },
   "about-us": {
@@ -24,7 +36,7 @@
     "bn": "আমাদের নীতিমালা"
   },
   "signIN": {
-    "en": "SIGN IN",
+    "en": "Login",
     "bn": "লগ-ইন"
   },
   "watchVide": {
@@ -139,7 +151,10 @@
     "en": "DIARY",
     "bn": "ডায়েরি"
   },
-  "category": { "en": "CATEGORY", "bn": "ক্যাটাগরি" },
+  "category": {
+    "en": "CATEGORY",
+    "bn": "ক্যাটাগরি"
+  },
   "profile": {
     "dashboard": {
       "en": "Dashboard",

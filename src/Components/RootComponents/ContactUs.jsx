@@ -43,7 +43,7 @@ const ContactUs = () => {
               </div>
               <h5 className="fw-bold">{getTranslation("hotlineemail", currentLanguage, labels)}</h5>
               <p className="text-muted">{getTranslation("HotlineEmail", currentLanguage, labels)}</p>
-              <p className="text-muted">{getTranslation("HotlineEmail2", currentLanguage, labels)}</p>
+              {/* <p className="text-muted">{getTranslation("HotlineEmail2", currentLanguage, labels)}</p> */}
             </div>
           </div>
         </div>
