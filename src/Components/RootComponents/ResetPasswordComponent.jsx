@@ -7,7 +7,7 @@ const ResetPasswordComponent = () => {
   return (
     <>
       {/* <Header /> */}
-      <div className='Space__For__Header'></div>
+      {/* <div className='Space__For__Header'></div> */}
       <ResetPassword />
       {/* <Footer /> */}
     </>

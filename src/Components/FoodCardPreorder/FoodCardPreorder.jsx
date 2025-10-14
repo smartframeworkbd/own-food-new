@@ -14,7 +14,7 @@ import ReuseableModel from '../Modal/ReuseableModel';
 import { Button } from 'react-bootstrap';
 
 const FoodCardPreorder = (item) => {
-  console.log(item)
+  // console.log(item)
 const [isShareModalOpen, setIsShareModalOpen] = useState(false);
   
   const sellerImgUrlRaw = item?.sellerInfo?.[0]?.sellerProfilePhoto?.[0]?.extraLarge?.imageUrl;

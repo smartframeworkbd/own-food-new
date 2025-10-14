@@ -12,27 +12,29 @@ import {
 import { useDispatch } from "react-redux";
 import { addItem } from "../../Redux/State-slice/CartSlice";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const FoodCard = (item) => {
   const [showShareOptions, setShowShareOptions] = useState(false);
 
   const imageUrl = item?.foodImage[0]?.extraLarge?.imageUrl;
   // console.log(item);
+const navigate = useNavigate();
 
   const foodImage = imageUrl
     ? imageUrl.replace(
-        "http://assets.ownfood.com/uploads",
-        "https://assets.ownfood.com/uploads"
-      ) + "?width=291&height=225&quality=100"
+      "http://assets.ownfood.com/uploads",
+      "https://assets.ownfood.com/uploads"
+    ) + "?width=291&height=225&quality=100"
     : "";
 
   const sellerImgUrlRaw =
     item?.sellerInfo?.[0]?.sellerProfilePhoto?.[0]?.extraLarge?.imageUrl;
   const sellerImgUrl = sellerImgUrlRaw
     ? sellerImgUrlRaw.replace(
-        "http://assets.ownfood.com/uploads",
-        "https://assets.ownfood.com/uploads"
-      ) + "?width=80&height=80&quality=100"
+      "http://assets.ownfood.com/uploads",
+      "https://assets.ownfood.com/uploads"
+    ) + "?width=80&height=80&quality=100"
     : "";
 
   const dispatch = useDispatch();
@@ -150,7 +152,7 @@ const FoodCard = (item) => {
             </div>
             <div className="action-item d-flex align-items-center gap-1">
               <Share2 size={16} /> <span>Share</span>
-               {showShareOptions && (
+              {/* {showShareOptions && (
     <div className="share-options bg-white border shadow-sm rounded p-2 position-absolute z-10" style={{ top: "120%", right: 0 }}>
       <div
         className="dropdown-item"
@@ -179,7 +181,7 @@ const FoodCard = (item) => {
         🔵 Facebook
       </a>
     </div>
-  )}
+  )} */}
             </div>
           </div>
         </div>
