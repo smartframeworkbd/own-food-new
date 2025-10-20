@@ -233,6 +233,8 @@ const CheckOut = () => {
       couponAmount: couponPrice,
       deliveryFeeForRider: deliveryFeeRider,
       paySystemName,
+     isUseWallet: useWallet,
+     walletBalance
     };
 
     if (coupon.length > 0) {
@@ -433,7 +435,7 @@ const CheckOut = () => {
                                           <p className="text-bold">
                                             Deliver to: {item?.Name}
                                           </p>
-                                          <p>{`${item?.CityData[0]?.cityName}, ${item?.RegionData[0]?.regionName},  ${item?.CountryData[0]?.countryName}`}</p>
+                                          <p>{`${item?.districtData[0]?.name}, ${item?.zoneData[0]?.name},  ${item?.areaData[0]?.name} ${item?.blockData[0]?.name??""}`}</p>
                                           <p>{item?.phoneNumber}</p>
                                         </div>
                                         <div className="border border-success round p-1">

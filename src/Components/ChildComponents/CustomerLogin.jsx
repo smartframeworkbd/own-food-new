@@ -47,6 +47,7 @@ const CustomerLogin = () => {
           targetURL = location.state.form.pathname;
         }
         navigate(targetURL, { replace: true });
+        window.location.reload(true);
         // navigate("/CustomerLogin");
       }
     }

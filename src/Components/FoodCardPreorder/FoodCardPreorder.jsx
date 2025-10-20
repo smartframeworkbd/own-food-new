@@ -9,11 +9,12 @@ import { CircleHelp, Coffee, Eye, Heart, Share2, ShoppingCart, ThumbsUp } from '
 import { useDispatch } from 'react-redux';
 import { addItem } from '../../Redux/State-slice/CartSlice';
 import toast from 'react-hot-toast';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import ReuseableModel from '../Modal/ReuseableModel';
 import { Button } from 'react-bootstrap';
 
 const FoodCardPreorder = (item) => {
+  // console.log(item)
 const [isShareModalOpen, setIsShareModalOpen] = useState(false);
   
   const sellerImgUrlRaw = item?.sellerInfo?.[0]?.sellerProfilePhoto?.[0]?.extraLarge?.imageUrl;
@@ -23,13 +24,18 @@ const sellerImgUrl = sellerImgUrlRaw
     '?width=80&height=80&quality=100'
   : '';
 
-
+const navigate = useNavigate();
   const dispatch = useDispatch();
       const handleAddToCart = (item) => {
           dispatch(addItem(item));
           toast.success("Food add successful!", {
               position: "bottom-center",
           });
+const sellerId = item?.sellerInfo?.[0]?._id;
+  if (sellerId) {
+    navigate(`/SellerProfile/${sellerId}`);
+  }
+
       };
   return (
     <div className="card food-card-preorder shadow-sm p-0 m-2">
@@ -132,7 +138,7 @@ const sellerImgUrl = sellerImgUrlRaw
               </Link>
 
               <div className="d-flex justify-content-between align-items-center">
-                <span  className="d-flex align-items-end "><img src={review} style={{ height: '20px', width: "20px" }} /> <span className='ms-1'>9.5%</span></span>
+                <span  className="d-flex align-items-end "><img src={review} style={{ height: '20px', width: "20px" }} /> <span className='ms-1'>{item?.totalReviews}</span></span>
                 <div>
                   <span className="fw-bold text-dark fs-5"> {labels.country === "Bangladesh"
                                                   ? labels.currency.bdt.symbol
@@ -159,21 +165,7 @@ const sellerImgUrl = sellerImgUrlRaw
                  }</span>
           </div>
 
-            <div className="footer-actions d-flex justify-content-around align-items-center border-top py-2">
-            <div className="action-item d-flex align-items-center gap-1">
-              <ThumbsUp size={16} /> <span>Like</span>
-            </div>
-            <div className="action-item d-flex align-items-center gap-1">
-              <Heart size={16} /> <span>Love</span>
-            </div>
-          <div className="action-item d-flex align-items-center gap-1 position-relative">
-  <span onClick={() =>  setIsShareModalOpen(true)}style={{ cursor: "pointer" }}>
-    <Share2 size={16} /> <span>Share</span>
-  </span>
-
- 
-</div>
-          </div>
+            
         </div>
       </div>
    <ReuseableModel

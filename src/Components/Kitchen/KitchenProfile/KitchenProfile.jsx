@@ -39,11 +39,16 @@ const KitchenProfile = ({ onTypeClick, setIsKitchenOpen }) => {
     fetchData();
 
 
-    setIsKitchenOpen(sellerData[0]?.status === "Active" ? true : false);
-    console.log(sellerData[0]?.status);
+    // setIsKitchenOpen(sellerData[0]?.status === "Active" ? true : false);
+    // console.log(sellerData[0]?.status);
 
 
   }, [id]);
+  useEffect(() => {
+  if (sellerData && sellerData.length > 0) {
+    setIsKitchenOpen(sellerData[0]?.status === "Active");
+  }
+}, [sellerData]);
   return (
     <div className="py-4 kitchen-profile-container">
       <div className="category-bar d-flex flex-wrap justify-content-center gap-2 mb-3">

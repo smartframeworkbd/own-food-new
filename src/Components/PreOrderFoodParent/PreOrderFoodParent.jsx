@@ -9,7 +9,7 @@ import FoodCard from "../FoodCard/FoodCard";
 import { Link } from "react-router-dom";
 // import FoodCard from "../FoodCard/FoodCard";
 
-const PreOrderFoodParent = ({ data }) => {
+const PreOrderFoodParent = ({ data={} }) => {
   const [selectedTab, setSelectedTab] = useState("Latest");
   const [selectedFoodType, setSelectedFoodType] = useState("ALL");
   const sliderRef = React.useRef();

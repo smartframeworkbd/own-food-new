@@ -66,7 +66,7 @@ const AllFood = () => {
 
           <Search setSearch={setSearch} setFilters={setFilters} />
 
-          <DailyDeals />
+          {/* <DailyDeals /> */}
           <h5 className="Foodcard-title">Indian</h5>
           <div className="row">
             {foodList.map((item, index) => (
@@ -81,7 +81,7 @@ const AllFood = () => {
         </div>
       </div>
     </div>
-  );
+  ); 
 };
 
 export default AllFood;

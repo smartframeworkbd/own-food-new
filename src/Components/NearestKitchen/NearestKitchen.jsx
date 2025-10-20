@@ -11,12 +11,19 @@ import { BaseURL } from "../../Helper/config";
 import { Link } from "react-router-dom";
 
 const chunkArrayWithPadding = (arr, size) => {
+
+  // console.log(arr)
+  if(!Array.isArray(arr))
+    {
+      return <p>not found any data</p>
+    }
   const chunked = [];
   for (let i = 0; i < arr.length; i += size) {
     const chunk = arr.slice(i, i + size);
     while (chunk.length < size) {
       chunk.push(null);
     }
+
     chunked.push(chunk);
   }
   return chunked;
@@ -34,8 +41,8 @@ const NearestKitchen = ({ data }) => {
         const ids = data?.sectionCategories1?.map((x) => x.value) || [];
         if (ids.length === 0) return;
 
-        const res = await axios.post(`${BaseURL}/get-seller-with-food-details`, { _id: ids });
-        setKitchenData(res.data.data || []);
+        const res = await axios.post(`${BaseURL}/get-home-nearest-seller`, { _id: ids });
+        setKitchenData(res?.data?.data || []);
       } catch (err) {
         console.error("Failed to load kitchens:", err);
       }
@@ -112,10 +119,10 @@ const NearestKitchen = ({ data }) => {
           <h2 className="section-title mb-4">{data?.sectionTitle1}</h2>
 
           <Slider ref={sliderRef} {...desktopSettings}>
-            {kitchenChunks.map((chunk, slideIdx) => (
+            {kitchenChunks?.length>0 && kitchenChunks.map((chunk, slideIdx) => (
               <div key={slideIdx}>
                 <div className="row justify-content-center">
-                  {chunk.map((kitchen, idx) => (
+                  {chunk?.length>0 && chunk.map((kitchen, idx) => (
                     <div
                       key={idx}
                       className="col-10 col-sm-6 col-md-4 col-lg-3 col-xlg-3 mb-4 d-flex justify-content-center"
@@ -133,7 +140,7 @@ const NearestKitchen = ({ data }) => {
               &#8249;
             </button>
             <span className="page-number">
-              {currentSlide + 1} / {kitchenChunks.length}
+              {currentSlide + 1} / {kitchenChunks?.length}
             </span>
             <button className="pagination-btn" onClick={() => sliderRef.current?.slickNext()}>
               &#8250;
@@ -148,7 +155,7 @@ const NearestKitchen = ({ data }) => {
           <h2 className="section-title mb-4">{data?.sectionTitle1 || "Nearest Kitchen"}</h2>
 
           <Slider ref={mobileSliderRef} {...mobileSettings}>
-            {mobileChunks.map((chunk, slideIdx) => {
+            {mobileChunks?.length>0 && mobileChunks.map((chunk, slideIdx) => {
               const row1 = chunk.slice(0, 2);
               const row2 = chunk.slice(2, 5);
 

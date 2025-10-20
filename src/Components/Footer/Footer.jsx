@@ -5,26 +5,27 @@ import logo from '../../assets/ownfoodfooter.png'
 import playstore from '../../assets/playstore.png'
 import appstore from '../../assets/appstore.png'
 import { FacebookIcon, InstagramIcon, TwitterIcon, YoutubeIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="footer">
       <Container>
         <Row className="footer-top">
-            <Col md={12}>
+          <Col md={12}>
             <div className="d-flex justify-content-between">
-                        <img style={{height:"91px",width:'121px'}} src={logo} alt="Ownfood Logo" className="logo" />
+              <img style={{ height: "91px", width: '121px' }} src={logo} alt="Ownfood Logo" className="logo" />
 
 
-<div className="social-icons">
-  <FacebookIcon />
-  <YoutubeIcon />
-  <TwitterIcon />
-  <InstagramIcon />
-</div>
+              <div className="social-icons">
+                <FacebookIcon />
+                <YoutubeIcon />
+                <TwitterIcon />
+                <InstagramIcon />
+              </div>
             </div>
 
 
-</Col>
+          </Col>
           <Col md={12} className="logo-text">
             <p className="tagline">
               Order food from the best recipe and shops with Ownfood Bangladesh
@@ -37,22 +38,25 @@ const Footer = () => {
 
         </Row>
         <div className="horizontal-divider">
-            <hr/>
+          <hr />
         </div>
         <Row className="footer-links">
           <Col md={2} sm={6}>
             <ul>
-              <li>About us</li>
-              <li>Contact us</li>
-              <li>How Ownfood works</li>
-              <li>Help & Support</li>
+              <li> <Link to={'/about-us'}> About us</Link></li>
+              <li><Link to={'/contact-us'}>Contact us</Link></li>
+                            <li> <Link to={'/about-us'}> How Ownfood works</Link></li>
+              <li><Link to={'/contact-us'}>Help & Support</Link></li>
+
+            
             </ul>
           </Col>
           <Col md={2} sm={6}>
             <ul>
-              <li>Join us</li>
-              <li>Become a seller</li>
-              <li>Join as a hero</li>
+              {/* <li>Join us</li> */}
+
+              <li><a to={'https://dashboard.ownfood.com/become-seller'}>Become a seller</a></li>
+              <li><a to={'https://dashboard.ownfood.com/become-rider'}>Become a Rider</a></li>
             </ul>
           </Col>
           <Col md={3} sm={6}>
@@ -66,10 +70,10 @@ const Footer = () => {
           </Col>
           <Col md={5} sm={6}>
             <div className="address">
-              <h5>Address</h5>
+              {/* <h5>Address</h5>
               <p>
                 Software Technology Part, Bangkok Market, 14 Agrabad Access Road, Chattogram, Bangladesh
-              </p>
+              </p> */}
               <div className="store-buttons">
                 <img src={playstore} alt="Google Play" />
                 <img src={appstore} alt="App Store" />

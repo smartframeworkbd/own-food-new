@@ -87,7 +87,9 @@ const NewHomePage = () => {
 
           }
 
-
+// {
+//   console.log(item.sectionStyle === "Style12",item)
+// }
           if (item.sectionStyle === "Style12") {
             return <div ref={preOrderRef}>
               <LazyWrapper><PreOrderFoodParent key={index} data={item} />

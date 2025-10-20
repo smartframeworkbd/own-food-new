@@ -1,16 +1,70 @@
 {
-
     "footerTitle": {
         "en": "",
         "bn": ""
     },
-    "about-us-content": {
-        "en": "OWNFOOD is an online platform for selling homemade food. Our aim is to increase the familiarity of delicious homemade food with those who want to have healthy and delicious homemade food. Along with contacting potential vendors who sell home-cooked food, OWNFOOD is not only a platform for selling food but also providing many more services. Anyone can stand on their own feet through our platform.",
-        "bn": "OWNFOOD হল ঘরের তৈরি খাবার বিক্রির অনলাইন প্ল্যাটফর্ম। আমাদের লক্ষ্য হল যারা স্বাস্থ্যকর এবং সুস্বাদু ঘরের তৈরি খাবার পেতে চান, তাদের কাছে ঘরের মজাদার খাবারের পরিচিতি বাড়ানো। এর সাথে ঘরের খাবার তৈরি করে বিক্রি করেন এমন সম্ভাব্য বিক্রেতাদের সাথে যোগাযোগ করিয়ে দেওয়া। OWNFOOD শুধু খাবার বিক্রির প্ল্যাটফর্ম নয় আরও অনেক সার্ভিস প্রদান করছে এবং আমাদের এই প্ল্যাটফর্ম এর মাধ্যমে চাইলে যে কেউ নিজেই নিজের পায়ে দাড়াতে পারবেন।"
-    },
     
-
-
+        "about-us-content": {
+            "en": {
+                "whoWeAre": "OwnFood promotes and delivers homemade food from seller's doorsteps to buyers. As an online platform for food lovers, OwnFood promotes healthy homemade food from individual home chefs to potential customers looking for delicious and authentic meals. Sellers can promote food as per their menu or buyers can contact the seller to prepare food. Our robust platform gives multiple options to both sellers and buyers to sell and buy healthy and authentic food. Moreover, people can share their recipes, give reviews, and earn reward points. Reward points can be converted into credit for food purchases. Using our platform encourages self-employment, entrepreneurship, women empowerment, and easy food accessibility, boosting the overall economy of the community.",
+                "whyBuyHomemadeFood": [
+                    "Meals cooked at home are healthy",
+                    "Cheaper than restaurant",
+                    "Lower calories, less sugar, less fat",
+                    "Tasty & quality food",
+                    "Become our seller!"
+                ],
+                "whySellThroughOwnFood": [
+                    "One and only dedicated online platform to promote homemade food",
+                    "Seller can take orders in advance",
+                    "Sell your instant food",
+                    "Catering service",
+                    "Promote your food through your menu like a restaurant"
+                ],
+                "howYouCanEarn": [
+                    "Sell any homemade food",
+                    "Instant food",
+                    "Menu item",
+                    "Catering",
+                    "Wish food",
+                    "Sell your recipe – share your secret recipe and earn money",
+                    "Video sharing – cook and share cooking videos simultaneously to earn",
+                    "Food blogging – an easy way to earn money if you are a food blogger",
+                    "Review & Earn – give reviews and refer sellers to earn free credits",
+                    "Be our OwnFood rider – deliver food from seller’s doorstep to buyers"
+                ]
+            },
+            "bn": {
+                "whoWeAre": "OwnFood বিক্রেতার দরজার থেকে ক্রেতাদের কাছে ঘরের তৈরি খাবার পৌঁছে দেয় এবং প্রচার করে। খাদ্য প্রেমীদের জন্য অনলাইন প্ল্যাটফর্ম হিসেবে OwnFood ব্যক্তি ঘরের রাঁধুনিদের সুস্বাস্থ্যকর ঘরের তৈরি খাবার সম্ভাব্য ক্রেতাদের কাছে পৌঁছে দেয় যারা সুস্বাদু এবং অটেন্টিক খাবার খুঁজছেন। বিক্রেতারা তাদের মেনু অনুযায়ী খাবার প্রচার করতে পারেন বা ক্রেতারা বিক্রেতাকে খাবার তৈরি করার জন্য যোগাযোগ করতে পারেন। আমাদের শক্তিশালী প্ল্যাটফর্ম উভয় বিক্রেতা এবং ক্রেতাকে স্বাস্থ্যকর ও অটেন্টিক খাবার বিক্রি ও কেনার জন্য বিভিন্ন বিকল্প দেয়। এছাড়াও, মানুষ তাদের রেসিপি শেয়ার করতে পারে, রিভিউ দিতে পারে এবং রিওয়ার্ড পয়েন্ট উপার্জন করতে পারে। রিওয়ার্ড পয়েন্ট খাবার ক্রয়ের জন্য ক্রেডিটে রূপান্তর করা যায়। আমাদের প্ল্যাটফর্ম ব্যবহার করে স্বনিয়োগ, উদ্যোক্তা সৃষ্টি, নারী ক্ষমতায়ন এবং সহজ খাদ্যপ্রাপ্যতা বৃদ্ধি পায় এবং সামগ্রিকভাবে সম্প্রদায়ের অর্থনীতি উন্নত হয়।",
+                "whyBuyHomemadeFood": [
+                    "ঘরে তৈরি খাবার স্বাস্থ্যকর",
+                    "রেস্তোরাঁর চেয়ে সস্তা",
+                    "কম ক্যালরি, কম চিনি, কম চর্বি",
+                    "স্বাদে এবং মানে উৎকৃষ্ট খাবার",
+                    "আমাদের বিক্রেতা হন!"
+                ],
+                "whySellThroughOwnFood": [
+                    "একমাত্র নিবেদিত অনলাইন প্ল্যাটফর্ম ঘরের তৈরি খাবার প্রচারের জন্য",
+                    "বিক্রেতা অগ্রিম অর্ডার নিতে পারবেন",
+                    "আপনার তাত্ক্ষণিক খাবার বিক্রি করুন",
+                    "ক্যাটারিং সেবা",
+                    "আপনার মেনুর মাধ্যমে রেস্তোরাঁর মতো খাবার প্রচার করুন"
+                ],
+                "howYouCanEarn": [
+                    "যেকোনো ঘরের তৈরি খাবার বিক্রি করুন",
+                    "তাত্ক্ষণিক খাবার",
+                    "মেনু আইটেম",
+                    "ক্যাটারিং",
+                    "বিশ খাদ্য",
+                    "আপনার রেসিপি বিক্রি করুন – আপনার গোপন রেসিপি শেয়ার করুন এবং উপার্জন করুন",
+                    "ভিডিও শেয়ারিং – রান্না করুন এবং রান্নার ভিডিও শেয়ার করুন একসাথে উপার্জন করতে",
+                    "ফুড ব্লগিং – আপনি যদি ফুড ব্লগার হন, তাহলে সহজে উপার্জন করতে পারবেন",
+                    "রিভিউ ও উপার্জন – রিভিউ দিয়ে এবং বিক্রেতাদের রেফার করে বিনামূল্যে ক্রেডিট উপার্জন করুন",
+                    "আমাদের OwnFood রাইডার হন – বিক্রেতার দরজার থেকে ক্রেতার কাছে খাবার পৌঁছে দিন"
+                ]
+            }
+        },
+    
     "ourpurpos": {
         "en": "About Us",
         "bn": "আমাদের সম্পর্কে"
@@ -19,15 +73,13 @@
         "en": "Contact Us",
         "bn": "যোগাযোগ করুন"
     },
-
-
     "office": {
         "en": "Corporate Office",
         "bn": "কর্পোরেট অফিস"
     },
     "officeAddress": {
-        "en": "Software Technology Park, Bangkok MArket (level-6) 14 Agrabad access road, Chattogram, Bangladesh",
-        "bn": " সফটওয়্যার টেকনোলজি পার্ক, ব্যাংকক মার্কেট ১৪ আগ্রাবাদ এক্সেস রোডচট্টগ্রাম, বাংলাদেশ"
+        "en": "29230 Ryan Road, Warren, MI 48092<br>Bangladesh Country Office: Uttora,Dhaka,Bangladesh",
+        "bn": "২৯২৩০ রায়ান রোড, ওয়ারেন, এমআই ৪৮০৯২<br>বাংলাদেশ কান্ট্রি অফিস: Dhaka,Bangladesh"
     },
     "HotlineNum": {
         "en": "+8801326102605",
@@ -157,15 +209,13 @@
         "en": "Download App",
         "bn": "ডাউনলোড এপ"
     },
-
     "address": {
-        
         "addressTitle": {
-            "en":"Our Office",
+            "en": "Our Office",
             "bn": "ঠিকানা"
         },
         "line1": {
-            "en":"Address: Software Technology Park Bangkok Market (level-6).",
+            "en": "Address: Software Technology Park Bangkok Market (level-6).",
             "bn": "ঠিকানাঃ সফটওয়্যার টেকনোলজি পার্ক, ব্যাংকক মার্কেট"
         },
         "line2": {

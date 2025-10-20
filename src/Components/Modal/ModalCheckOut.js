@@ -159,10 +159,10 @@ const ModalCheckOut = (props) => {
         .post(
           BaseURL + "/create-address-book",
           {
-            districtID: districtId,
-            zoneID: zoneId,
-            areaID: areaId,
-            blockID: blockId,
+            districtSerialId: districtId,
+            zoneSerialId: zoneId,
+            areaSerialId: areaId,
+            blockSerialId: blockId,
             Name: name,
             phoneNumber: phoneNumber,
             countryID: country,
