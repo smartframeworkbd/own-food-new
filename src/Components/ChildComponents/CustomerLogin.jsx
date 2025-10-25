@@ -41,6 +41,13 @@ const CustomerLogin = () => {
     // }
     else {
       let result = await loginUsersAPI(email, userPassword);
+      fetch("http://api.ownfood.local:5000/api/v1/central-auth", {
+        method: "POST",
+        credentials: "include" // crucial! sends cookies
+      })
+      .then(res => res.json())
+      .then(data => console.log("login cookie",data));
+      
       if (result) {
         let targetURL = "/";
         if (location.state != null) {
