@@ -9,6 +9,7 @@ import labels from "../../translationData/signIn.json";
 import { IoIosEyeOff, IoMdEye } from "react-icons/io";
 import getTranslation from "../../Helper/getTranslationUtility";
 import { LanguageContext } from "../../Context/LanguageContext";
+import { BaseURL } from "../../Helper/config";
 
 const CustomerLogin = () => {
   // const [currentLanguage, setCurrentLanguage] = useState("en");
@@ -43,8 +44,12 @@ const CustomerLogin = () => {
       let result = await loginUsersAPI(email, userPassword);
       if (result) {
         let targetURL = "/";
+        await fetch(`${BaseURL}/central-auth`, {
+          method: "POST",
+          credentials: "include",
+        });
         if (location.state != null) {
-          targetURL = location.state.form.pathname;
+          // targetURL = location.state.form.pathname;
         }
         navigate(targetURL, { replace: true });
         window.location.reload(true);

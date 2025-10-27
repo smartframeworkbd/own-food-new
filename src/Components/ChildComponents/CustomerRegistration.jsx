@@ -193,7 +193,22 @@ const CustomerRegistration = () => {
       mblref.scrollIntoView({ behavior: "smooth", block: "center" });
 
       return;
-    } else {
+    }
+    else if (!IsMobile(reference) && reference.length>0) {
+      setMobileErMsg("Enter Valid Mobile Number")
+      mblref.scrollIntoView({ behavior: "smooth", block: "center" });
+      return;
+    }
+    else if (userPassword !== confPassword) {
+      setMobileErMsg("Password Not match!")
+      // newPassword, newConfirmPassword
+      // ErrorToast("Phone number already used!");
+      mblref.scrollIntoView({ behavior: "smooth", block: "center" });
+
+      return;
+    }
+
+    else {
       let result = await createUsersAPI(
         userFullName,
         email,
@@ -240,7 +255,7 @@ const CustomerRegistration = () => {
                   <div className="form-group clearfix">
                     <label for="third_field" class="form-label">
                       {/* {labels.fullName.bn} */}
-                      {getTranslation("fullName", currentLanguage, labels)}
+                      {getTranslation("fullName", currentLanguage, labels)} *
                     </label>
                     <div class="form-box">
                       <input
@@ -266,7 +281,10 @@ const CustomerRegistration = () => {
                   <div className="form-group clearfix">
                     <label for="first_field" className="form-label">
 
-                      {getTranslation("email", currentLanguage, labels)}
+                      {getTranslation("email", currentLanguage, labels)}  *
+
+
+
                     </label>
                     <div class="form-box">
                       <input
@@ -296,7 +314,7 @@ const CustomerRegistration = () => {
                   <div className="form-group clearfix">
                     <label for="first_field" className="form-label">
 
-                      {getTranslation("mobile", currentLanguage, labels)}
+                      {getTranslation("mobile", currentLanguage, labels)} *
                     </label>
                     <div className="form-box">
                       <input
@@ -330,7 +348,7 @@ const CustomerRegistration = () => {
                   )}
                   <div className="form-group clearfix">
                     <label for="second_field" className="form-label">
-                      {labels.password.bn}
+                      {labels.password.bn} *
                     </label>
                     <div className="form-box">
                       <input
@@ -385,6 +403,8 @@ const CustomerRegistration = () => {
                         currentLanguage,
                         labels
                       )}
+
+                      *
                     </label>
                     <div class="form-box">
                       <input

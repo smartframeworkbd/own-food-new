@@ -103,9 +103,10 @@ export const loginUsersAPI = async (email, userPassword) => {
   try {
     let URL = BaseURL + "/login-users";
     let res = await axios.post(URL, { email, userPassword });
+    console.log(res)
 
     if (res.status === 200 && res.data["status"] === "Success") {
-      setToken(res.data["Token"]);
+      setToken(res.data["token"]);
       setUserDetails(res.data["data"]);
       // Swal.fire({
       //   position: "center",

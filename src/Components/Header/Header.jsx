@@ -28,7 +28,7 @@ const NavigationBar = ({ paneLeft, SetpanLeft, cart = [], state, setState, userA
   // const cart = useSelector((state) => state.cart.cartItems);
 
 
-  const [selectedLang, setSelectedLang] = useState("bn");
+const [selectedLang, setSelectedLang] = useState(currentLanguage);
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 

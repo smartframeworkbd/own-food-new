@@ -376,11 +376,11 @@ const WhatsAppOTP = () => {
                     account. A Code has been sent to{" "}
                     {sessionUser && <span>{sessionUser?.userMobileNo}</span>}
                   </p>
-                  <div>
+                  {/* <div>
                     <Link to={"/CustomerRegistration"}>
                       <p className="text-primary">Change number</p>
                     </Link>
-                  </div>
+                  </div> */}
 
                   <label>Enter OTP Code Here</label>
                   <form method="POST" id="otp-form">
