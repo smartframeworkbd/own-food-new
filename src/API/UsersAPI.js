@@ -102,10 +102,35 @@ export const createUsersAPI = async (
 export const loginUsersAPI = async (email, userPassword) => {
   try {
     let URL = BaseURL + "/login-users";
-    let res = await axios.post(URL, { email, userPassword });
+   // let res = await axios.post(URL, { email, userPassword },withcredentials: "include");
+    const res = await axios.post(
+      URL,
+      { email, userPassword },   // request body
+      {
+        withCredentials: true,   // send cookies
+        headers: {
+          "Content-Type": "application/json"
+        }
+      }
+    );
+
+
+    // const res = await fetch(URL, {
+    //   method: "POST",
+    //   credentials: "include", // send cookies
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({ email, userPassword }) // ✅ body must be stringified
+    // });
+
+  //  const data = await res.json();
+    //console.log(data);
+
+
 
     if (res.status === 200 && res.data["status"] === "Success") {
-      setToken(res.data["Token"]);
+      setToken(res.data["token"]);
       setUserDetails(res.data["data"]);
       // Swal.fire({
       //   position: "center",
