@@ -1,4 +1,7 @@
-export const BaseURL = "https://api.ownfood.com.bd/api/v1";
+// export const BaseURL = "https://api.ownfood.com.bd/api/v1";
+export const BaseURL = "https://api.ownfood.com/api/v1";
+
+// export const BaseURL ="http://api.ownfood.localhost:5000/api/v1"
 // export const BaseURL = "https://api.garikroybikroy.com/api/v1";
 // export const BaseURL = "https://staging-api.ownfood.net/api/v1";
 // export const BaseURL = "http://localhost:5000/api/v1";

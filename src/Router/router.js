@@ -52,6 +52,7 @@ import NewHomePage from "../Pages/NewHomePage.jsx";
 import KitchenProfile from "../Components/Kitchen/KitchenProfile/KitchenProfile.jsx";
 import Kitchen from "../Components/Kitchen/Kitchen.jsx";
 import AllFood from "../Components/AllFoodParent/AllFood/AllFood.jsx";
+import NotFoundPage from "../Components/Error/NotFoundPage.jsx";
 
 export const routes = createBrowserRouter([
 
@@ -273,14 +274,21 @@ export const routes = createBrowserRouter([
         path: "/terms",
         element: <Terms></Terms>,
       },
-
+ {
+  path: "*",
+  element: <NotFoundPage/>,
+}
     ]
 
   },
   {
     path: "/print-order",
     element: <PrintComponent />
-  }
+  },
+  {
+  path: "*",
+  element: <NotFoundPage/>,
+}
   // {
   //   path: "/",
   //   element: <HomePage />,
@@ -477,4 +485,5 @@ export const routes = createBrowserRouter([
   //   path:"mobile",
   //   element:<BottomBar/>
   // }
+
 ]);

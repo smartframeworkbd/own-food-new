@@ -26,6 +26,7 @@ import "./index.css";
 
 import 'sweetalert2/src/sweetalert2.scss'
 import { useEffect } from "react";
+import ErrorBoundary from "./Components/Error/ErrorBoundary";
 function App() {
   const platformFee = process.env.REACT_APP_ENV;
   useEffect(() => {
@@ -36,10 +37,13 @@ function App() {
     }
   }, []);
   return (
-    <RouterProvider router={routes}>
+    <ErrorBoundary>
+ <RouterProvider router={routes}>
       {/* <Toaster />
       <ScrollToTop smooth color='#6f00ff' /> */}
     </RouterProvider>
+    </ErrorBoundary>
+   
     // <BrowserRouter>
     //   <Toaster />
     //   <ScrollToTop smooth color='#6f00ff' />

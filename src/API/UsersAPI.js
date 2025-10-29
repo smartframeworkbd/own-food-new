@@ -102,7 +102,12 @@ export const createUsersAPI = async (
 export const loginUsersAPI = async (email, userPassword) => {
   try {
     let URL = BaseURL + "/login-users";
-    let res = await axios.post(URL, { email, userPassword });
+    let res = await axios.post(URL, { email, userPassword }, {
+        withCredentials: true,   
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
     console.log(res)
 
     if (res.status === 200 && res.data["status"] === "Success") {

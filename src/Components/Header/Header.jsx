@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import SearchBar from './SearchBar/SearchBar';
 import { LanguageContext } from '../../Context/LanguageContext';
-import { DashBoardLink } from '../../Helper/config';
+import { BaseURL, DashBoardLink } from '../../Helper/config';
 import labels from "../../translationData/menu.json";
 import getTranslation from "../../Helper/getTranslationUtility";
 
@@ -28,7 +28,7 @@ const NavigationBar = ({ paneLeft, SetpanLeft, cart = [], state, setState, userA
   // const cart = useSelector((state) => state.cart.cartItems);
 
 
-const [selectedLang, setSelectedLang] = useState(currentLanguage);
+  const [selectedLang, setSelectedLang] = useState(currentLanguage);
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -55,11 +55,57 @@ const [selectedLang, setSelectedLang] = useState(currentLanguage);
 
     return () => window.removeEventListener("storage", checkUser);
   }, []);
-  const handleLogout = () => {
-    localStorage.removeItem("UserDetails");
-    localStorage.removeItem("Token");
-    window.location.reload(false);
+
+  const handleLogout = async () => {
+    try {
+      await fetch(`${BaseURL}/logout`, {
+        method: "POST",
+        credentials: "include", // গুরুত্বপূর্ণ: কুকি পাঠানোর জন্য
+      });
+
+      // ✅ লোকাল স্টোরেজ / সেশন স্টোরেজ ক্লিয়ার করো
+      localStorage.removeItem("user");    // নির্দিষ্ট item
+      localStorage.removeItem("token");   // অথবা তোমার রাখা অন্য key
+      // বা সব একসাথে:
+      // localStorage.clear();
+      localStorage.removeItem("UserDetails");
+      localStorage.removeItem("Token");
+      window.location.reload(false);
+      sessionStorage.clear(); // যদি sessionStorage-এ কিছু থাকে
+
+      // রিডাইরেক্ট বা UI আপডেট করো
+      // window.location.href = "/login";
+    } catch (error) {
+      console.error("Logout failed:", error);
+    }
   };
+  //   const handleLogout = () => {
+
+  //     const handleLogout = async () => {
+  //   try {
+  //     await fetch("https://ownfood.localhost/logout", {
+  //       method: "POST",
+  //       credentials: "include", // গুরুত্বপূর্ণ: কুকি পাঠানোর জন্য
+  //     });
+
+  //     // ✅ লোকাল স্টোরেজ / সেশন স্টোরেজ ক্লিয়ার করো
+  //     localStorage.removeItem("user");    // নির্দিষ্ট item
+  //     localStorage.removeItem("token");   // অথবা তোমার রাখা অন্য key
+  //     // বা সব একসাথে:
+  //     // localStorage.clear();
+
+  //     sessionStorage.clear(); // যদি sessionStorage-এ কিছু থাকে
+
+  //     // রিডাইরেক্ট বা UI আপডেট করো
+  //     window.location.href = "/login";
+  //   } catch (error) {
+  //     console.error("Logout failed:", error);
+  //   }
+  // };
+  //     localStorage.removeItem("UserDetails");
+  //     localStorage.removeItem("Token");
+  //     window.location.reload(false);
+  //   };
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -231,7 +277,7 @@ const [selectedLang, setSelectedLang] = useState(currentLanguage);
                       </li>
 
                       <li>
-                        <a style={{cursor:"pointer"}} onClick={() => handleLogout()}>
+                        <a style={{ cursor: "pointer" }} onClick={() => handleLogout()}>
                           <i class="fa-solid fa-right-to-bracket me-1"></i>
                           {/* {labels.profile.logout.bn} */}
                           {getTranslation(
